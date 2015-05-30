@@ -1,13 +1,13 @@
-Family.create!(surname: "Lannister", 
+Family.create!(surname: "Lannister",
 							email: "tywin@casterlyrock.gov",
 							password: "1234567")
-Family.create!(surname: "Stark", 
+Family.create!(surname: "Stark",
 							email: "rob@thenorth.gov",
 							password: "1234567")
-Family.create!(surname: "Targaryen", 
+Family.create!(surname: "Targaryen",
 							email: "dayanares@dothraki.gov",
 							password: "1234567")
-Family.create!(surname: "Kardashian", 
+Family.create!(surname: "Kardashian",
 							email: "keeping@upwith.com",
 							password: "1234567")
 
