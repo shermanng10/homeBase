@@ -5,7 +5,8 @@ class CreateRewards < ActiveRecord::Migration
     	t.integer :cost, null: false
     	t.string :category
     	t.integer :family_id, null: false
-    	t.integer :member_id
+    	t.integer :member_id, null: false
+      t.string :status, default: "open"
 
       t.timestamps null: false
     end

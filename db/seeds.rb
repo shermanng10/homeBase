@@ -14,13 +14,13 @@ Family.create!(surname: "Kardashian",
 Member.create!(name: "Tywin",
 							role: "father",
 							family_id: 1,
-							points: 0,
+							points: 3,
 							color: "red",
 							img_url: "this is a thing")
 Member.create!(name: "Tyrion",
 							role: "son",
 							family_id: 1,
-							points: 0,
+							points: 78,
 							color: "red",
 							img_url: "this is a thing")
 Member.create!(name: "Cersei",
@@ -44,7 +44,7 @@ Member.create!(name: "Eddard",
 Member.create!(name: "Rob",
 							role: "son",
 							family_id: 2,
-							points: 0,
+							points: 14,
 							color: "red",
 							img_url: "this is a thing")
 Member.create!(name: "Jon",
@@ -62,7 +62,7 @@ Member.create!(name: "Arya",
 Member.create!(name: "Dayanares",
 							role: "mother",
 							family_id: 3,
-							points: 0,
+							points: -4,
 							color: "red",
 							img_url: "this is a thing")
 Member.create!(name: "Barry",
@@ -74,7 +74,7 @@ Member.create!(name: "Barry",
 Member.create!(name: "Mendel",
 							role: "son",
 							family_id: 3,
-							points: 0,
+							points: 10,
 							color: "red",
 							img_url: "this is a thing")
 Member.create!(name: "Schlomo",
@@ -98,7 +98,7 @@ Member.create!(name: "Kourtney",
 Member.create!(name: "Kylie",
 							role: "daughter",
 							family_id: 4,
-							points: 0,
+							points: 45,
 							color: "red",
 							img_url: "this is a thing")
 Member.create!(name: "Kendall",
@@ -163,16 +163,16 @@ task14 = Task.create!(title: "Pick up all toys", point_value: 15, family_id: 2, 
 task15 = Task.create!(title: "Dust", point_value: 25, family_id: 3, deadline: Date.today)
 
 
-reward1 = Reward.create!(name: "Spinach", category:"Delicious Food", cost: 10, family_id: 1)
-reward2 = Reward.create!(name: "Corn", category:"Delicious Food", cost: 20,family_id: 1, member_id: 1)
+reward1 = Reward.create!(name: "Spinach", category:"Delicious Food", cost: 10, family_id: 1, member_id: 3)
+reward2 = Reward.create!(name: "Corn", category:"Delicious Food", cost: 20,family_id: 1, member_id: 1, status:"closed")
 reward3 = Reward.create!(name: "Tootsie Roll", category:"Delicious Food", cost: 5, family_id: 1, member_id: 2)
 reward4 = Reward.create!(name: "Kobe Beef", category:"Delicious Food", cost: 1000, family_id: 1, member_id: 2)
-reward5 = Reward.create!(name: "Alaskan King Crab", category:"Delicious Food", cost: 400, family_id: 1)
-reward6 = Reward.create!(name: "Ramen Burger", category:"Delicious Food", cost: 100, family_id: 1)
+reward5 = Reward.create!(name: "Alaskan King Crab", category:"Delicious Food", cost: 400, family_id: 1, member_id: 1)
+reward6 = Reward.create!(name: "Ramen Burger", category:"Delicious Food", cost: 100, family_id: 1, member_id: 4, status: "pending")
 
-reward7 = Reward.create!(name: "MacBook", category:"Technology", cost: 10000, family_id: 2)
-reward8 = Reward.create!(name: "PlayStation4", category:"Technology", cost: 5000,family_id: 2)
-reward9 = Reward.create!(name: "XBoxOne", category:"Technology", cost: 5000, family_id: 2)
-reward10 = Reward.create!(name: "Soda", category:"Delicious Food", cost: 20, family_id: 2)
-reward11 = Reward.create!(name: "Shelter", category:"Basic Living", cost: 15, family_id: 2)
-reward12 = Reward.create!(name: "Gruel", category:"Basic Living", cost: 20, family_id: 2)
+reward7 = Reward.create!(name: "MacBook", category:"Technology", cost: 10000, family_id: 2, member_id: 5, status:"closed")
+reward8 = Reward.create!(name: "PlayStation4", category:"Technology", cost: 5000,family_id: 2, member_id: 6)
+reward9 = Reward.create!(name: "XBoxOne", category:"Technology", cost: 5000, family_id: 2, member_id: 7)
+reward10 = Reward.create!(name: "Soda", category:"Delicious Food", cost: 20, family_id: 2, member_id: 7)
+reward11 = Reward.create!(name: "Shelter", category:"Basic Living", cost: 15, family_id: 2, member_id: 5, status:"pending")
+reward12 = Reward.create!(name: "Gruel", category:"Basic Living", cost: 20, family_id: 2, member_id: 8)
