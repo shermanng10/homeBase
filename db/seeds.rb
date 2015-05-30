@@ -1,13 +1,13 @@
-Family.create!(surname: "Lannister", 
+Family.create!(surname: "Lannister",
 							email: "tywin@casterlyrock.gov",
 							password: "1234567")
-Family.create!(surname: "Stark", 
+Family.create!(surname: "Stark",
 							email: "rob@thenorth.gov",
 							password: "1234567")
-Family.create!(surname: "Targaryen", 
+Family.create!(surname: "Targaryen",
 							email: "dayanares@dothraki.gov",
 							password: "1234567")
-Family.create!(surname: "Kardashian", 
+Family.create!(surname: "Kardashian",
 							email: "keeping@upwith.com",
 							password: "1234567")
 
@@ -108,16 +108,49 @@ Member.create!(name: "Kendall",
 							color: "red",
 							img_url: "this is a thing")
 
-task1 = Task.create!(title: "Empty the dishwasher" , point_value: 25, family_id: 1, assigned_member_id: 1, completed_member_id: 1, deadline: Date.today)
-task2 = Task.create!(title: "Clean Bedroom", point_value: 10, family_id: 1, assigned_member_id: 2, completed_member_id: 1)
-task3 = Task.create!(title: "Take out trash" , point_value: 20, family_id: 1, deadline: Date.today)
+task1 = Task.create!(title: "Empty the dishwasher" ,
+										point_value: 25,
+										family_id: 1,
+										assigned_member_id: 1,
+										completed_member_id: 1,
+										deadline: Date.today)
+task2 = Task.create!(title: "Clean Bedroom",
+										point_value: 10,
+										family_id: 1,
+										assigned_member_id: 2,
+										completed_member_id: 1)
+task3 = Task.create!(title: "Take out trash" ,
+										point_value: 20,
+										family_id: 1,
+										deadline: Date.today)
+task4 = Task.create!(title: "Sweep Kitchen floor",
+										point_value: 35,
+										family_id: 2,
+										assigned_member_id: 5,
+										completed_member_id: 5)
 
-task4 = Task.create!(title: "Sweep Kitchen floor", point_value: 35, family_id: 2, assigned_member_id: 5, completed_member_id: 5)
-task5 = Task.create!(title: "Vaccuum living room", point_value: 30, family_id: 2, assigned_member_id: 6, deadline: Date.today + 3)
-task6 = Task.create!(title: "Walk the dog", point_value: 20, family_id: 2)
+task5 = Task.create!(title: "Vaccuum living room",
+										point_value: 30,
+										family_id: 2,
+										assigned_member_id: 6,
+										deadline: Date.today + 3)
 
-task7 = Task.create!(title: "Feed the fish", point_value: 10, family_id: 3, assigned_member_id: 9)
-task8 = Task.create!(title: "Fold laundry", point_value: 25, family_id: 3, assigned_member_id: 10, completed_member_id: 10, deadline: Date.today)
+task6 = Task.create!(title: "Walk the dog",
+										point_value: 20,
+										family_id: 2)
+
+task7 = Task.create!(title: "Feed the fish",
+										point_value: 10,
+										family_id: 3,
+										assigned_member_id: 9)
+
+task8 = Task.create!(title: "Fold laundry",
+										point_value: 25,
+										family_id: 3,
+										assigned_member_id: 10,
+										completed_member_id: 10,
+										deadline: Date.today)
+
 task9 = Task.create!(title: "Vaccuum pool", point_value: 50, family_id: 3)
 
 
