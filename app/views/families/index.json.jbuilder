@@ -25,5 +25,10 @@ json.members @family do |member|
       json.completedMember task.completed_member.name
     end
   end
+  json.events member.events do |event|
+    json.title event.title
+    json.eventDate event.event_date
+    json.eventTime event.event_time
+  end
 end
 
