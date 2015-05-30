@@ -1,9 +1,12 @@
 class TasksController < ApplicationController
-	# before_action :require_login	
+	# before_action :require_login
 
 	def index
-		task = Task.all
-		render json: task
+		task = Task.where(family_id: current_user.id)
+		grouped = task.all(group: assigned_member_id)
+		# respond_to |format|
+		# 	# format.json {render json: task}
+		# 	format.html {}
 	end
 
 	def create
