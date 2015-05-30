@@ -1,9 +1,8 @@
 class FamiliesController < ApplicationController
 
   def index
-  	family = Family.find_by(id: current_user.id)
-  	members = family.members
-  	render json: members
+  	family = Family.find_by(id: 1)
+  	@members = family.members
   end
 
   def create
