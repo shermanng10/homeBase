@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
+  post "sessions/admin" => "sessions#admin"
+  get "sessions/normal" => "sessions#normal_mode"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

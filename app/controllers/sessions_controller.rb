@@ -12,6 +12,21 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    session[:admin] = nil
+    redirect_to :back
+  end
+
+  def admin
+    p "in this shit"
+    user = Family.find_by(id: session[:user_id])
+    if user.authenticate(params[:password])
+      session[:admin] = true
+      redirect_to :back
+    end
+  end
+
+  def normal_mode
+    session[:admin] = nil
     redirect_to :back
   end
 end
