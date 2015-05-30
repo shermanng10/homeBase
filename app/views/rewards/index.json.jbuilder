@@ -4,5 +4,7 @@ json.rewards @rewards do |reward|
   if reward.member
     json.forMember reward.member.name
   end
+  json.category reward.category
+  json.status reward.status
 end
 
