@@ -58,13 +58,14 @@ ActiveRecord::Schema.define(version: 20150528193057) do
   end
 
   create_table "rewards", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.integer  "cost",       null: false
+    t.string   "name",                        null: false
+    t.integer  "cost",                        null: false
     t.string   "category"
-    t.integer  "family_id",  null: false
-    t.integer  "member_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "family_id",                   null: false
+    t.integer  "member_id",                   null: false
+    t.string   "status",     default: "open"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "tasks", force: :cascade do |t|
