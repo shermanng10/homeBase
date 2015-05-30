@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="../../assets/stylesheets/style.css">
+
+</head>
+
+<body>
+
+<h1 class="welcome">Today's Date</h1><h2 class='weather'>73 and Sunny</h2>
+<div class="clear"></div>
+<div class="kid-container">
+<p class="kid-name"><img class="kid-pic" src="../../assets/images/kendall.jpeg">Kendall</p>
+
+<div class="clear"></div>
+<table class="tasks-container">
+
+</table>
+</div>
+
+<div class="space">
+
+</div>
+
+
+<div class="unassigned-container">
+<h4>Unassigned Tasks</h4>
+<table class="unassigned">
+</table>
+</div>
+
+</body>
+
+
+
+
+<script id="task-template" type="text/x-handlebars-template">
+	<tr class='button-container'>
+	<td class="task-d"><button class="title">{{title}}</button></td><td class="point-d"><button class="point_value">{{point_value}}</button></td></tr>
+		</script>
+
+
+
+  <script src='../../assets/javascripts/jquery-2.1.4.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
+  <script src="../../assets/javascripts/handlebars-v3.0.3.js"></script>
+
+
+<script>
+$(document).ready(function(){
+  getTasks();
+});
+
+
+var getTasks = function(){
+  $.ajax({
+    url: "http://localhost:3000/families.json",
+    type: 'get',
+    dataType: 'json'
+  }).done(function(response){
+    console.log(response);
+    var template = $('#task-template').html();
+    response.forEach(function(task){
+    if(task.id < 5){
+    var render = Mustache.render(template, task);
+    $('.tasks-container').append(render);
+  }
+    else if(task.assigned_member_id === null){
+      console.log(task);
+    var render_unassigned = Mustache.render(template, task);
+    $('.unassigned').append(render_unassigned);
+
+  }
+    })
+    });
+};
+</script>
+
+
