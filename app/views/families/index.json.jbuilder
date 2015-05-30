@@ -1,4 +1,5 @@
 json.members @family do |member|
+  json.family member.family.surname
   json.role member.role
   json.name member.name
   json.points member.points
@@ -29,10 +30,6 @@ json.members @family do |member|
     json.title event.title
     json.eventDate event.event_date
     json.eventTime event.event_time
-  end
-  json.rewards member.rewards do |reward|
-    json.name
-    json.cost
   end
 end
 
