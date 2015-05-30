@@ -30,5 +30,9 @@ json.members @family do |member|
     json.eventDate event.event_date
     json.eventTime event.event_time
   end
+  json.rewards member.rewards do |reward|
+    json.name
+    json.cost
+  end
 end
 
