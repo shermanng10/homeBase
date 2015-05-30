@@ -8,4 +8,8 @@ class Member < ActiveRecord::Base
 	validates :role, :name, :family, :img_url, :color, presence: true
 	validates :points, numericality: {only_integer: true}
 
+  def tasks_left_to_do
+    self.assigned_tasks - self.completed_tasks
+  end
+
 end
