@@ -29,21 +29,17 @@
 
 
 
-<script id="task-template" type="text/x-handlebars-template">
-	<tr class='button-container'>
-	<td class="task-d"><button class="title">{{title}}</button></td><td class="point-d"><button class="point_value">{{point_value}}</button></td></tr>
-		</script>
-
 		<script id="person-template" type="text/x-handlebars-template">
 		<div class="kid-container">
 		<p class="kid-name"><%= image_tag "kendall.jpg" %>{{name}}</p>
-
 		<div class="clear"></div>
 		<table class="tasks-container">
-
+		<tr class='button-container'>
+		{{#assignedTasks}}
+	<td class="task-d"><button class="title">{{title}}</button></td><td class="point-d"><button class="point_value">{{point_value}}</button></td></tr>
+		{{/assignedTasks}}
 		</table>
 		</div>
-
 		</script>
 
 
@@ -76,15 +72,30 @@ var getTasks = function(){
     dataType: 'json'
   }).done(function(response){
     console.log(response);
-    var taskTemplate = $('#person-template').html();
-    response.members.assignedTasks.forEach(function(task){
-    	console.log(task);
+    var taskTemplate = $('#task-template').html();
+    response.members.forEach(function(member){
+    member.assignedTasks.forEach(function(task){
     	var renderTasks = Mustache.render(taskTemplate, task);
     	$('.tasks-container').append(renderTasks);
     });
     });
+    });
 };
 
+var getUnassigned = function(){
+  $.ajax({
+    url: "http://localhost:3000/families.json",
+    type: 'get',
+    dataType: 'json'
+  }).done(function(response){
+    console.log(response);
+    var template = $('#person-template').html();
+    response.members.forEach(function(member){
+    	var renderPeople = Mustache.render(template, member);
+    	$('.people-container').append(renderPeople);
+    });
+    });
+};
 
 
 
