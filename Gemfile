@@ -26,6 +26,7 @@ gem 'pg'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
+gem "paperclip", "~> 4.2"
 
 # Use Unicorn as the app server
 # gem 'unicorn'

@@ -5,34 +5,43 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-          <% if !current_user %>
-          <span id="create-account"></span>
+  <% if !current_user %>
+    <span id="create-account"></span>
+  <% end %>
+  <div class="collapse navbar-collapse">
+    <% if logged_in? %>
+      <% if parent_mode? %>
+        <%= link_to "Logout", '/logout', method: :delete, class: "logout" %>
+        <a href="#loginmodal" class="flatbtn2" id="normaltrigger">Exit Parent Mode</a>
+      <% else %>
+        <a href="#loginmodal" class="flatbtn" id="parenttrigger">Enter Parent Mode</a>
+      <% end %>
+    <% else %>
+      <div id='form-login'>
+        <%= form_tag "/login", method: "post" do %>
+        <%= label_tag :email %>:
+        <%= text_field_tag :email %>
+        <%= label_tag :password %>:
+        <%= password_field_tag :password %>
+        <%= submit_tag "sign in", :class => 'btn btn-default' %>
+        <%= link_to "Signup",  new_family_path %>
         <% end %>
       </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <% if logged_in? %>
-              <li><%= link_to "Logout", '/logout', method: :delete %></li>
-            </ul>
-          </li>
-          <% else %>
-            <div id='form-login'>
-              <%= form_tag "/login", method: "post" do %>
-              <%= label_tag :email %>:
-              <%= text_field_tag :email %>
-              <%= label_tag :password %>:
-              <%= password_field_tag :password %>
-              <%= submit_tag "sign in", :class => 'btn btn-default' %>
-              <%= link_to "Signup",  new_family_path %>
-          <% end %>
-            </div>
-          <% end %>
-          <html>
+    <% end %>
 
-        </ul>
 
+  <div id="loginmodal" style="display:none;">
+    <h1>Parent Login</h1>
+    <form id="loginform" name="loginform" method="post" action="sessions/admin">
+      <%= token_tag(nil) %>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+      <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+    </form>
+  </div>
 <%= yield %>
 
 </body>
