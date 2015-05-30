@@ -7,6 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+          <% if !current_user %>
+          <span id="create-account"></span>
+        <% end %>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
+              <li><%= link_to "Logout", '/logout', method: :delete %></li>
+            </ul>
+          </li>
+          <% else %>
+            <div id='form-login'>
+              <%= form_tag "/login", method: "post" do %>
+              <%= label_tag :email %>:
+              <%= text_field_tag :email %>
+              <%= label_tag :password %>:
+              <%= password_field_tag :password %>
+              <%= submit_tag "sign in", :class => 'btn btn-default' %>
+          <% end %>
+            </div>
+          <% end %>
+          <html>
+
+        </ul>
 
 <%= yield %>
 

@@ -1,8 +1,10 @@
 class FamiliesController < ApplicationController
+  before_action :require_login
 
   def index
-  	family = Family.find_by(id: 1)
-  	@members = family.members
+  	family = Family.find_by(id: @current_user.id)
+  	members = family.members
+  	render json: members
   end
 
   def create
@@ -24,5 +26,9 @@ class FamiliesController < ApplicationController
   private
   def family_params
   	params.require(:family).permit :surname, :email, :password
+  end
+
+  def require_login
+    !current_user
   end
 end

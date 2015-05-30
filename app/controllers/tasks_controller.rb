@@ -1,17 +1,14 @@
 class TasksController < ApplicationController
-	# before_action :require_login
+	before_action :require_login
 
 	def index
-		task = Task.where(family_id: current_user.id)
-		grouped = task.all(group: assigned_member_id)
-		# respond_to |format|
-		# 	# format.json {render json: task}
-		# 	format.html {}
+		p session[:user_id]
+		task = Task.where(family_id: session[:user_id])
 	end
 
 	def create
 		@task = Task.new(task_params)
-		@task.family_id = session[:user_id]
+		@task.family_id = @current_user.id
 		if @task.save
 			render json: @task
 		end
