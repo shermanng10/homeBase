@@ -17,4 +17,9 @@ class Member < ActiveRecord::Base
     count = self.family.members.length
     self.color = colors[count]
   end
+
+  def pending_rewards
+    self.rewards.where(status: 'pending')
+  end
+
 end
