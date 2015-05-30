@@ -7,10 +7,9 @@ class MembersController < ApplicationController
 
 	def create
 		member = Member.new(member_params)
-		member.family_id = current_user.id
-		#current_user.family.id
+		member.family_id = @current_user.id
 		if member.save
-			member.color = member.assign_color
+			member.assign_color
 			render json: member
 		else
 		end
