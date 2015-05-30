@@ -1,5 +1,5 @@
+json.familyName @family.first.family.surname
 json.members @family do |member|
-  json.family member.family.surname
   json.role member.role
   json.name member.name
   json.points member.points
@@ -32,4 +32,5 @@ json.members @family do |member|
     json.eventTime event.event_time
   end
 end
+json.unassignedTasks @family.unassigned_tasks
 
