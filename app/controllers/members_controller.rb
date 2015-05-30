@@ -2,8 +2,7 @@ class MembersController < ApplicationController
 	before_action :require_login
 
 	def index
-		members = Member.where(family_id: current_user.id)
-		render json: members
+		@members = Member.where(family_id: 2)
 	end
 
 	def create
