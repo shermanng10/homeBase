@@ -2,7 +2,7 @@ class MembersController < ApplicationController
 	before_action :require_login
 
 	def index
-		@members = Member.where(family_id: 2)
+		@members = Member.where(family_id: @current_user.id)
 	end
 
 	def create

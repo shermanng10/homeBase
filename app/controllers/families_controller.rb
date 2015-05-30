@@ -2,9 +2,7 @@ class FamiliesController < ApplicationController
   before_action :require_login
 
   def index
-  	family = Family.find_by(id: @current_user.id)
-  	members = family.members
-  	render json: members
+    @family = Member.where(family_id: @current_user.id)
   end
 
   def create

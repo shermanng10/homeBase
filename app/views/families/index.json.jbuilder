@@ -1,4 +1,4 @@
-json.members @members do |member|
+json.members @family do |member|
   json.role member.role
   json.name member.name
   json.points member.points
