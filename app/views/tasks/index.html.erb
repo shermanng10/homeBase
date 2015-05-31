@@ -61,15 +61,15 @@
 
 
 		<script id="task-template" type="text/x-handlebars-template">
-	<tr class='button-container'>
-	<td class="task-d"><button class="title">{{title}}</button></td>
-  <td class="point-d"><button class="point_value">{{point_value}}</button></td>
-  <td class="icons">
-  <%= image_tag "icons/greencheck.png" %>
-  <form id="red-x"><%= image_tag "icons/redx.png" %></form>
-  <%= image_tag "icons/redo.png" %>
-  </td>
-  </tr>
+  	<tr class='button-container'>
+    	<td class="task-d"><button class="title" name="{{id}}">{{title}}</button></td>
+      <td class="point-d"><button class="point_value">{{point_value}}</button></td>
+      <td class="icons">
+      <%= image_tag "icons/greencheck.png" %>
+      <form id="red-x"><%= image_tag "icons/redx.png" %></form>
+      <%= image_tag "icons/redo.png" %>
+      </td>
+    </tr>
 		</script>
 
   <script id="child-chore" type="text/x-handlebars-template">
