@@ -5,10 +5,14 @@ class FamiliesController < ApplicationController
     @family = Member.where(family_id: session[:user_id])
   end
 
+  def new
+
+  end
+
   def create
-  	new_family = Family.new(family_params)
-  	if new_family.save
-  		render json: new_family
+  	@new_family = Family.new(family_params)
+  	if @new_family.save
+  		render json: @new_family
   	else
   	end
   end

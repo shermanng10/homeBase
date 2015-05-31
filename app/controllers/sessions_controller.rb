@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
   end
 
   def admin
-    p "in this shit"
     user = Family.find_by(id: session[:user_id])
     if user.authenticate(params[:password])
       session[:admin] = true

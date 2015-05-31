@@ -1,7 +1,9 @@
 class RewardsController < ApplicationController
 	before_action :require_login
 	def index
-		@rewards = Reward.where(family_id: current_user.id, status: 'open')
+		@family = Member.where(family_id: session[:user_id])
+
+		# @rewards = Reward.where(family_id: current_user.id, status: 'open').group(:member_id, :id)
 	end
 
 	def create
