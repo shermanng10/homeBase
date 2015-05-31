@@ -7,7 +7,7 @@ json.members @family do |member|
   json.imgUrl member.img_url
   json.pendingRewards member.pending_rewards
   json.assignedTasks member.tasks_left_to_do do |task|
-    json.user task.title
+    json.title task.title
     json.point_value task.point_value
     json.assigned_member task.assigned_member.name
     json.deadline task.deadline
@@ -32,5 +32,5 @@ json.members @family do |member|
     json.eventTime event.event_time
   end
 end
-json.unassignedTasks @family.unassigned_tasks
+json.unassignedTasks @family.first.unassigned_tasks
 

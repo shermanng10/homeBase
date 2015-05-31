@@ -26,4 +26,8 @@ class Member < ActiveRecord::Base
     self.rewards.where(status: 'pending')
   end
 
+  def unassigned_tasks
+    Task.where(family_id: self.family.id, assigned_member_id: nil)
+  end
+
 end
