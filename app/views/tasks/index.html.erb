@@ -72,6 +72,9 @@
   </tr>
 		</script>
 
+  <script id="child-chore" type="text/x-handlebars-template">
+    <option value="{{id}}">{{name}}</option>
+  </script>
 
 <script>
 $(document).ready(function(){
@@ -90,9 +93,12 @@ var getPeople = function(){
   }).done(function(response){
     console.log(response);
     var template = $('#person-template').html();
+    var dropdown = $('#child-chore').html()
     response.members.forEach(function(member){
     	var renderPeople = Mustache.render(template, member);
+      var renderChildChores = Mustache.render(dropdown, member)
     	$('.people-container').append(renderPeople);
+      $('#child-options').append(renderChildChores);
     });
     });
 };
