@@ -1,0 +1,61 @@
+<head>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
+
+</head>
+
+<body>
+
+<div class="reward-intro">
+<h1>Fabulous Rewards!</h1>
+<h2 class="dropdown-menu">Kendall: 500 Points</h2>
+</div>
+
+<table class="rewards-container">
+
+
+
+</table>
+</div>
+
+
+
+
+</body>
+
+
+
+
+<script id="reward-template" type="text/x-handlebars-template">
+	<tr class='button-container'>
+	<td class="reward-d"><button class="name">{{name}}</button></td><td class="cost-d"><button class="cost">{{cost}}</button></td><td class="t-cat">{{category}}</td></tr>
+		</script>
+
+
+
+
+
+
+
+
+<script>
+$(document).ready(function(){
+  getRewards();
+});
+
+
+var getRewards = function(){
+  $.ajax({
+    url: "http://localhost:3000/rewards",
+    type: 'get',
+    dataType: 'json'
+  }).done(function(response){
+    console.log(response);
+    var rewardTemplate = $('#reward-template').html();
+    (response.rewards).forEach(function(reward){
+    var rewardRender = Mustache.render(rewardTemplate, reward);
+    $('.rewards-container').append(rewardRender);
+    });
+    });
+};
+
+</script>
