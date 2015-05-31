@@ -5,8 +5,10 @@
 
 <body>
 
+
 <h1 class="welcome"><span id="date"></span></h1><h2 id='weather'></h2>
 <div class="clear"></div>
+<button class="rlink"><a href="/rewards">Rewards ></a></button>
 <div class="people-container">
 
 
@@ -30,7 +32,14 @@
 		<table class="tasks-container">
 		<tr class='button-container'>
 		{{#assignedTasks}}
-	<td class="task-d"><button class="title">{{title}}</button></td><td class="point-d"><button class="point_value">{{point_value}}</button></td></tr>
+	<td class="task-d"><button class="title">{{title}}</button></td>
+  <td class="point-d"><button class="point_value">{{point_value}}</button></td>
+  <td class="icons">
+  <%= image_tag "icons/greencheck.png" %>
+  <%= image_tag "icons/redx.png" %>
+  <%= image_tag "icons/redo.png" %>
+  </td>
+  </tr>
 		{{/assignedTasks}}
 		</table>
 		</div>
@@ -40,7 +49,14 @@
 
 		<script id="task-template" type="text/x-handlebars-template">
 	<tr class='button-container'>
-	<td class="task-d"><button class="title">{{title}}</button></td><td class="point-d"><button class="point_value">{{point_value}}</button></td></tr>
+	<td class="task-d"><button class="title">{{title}}</button></td>
+  <td class="point-d"><button class="point_value">{{point_value}}</button></td>
+  <td class="icons">
+  <%= image_tag "icons/greencheck.png" %>
+  <%= image_tag "icons/redx.png" %>
+  <%= image_tag "icons/redo.png" %>
+  </td>
+  </tr>
 		</script>
 
 
