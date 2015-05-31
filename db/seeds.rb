@@ -16,97 +16,97 @@ Member.create!(name: "Tywin",
 							family_id: 1,
 							points: 3,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Tyrion",
 							role: "son",
 							family_id: 1,
 							points: 78,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Cersei",
 							role: "daughter",
 							family_id: 1,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Bob",
 							role: "son",
 							family_id: 1,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Eddard",
 							role: "father",
 							family_id: 2,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Rob",
 							role: "son",
 							family_id: 2,
 							points: 14,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Jon",
 							role: "son",
 							family_id: 2,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Arya",
 							role: "daughter",
 							family_id: 2,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Dayanares",
 							role: "mother",
 							family_id: 3,
 							points: -4,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Barry",
 							role: "son",
 							family_id: 3,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Mendel",
 							role: "son",
 							family_id: 3,
 							points: 10,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Schlomo",
 							role: "son",
 							family_id: 3,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Kris",
 							role: "mother",
 							family_id: 4,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Kourtney",
 							role: "daughter",
 							family_id: 4,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Kylie",
 							role: "daughter",
 							family_id: 4,
 							points: 45,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Kendall",
 							role: "daughter",
 							family_id: 4,
 							points: 0,
 							color: "red",
-							img_url: "this is a thing")
+							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 
 task1 = Task.create!(title: "Empty the dishwasher" ,
 										point_value: 25,
@@ -176,3 +176,6 @@ reward9 = Reward.create!(name: "XBoxOne", category:"Technology", cost: 5000, fam
 reward10 = Reward.create!(name: "Soda", category:"Delicious Food", cost: 20, family_id: 2, member_id: 7)
 reward11 = Reward.create!(name: "Shelter", category:"Basic Living", cost: 15, family_id: 2, member_id: 5, status:"pending")
 reward12 = Reward.create!(name: "Gruel", category:"Basic Living", cost: 20, family_id: 2, member_id: 8)
+
+reward13 = Reward.create!(name: "Basketball", category:"Technology", cost: 20, family_id: 4, member_id: 15)
+reward14 = Reward.create!(name: "Pack of Gum", category:"Basic Living", cost: 100, family_id: 4, member_id: 15)
