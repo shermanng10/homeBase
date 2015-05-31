@@ -16,6 +16,16 @@ Rails.application.routes.draw do
   post "sessions/admin" => "sessions#admin"
   get "sessions/normal" => "sessions#normal_mode"
 
+  post 'members/give_reward' => 'members#give_reward'
+  post 'members/deny_reward' => 'members#deny_reward'
+
+  post 'members/add_points' => 'members#add_points'
+  post 'members/remove_points' => 'members#remove_points'
+
+  post 'tasks/kid_complete' => 'tasks#kid_complete'
+  post 'tasks/parent_delete' => 'tasks#parent_delete'
+  post 'tasks/parent_redo' => 'tasks#parent_redo'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
