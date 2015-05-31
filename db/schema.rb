@@ -58,14 +58,14 @@ ActiveRecord::Schema.define(version: 20150531134126) do
   end
 
   create_table "members", force: :cascade do |t|
-    t.string   "role",                    null: false
-    t.string   "name",                    null: false
-    t.integer  "family_id",               null: false
+    t.string   "role",                                                                        null: false
+    t.string   "name",                                                                        null: false
+    t.integer  "family_id",                                                                   null: false
     t.integer  "task_points", default: 0
-    t.string   "color",                   null: false
-    t.string   "img_url",                 null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "color"
+    t.string   "img_url",     default: "http://media.giphy.com/media/F5njAlGB0wpy/giphy.gif"
+    t.datetime "created_at",                                                                  null: false
+    t.datetime "updated_at",                                                                  null: false
     t.integer  "sash_id"
     t.integer  "level",       default: 0
   end

@@ -1,18 +1,17 @@
 class MembersController < ApplicationController
-	# before_action :require_login
+	before_action :require_login
 
-	def index
-		@members = Member.where(family_id: @current_user.id)
+	def new
+		@member = Member.new
 	end
 
 	def create
-		member = Member.new(member_params)
-		member.family_id = @current_user.id
-		if member.save
-			member.assign_color
-			render json: member
-		else
-		end
+		@member = Member.new(member_params)
+		@member.family_id = current_user.id
+		@member.save
+		@member.assign_color
+		@member.save
+		# redirect_to :back
 	end
 
 	def destroy
@@ -21,7 +20,6 @@ class MembersController < ApplicationController
 			if member.destroy
 				all_members = Member.all
 				render json: all_members
-			else
 			end
 		else
 			#can't delete someone not in your family.
@@ -33,7 +31,7 @@ class MembersController < ApplicationController
 		member = Member.find_by(id: params[:member_id])
 		reward = Reward.find_by(id: params[:reward_id])
 		member.task_points -= reward.cost
-		member.save 
+		member.save
 		reward.status = 'closed'
 	end
 
@@ -43,7 +41,7 @@ class MembersController < ApplicationController
 		reward.status = 'open'
 	end
 
-	def add_points points 
+	def add_points points
 		member = Member.find_by(id: params[:member_id])
 		member.task_points += points
 		member.save
@@ -57,7 +55,7 @@ class MembersController < ApplicationController
 
 	private
 	def member_params
-		params.require(:member).permit :role, :name, :img_url
+		params.require(:member).permit :role, :name
 	end
 
 	def require_login

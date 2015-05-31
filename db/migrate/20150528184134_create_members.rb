@@ -5,8 +5,8 @@ class CreateMembers < ActiveRecord::Migration
     	t.string :name, null: false
     	t.integer :family_id, null: false
     	t.integer :task_points, default: 0
-    	t.string :color, null: false
-    	t.string :img_url, null: false
+    	t.string :color
+    	t.string :img_url, default: "http://media.giphy.com/media/F5njAlGB0wpy/giphy.gif"
 
       t.timestamps null: false
     end
