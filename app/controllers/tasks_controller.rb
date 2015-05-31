@@ -30,8 +30,9 @@ class TasksController < ApplicationController
 
 	def kid_complete
 		task = Task.find_by(id: params[:task_id])
-		task.completed_member_id = task.assigned_member_id
+		task.completed_member_id = params[:member_id]
 		task.save
+		redirect_to :back
 	end
 
 

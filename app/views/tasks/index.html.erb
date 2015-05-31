@@ -45,13 +45,21 @@
 		<table class="tasks-container">
 		<tr class='button-container'>
 		{{#assignedTasks}}
-	<td class="task-d"><button class="title">{{title}}</button></td>
+	<td class="task-d">
+  <form class = "chore-form">
+  <input type="hidden" name="task_id" value="{{task_id}}">
+  <input type="hidden" name="member_id" value="{{id}}">
+  <input type="submit" value="{{title}}" />
+  </form>
+  </td>
   <td class="point-d"><button class="point_value">{{point_value}}</button></td>
+  <% if session[:admin] == true %>
   <td class="icons">
   <%= image_tag "icons/greencheck.png" %>
   <%= image_tag "icons/redx.png" %>
   <%= image_tag "icons/redo.png" %>
   </td>
+  <% end %>
   </tr>
 		{{/assignedTasks}}
 		</table>
@@ -62,13 +70,15 @@
 
 		<script id="task-template" type="text/x-handlebars-template">
   	<tr class='button-container'>
-    	<td class="task-d"><button class="title" name="{{id}}">{{title}}</button></td>
+    	<td class="task-d"><button type='button' class="title" name="{{id}}">{{title}}</button></td>
       <td class="point-d"><button class="point_value">{{point_value}}</button></td>
-      <td class="icons">
-      <%= image_tag "icons/greencheck.png" %>
-      <form id="red-x"><%= image_tag "icons/redx.png" %></form>
-      <%= image_tag "icons/redo.png" %>
-      </td>
+
+        <td class="icons">
+        <%= image_tag "icons/greencheck.png" %>
+        <form id="red-x"><%= image_tag "icons/redx.png" %></form>
+        <%= image_tag "icons/redo.png" %>
+        </td>
+
     </tr>
 		</script>
 
@@ -80,10 +90,24 @@
 $(document).ready(function(){
 	var date = new Date()
 	$('#date').text(date.toDateString());
-	getPeople();
+  getPeople();
   getUnassigned();
+  $(document).on('submit','.chore-form', updateChore);
 });
 
+var updateChore = function(e){
+  console.log($(e.target))
+  e.preventDefault();
+  $.ajax({
+    url: "tasks/kid_complete",
+    type: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    console.log(response)
+  }).fail(function(error){
+    console.log(error)
+  })
+};
 
 var getPeople = function(){
   $.ajax({
