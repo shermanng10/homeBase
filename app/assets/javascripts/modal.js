@@ -87,6 +87,7 @@ var createMember = function(event){
   }).done(function(response){
     location.reload(false)
   }).fail(function(error){
+    location.reload(false);
     console.log(error, "hello");
   });
 };

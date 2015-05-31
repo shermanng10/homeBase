@@ -11,7 +11,7 @@ class MembersController < ApplicationController
 		@member.save
 		@member.assign_color
 		@member.save
-		render json: @member, status: 200
+		# redirect_to :back
 	end
 
 	def destroy
