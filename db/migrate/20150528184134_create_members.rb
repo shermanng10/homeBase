@@ -4,7 +4,7 @@ class CreateMembers < ActiveRecord::Migration
     	t.string :role, null: false
     	t.string :name, null: false
     	t.integer :family_id, null: false
-    	t.integer :points, default: 0
+    	t.integer :task_points, default: 0
     	t.string :color, null: false
     	t.string :img_url, null: false
 
