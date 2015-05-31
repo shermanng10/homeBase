@@ -29,17 +29,18 @@ class TasksController < ApplicationController
 		task.save
 	end
 
-	# def parent_complete
-	# 	task = Task.find_by(id: params[:task_id])
-	# 	member = Member.find_by(id: params[:task_id])
-	# 	task.completed? = true
-	# 	member.task_points += task.point_value
-	# 	member.save
-	# end
+
+	def parent_complete
+		task = Task.find_by(id: params[:task_id])
+		member = Member.find_by(id: params[:task_id])
+		task.complete = true
+		member.task_points += task.point_value
+		member.save
+	end
 
 	def parent_delete
 		task = Task.find_by(id: params[:task_id])
-		task.delete 
+		task.delete
 		task.save
 	end
 
@@ -56,7 +57,7 @@ class TasksController < ApplicationController
 
 	def require_login
 		if !current_user
-			
+
 		end
 	end
 end
