@@ -64,6 +64,19 @@ var switchMode = function(e) {
     })
 }
 
+var parentMode = function(e) {
+    e.preventDefault();
+
+    $.ajax({
+        url: "sessions/admin",
+        method: "GET"
+    }).done(function(response) {
+        location.reload(false);
+    }).fail(function(error) {
+        console.log(error)
+    })
+}
+
 var createMember = function(event){
   event.preventDefault();
   console.log($(event.target).serialize());

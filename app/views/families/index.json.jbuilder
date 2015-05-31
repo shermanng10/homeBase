@@ -8,7 +8,8 @@ json.members @family do |member|
   json.badges member.badges
   json.imgUrl member.img_url
   json.pendingRewards member.pending_rewards
-  json.assignedTasks member.tasks_left_to_do do |task|
+  json.assignedTasks member.assigned_tasks do |task|
+    json.task_id task.id
     json.title task.title
     json.point_value task.point_value
     json.assigned_member task.assigned_member.name
