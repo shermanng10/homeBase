@@ -6,7 +6,7 @@
 
 <body>
 
-<h1 class="welcome">Today's Date</h1><h2 class='weather'>73 and Sunny</h2>
+<h1 class="welcome"><span id="date"></span></h1><h2 class='weather'>73 and Sunny</h2>
 <div class="clear"></div>
 <div class="people-container">
 
@@ -20,7 +20,7 @@
 
 <div class="unassigned-container">
 <h4>Unassigned Tasks</h4>
-<table class="unassigned">
+<table id="unassigned">
 </table>
 </div>
 
@@ -42,11 +42,21 @@
 		</div>
 		</script>
 
+		<script id="task-template" type="text/x-handlebars-template">
+	<tr class='button-container'>
+	<td class="task-d"><button class="title">{{title}}</button></td><td class="point-d"><button class="point_value">{{point_value}}</button></td></tr>
+		</script>
+
 
 <script>
 $(document).ready(function(){
+	var date = new Date()
+	$('#date').text(date.toDateString());
 	getPeople();
-  getTasks();
+  getUnassigned();
+
+
+
 });
 
 
@@ -56,7 +66,6 @@ var getPeople = function(){
     type: 'get',
     dataType: 'json'
   }).done(function(response){
-    console.log(response);
     var template = $('#person-template').html();
     response.members.forEach(function(member){
     	var renderPeople = Mustache.render(template, member);
@@ -65,22 +74,6 @@ var getPeople = function(){
     });
 };
 
-var getTasks = function(){
-	$.ajax({
-    url: "http://localhost:3000/families.json",
-    type: 'get',
-    dataType: 'json'
-  }).done(function(response){
-    console.log(response);
-    var taskTemplate = $('#task-template').html();
-    response.members.forEach(function(member){
-    member.assignedTasks.forEach(function(task){
-    	var renderTasks = Mustache.render(taskTemplate, task);
-    	$('.tasks-container').append(renderTasks);
-    });
-    });
-    });
-};
 
 var getUnassigned = function(){
   $.ajax({
@@ -88,12 +81,12 @@ var getUnassigned = function(){
     type: 'get',
     dataType: 'json'
   }).done(function(response){
-    console.log(response);
-    var template = $('#person-template').html();
-    response.members.forEach(function(member){
-    	var renderPeople = Mustache.render(template, member);
-    	$('.people-container').append(renderPeople);
-    });
+    var taskTemplate = $('#task-template').html();
+    response.unassignedTasks.forEach(function(task){
+    	console.log(task)
+    	var renderUnassigned = Mustache.render(taskTemplate, task);
+    	$('#unassigned').append(renderUnassigned);
+    })
     });
 };
 

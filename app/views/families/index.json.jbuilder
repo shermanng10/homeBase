@@ -32,5 +32,5 @@ json.members @family do |member|
     json.eventTime event.event_time
   end
 end
-json.unassignedTasks @family.unassigned_tasks
+json.unassignedTasks @family.first.unassigned_tasks
 

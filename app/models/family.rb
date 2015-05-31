@@ -9,7 +9,4 @@ class Family < ActiveRecord::Base
 	validates :email, uniqueness: true
 	validates :password, length: { in: 6..20 }
 
-  def unassigned_tasks
-    self.tasks.where(assigned_member_id: nil)
-  end
 end
