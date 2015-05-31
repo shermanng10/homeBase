@@ -27,6 +27,7 @@ gem 'pg'
 gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
 gem "paperclip", "~> 4.2"
+gem 'aws-sdk'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
