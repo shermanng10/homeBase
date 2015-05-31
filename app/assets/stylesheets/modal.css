@@ -43,6 +43,12 @@ body {
   font-style: italic;
 }
 
+#weather {
+  margin-right:15px;
+  float:right;
+  font-size: 30px;
+}
+
 br { display: block; line-height: 2.2em; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }

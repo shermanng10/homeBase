@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <head>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
@@ -26,10 +25,6 @@
 </div>
 
 </body>
-
-
-
-
 		<script id="person-template" type="text/x-handlebars-template">
 		<div class="kid-container">
 		<p class="kid-name"><%= image_tag "kendall.jpg" %>{{name}}</p>
@@ -65,6 +60,7 @@ var getPeople = function(){
     type: 'get',
     dataType: 'json'
   }).done(function(response){
+    console.log(response);
     var template = $('#person-template').html();
     response.members.forEach(function(member){
     	var renderPeople = Mustache.render(template, member);
@@ -82,7 +78,6 @@ var getUnassigned = function(){
   }).done(function(response){
     var taskTemplate = $('#task-template').html();
     response.unassignedTasks.forEach(function(task){
-    	console.log(task)
     	var renderUnassigned = Mustache.render(taskTemplate, task);
     	$('#unassigned').append(renderUnassigned);
     })
