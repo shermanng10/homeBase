@@ -1,4 +1,5 @@
 class Member < ActiveRecord::Base
+
   has_merit
 
   # has_attached_file :img_url, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
@@ -11,6 +12,7 @@ class Member < ActiveRecord::Base
 
   validates :role, :name, :family, :img_url, :color, presence: true
   validates :task_points, numericality: {only_integer: true}
+
   # validates_attachment_content_type :img_url, :content_type => /\Aimage\/.*\Z/
 
   def tasks_left_to_do
