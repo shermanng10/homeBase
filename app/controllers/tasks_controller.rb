@@ -23,6 +23,31 @@ class TasksController < ApplicationController
 		end
 	end
 
+	def kid_complete
+		task = Task.find_by(id: params[:task_id])
+		task.completed_member_id = task.assigned_member_id
+		task.save
+	end
+
+	def parent_complete
+		task = Task.find_by(id: params[:task_id])
+		member = Member.find_by(id: params[:task_id])
+		task.completed? = true
+		member.task_points += task.point_value
+		member.save
+	end
+
+	def parent_delete
+		task = Task.find_by(id: params[:task_id])
+		task.delete 
+		task.save
+	end
+
+	def parent_redo
+		task = Task.find_by(id: params[:task_id])
+		task.completed_member_id = nil
+		task.save
+	end
 
 	private
 	def task_params
@@ -31,7 +56,7 @@ class TasksController < ApplicationController
 
 	def require_login
 		if !current_user
-			# render json: [{title: "Tanya is catty"}]
+			
 		end
 	end
 end

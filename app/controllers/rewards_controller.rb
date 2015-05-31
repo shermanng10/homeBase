@@ -34,9 +34,15 @@ class RewardsController < ApplicationController
 		end
 	end
 
+	def buy_reward
+		reward = Reward.find_by(id: params[:reward_id])
+		reward.status = 'pending'
+		reward.save
+	end
+
 	private
 	def reward_params
-		params.require(:reward).permit :name, :cost, :category
+		params.require(:reward).permit :name, :cost, :category, :member_id
 	end
 
 	def require_login
