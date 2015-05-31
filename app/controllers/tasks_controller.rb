@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
-	before_action :require_login
+	skip_before_filter  :verify_authenticity_token
+	# before_action :require_login
 
 	def index
 		p session[:user_id]
@@ -7,8 +8,12 @@ class TasksController < ApplicationController
 	end
 
 	def create
-		@task = Task.new(task_params)
-		@task.family_id = @current_user.id
+		p params
+		@task = Task.new
+		@task.point_value = params[:points]
+		@task.title = params[:title]
+		@task.family_id = current_user.id
+		@task.assigned_member_id = params[:name]
 		if @task.save
 			render json: @task
 		end
@@ -52,7 +57,7 @@ class TasksController < ApplicationController
 
 	private
 	def task_params
-		params.require(:task).permit :title, :point_value, :assigned_member_id, :deadline
+		params.require(:task).permit :title, :points, :name, :deadline
 	end
 
 	def require_login

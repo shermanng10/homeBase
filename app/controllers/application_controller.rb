@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :null_session
 	helper_method :current_user, :log_in, :logged_in?, :parent_mode?
 
   def current_user
