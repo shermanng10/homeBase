@@ -6,13 +6,15 @@ class FamiliesController < ApplicationController
   end
 
   def new
-
+    @new_family = Family.new
   end
 
   def create
   	@new_family = Family.new(family_params)
   	if @new_family.save
-  		render json: @new_family
+  		redirect_to :root
+      session[:user_id] = @new_family.id
+      session[:admin] = true
   	else
   	end
   end
