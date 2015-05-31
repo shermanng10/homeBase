@@ -126,7 +126,7 @@ ActiveRecord::Schema.define(version: 20150531134126) do
     t.integer  "assigned_member_id"
     t.integer  "completed_member_id"
     t.date     "deadline"
-    t.boolean  "complete?",           default: false
+    t.boolean  "complete",            default: false
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end

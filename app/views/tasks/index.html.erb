@@ -55,9 +55,20 @@
   <td class="point-d"><button class="point_value">{{point_value}}</button></td>
   <% if session[:admin] == true %>
   <td class="icons">
-  <%= image_tag "icons/greencheck.png" %>
-  <%= image_tag "icons/redx.png" %>
-  <%= image_tag "icons/redo.png" %>
+  <form class="approve-chore">
+  <input type="hidden" name="task_id" value="{{task_id}}">
+  <input type="image" src="<%= image_path('icons/greencheck.png') %>">
+  </form>
+  <td class="icons">
+  <form class="reject-chore">
+  <input type="hidden" name="task_id" value="{{task_id}}">
+  <input type="image" src="<%= image_path('icons/redx.png') %>">
+  </form>
+  <td class="icons">
+  <form class="redo-chore">
+  <input type="hidden" name="task_id" value="{{task_id}}">
+  <input type="image" src="<%= image_path('icons/redo.png') %>">
+  </form>
   </td>
   <% end %>
   </tr>

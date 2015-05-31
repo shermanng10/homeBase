@@ -7,8 +7,7 @@ class CreateTasks < ActiveRecord::Migration
     	t.integer :assigned_member_id
     	t.integer :completed_member_id
     	t.date :deadline
-      t.boolean :complete?, default: false
-      
+      t.boolean :complete, default: false
 
       t.timestamps null: false
     end
