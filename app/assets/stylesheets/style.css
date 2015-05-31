@@ -55,6 +55,8 @@ border-radius: 20px;
 width: 35vw;
 margin: 0 auto;
 padding-bottom: 20px;
+padding-left:5px;
+padding-top: 5px;
 }
 
 .kid-name{
@@ -65,7 +67,7 @@ padding-bottom: 20px;
 }
 
 p img {
-  border-radius:10px;
+  border-radius:20px;
 	width:92px;
 	margin-right:20px;
    vertical-align: text-bottom;
@@ -130,7 +132,7 @@ p img {
 }
 
 .space{
-	margin-top:100px;
+	margin-bottom: 35px;
 }
 
 .unassigned-container{
@@ -138,6 +140,7 @@ p img {
 	margin: 0 auto;
 	border-radius: 10px;
 	border: 1px solid black;
+	padding:5px;
 }
 
 .unassigned {
