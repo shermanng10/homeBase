@@ -1,6 +1,6 @@
 class Member < ActiveRecord::Base
-  has_attached_file :img_url, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-  validates_attachment_content_type :img_url, :content_type => /\Aimage\/.*\Z/
+  # has_attached_file :img_url, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  # validates_attachment_content_type :img_url, :content_type => /\Aimage\/.*\Z/
 
   belongs_to :family
   has_many :events, dependent: :destroy
@@ -10,7 +10,7 @@ class Member < ActiveRecord::Base
 
   validates :role, :name, :family, :img_url, :color, presence: true
   validates :points, numericality: {only_integer: true}
-  validates_attachment_content_type :img_url, :content_type => /\Aimage\/.*\Z/
+  # validates_attachment_content_type :img_url, :content_type => /\Aimage\/.*\Z/
 
   def tasks_left_to_do
     self.assigned_tasks - self.completed_tasks
@@ -31,3 +31,10 @@ class Member < ActiveRecord::Base
   end
 
 end
+has_attached_file :download,
+                    :storage => :s3,
+                    :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
+
+  def s3_credentials
+    {:bucket => "xxx", :access_key_id => "xxx", :secret_access_key => "xxx"}
+  end
