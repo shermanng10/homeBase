@@ -2,7 +2,7 @@ json.familyName @family.first.family.surname
 json.members @family do |member|
   json.role member.role
   json.name member.name
-  json.points member.points
+  json.task_points member.task_points
   json.color member.color
   json.imgUrl member.img_url
   json.pendingRewards member.pending_rewards
