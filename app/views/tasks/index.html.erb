@@ -53,7 +53,7 @@
   <td class="point-d"><button class="point_value">{{point_value}}</button></td>
   <td class="icons">
   <%= image_tag "icons/greencheck.png" %>
-  <%= image_tag "icons/redx.png" %>
+  <form id="red-x"><%= image_tag "icons/redx.png" %></form>
   <%= image_tag "icons/redo.png" %>
   </td>
   </tr>
@@ -98,6 +98,14 @@ var getUnassigned = function(){
     })
     });
 };
+
+// var deleteTask = function(){
+//   $.ajax({
+//     url:"http://localhost:3000/families.json",
+//     type:'delete',
+//     data: ,
+//   });
+// }
 
 
 </script>
