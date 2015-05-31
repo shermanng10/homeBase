@@ -5,7 +5,6 @@
 
 <body>
 
-
 <h1 class="welcome"><span id="date"></span></h1><h2 id='weather'></h2>
 <div class="clear"></div>
 <button class="rlink"><a href="/rewards">Rewards ></a></button>
@@ -23,7 +22,20 @@
 
 </table>
 </div>
-
+<div id="login-box" class="login-popup">
+  <form method="post" class="create-member" action="/members">
+    <%= token_tag(nil) %>
+    <label>
+    <span>Role in family</span>
+    <input name="member[role]" type="text" placeholder="Role">
+    </label>
+    <label>
+    <span>Name</span>
+    <input name="member[name]" type="text" placeholder="Name">
+    </label>
+    <input class="button" type="submit" value="submit" />
+  </form>
+</div>
 </body>
 		<script id="person-template" type="text/x-handlebars-template">
 		<div class="kid-container">
