@@ -21,6 +21,7 @@
 <div class="unassigned-container">
 <h4>Unassigned Tasks</h4>
 <table id="unassigned">
+
 </table>
 </div>
 
@@ -42,6 +43,7 @@
 		</div>
 		</script>
 
+
 		<script id="task-template" type="text/x-handlebars-template">
 	<tr class='button-container'>
 	<td class="task-d"><button class="title">{{title}}</button></td><td class="point-d"><button class="point_value">{{point_value}}</button></td></tr>
@@ -54,9 +56,6 @@ $(document).ready(function(){
 	$('#date').text(date.toDateString());
 	getPeople();
   getUnassigned();
-
-
-
 });
 
 
@@ -89,9 +88,6 @@ var getUnassigned = function(){
     })
     });
 };
-
-
-
 
 
 </script>
