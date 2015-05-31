@@ -5,6 +5,7 @@
 
 <body>
 
+<a href="#login-box" class="login-window">Add Member</a>
 <h1 class="welcome"><span id="date"></span></h1><h2 id='weather'></h2>
 <div class="clear"></div>
 <button class="rlink"><a href="/rewards">Rewards ></a></button>
@@ -71,6 +72,9 @@
   </tr>
 		</script>
 
+  <script id="child-chore" type="text/x-handlebars-template">
+    <option value="{{id}}">{{name}}</option>
+  </script>
 
 <script>
 $(document).ready(function(){
@@ -89,9 +93,12 @@ var getPeople = function(){
   }).done(function(response){
     console.log(response);
     var template = $('#person-template').html();
+    var dropdown = $('#child-chore').html()
     response.members.forEach(function(member){
     	var renderPeople = Mustache.render(template, member);
+      var renderChildChores = Mustache.render(dropdown, member)
     	$('.people-container').append(renderPeople);
+      $('#child-options').append(renderChildChores);
     });
     });
 };
