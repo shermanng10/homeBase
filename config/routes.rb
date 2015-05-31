@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :tasks, :events, :rewards
   # You can have the root of your site routed with "root"
   root 'tasks#index'
-  # get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
@@ -25,7 +24,7 @@ Rails.application.routes.draw do
   post 'tasks/kid_complete' => 'tasks#kid_complete'
   post 'tasks/parent_delete' => 'tasks#parent_delete'
   post 'tasks/parent_redo' => 'tasks#parent_redo'
-  
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
