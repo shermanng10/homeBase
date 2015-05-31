@@ -25,9 +25,13 @@
 
 
 <script id="reward-template" type="text/x-handlebars-template">
-<h4>{{forMember}}</h4>
+<div class="reward-box">
+<h4 class="rewardMember">{{name}}  <span style="color:#3498db">{{task_points}}</span></h4>
+  {{#rewards}}
 	<tr class='button-container'>
-	<td class="reward-d"><button class="name">{{name}}</button></td><td class="cost-d"><button class="cost">{{cost}}</button></td><td class="t-cat">{{category}}</td></tr>
+	<td class="reward-d"><button class="name">{{name}}</button></td><td class="cost-d"><button class="cost">{{cost}}</button></td><td class="t-cat"></td></tr><br>
+  {{/rewards}}
+  </div>
 		</script>
 
 
@@ -51,8 +55,8 @@ var getRewards = function(){
   }).done(function(response){
     console.log(response);
     var rewardTemplate = $('#reward-template').html();
-    (response.rewards).forEach(function(reward){
-    var rewardRender = Mustache.render(rewardTemplate, reward);
+    response.members.forEach(function(member){
+    var rewardRender = Mustache.render(rewardTemplate, member);
     $('.rewards-container').append(rewardRender);
     });
     });

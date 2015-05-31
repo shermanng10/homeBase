@@ -174,3 +174,16 @@ p img {
   border-radius: 10px;
   margin-right:20px;
 }
+
+.rewardMember{
+	font-size:24px;
+	margin: 10px;
+}
+
+.reward-box{
+	padding: 5px;
+	border: 1px solid black;
+	border-radius:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
