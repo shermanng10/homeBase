@@ -222,3 +222,17 @@ p img {
 	text-decoration: none;
 	text-align:center;
 }
+
+.add-member a{
+	text-decoration: none;
+}
+
+.chore-window{
+	text-decoration: none;
+	text-align: center;
+}
+
+.chore-button{
+	float:left;
+}
+
