@@ -30,10 +30,17 @@
     {{/badges}}
     {{#pendingRewards}}
   <div style="text-align:center">
+
+  <form class='giveanewreward'>
+    <input type='hidden' name='reward_name' value='{{id}}'>
     <div class="pendingReward">  - {{name}} -  </div>
+    <input type='image' style='height: 25px' src='/assets/greencheck.png'>
+  </form>
+
   </div> 
   {{/pendingRewards}}
 </script>
+
 
 <% if parent_mode? %>
   <a href="#points-box" id='addpointsbtn' class="points-window">Add Points</a>
@@ -115,6 +122,7 @@ $(document).on('click', 'a.close, #mask', function() {
 });
 
 $(document).ready(function() {
+  $(document).on('submit', '.giveanewreward', giveReward)
   $('a.rmpoints-window').click(function() {
 
     var rmpointsBox = $(this).attr('href');
@@ -145,6 +153,21 @@ $(document).on('click', 'a.close, #mask', function() {
 });
 
 });
+
+var giveReward = function(e){
+  e.preventDefault();
+  $.ajax({
+    url: '/members/give_reward',
+    method: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    console.log(response)
+    console.log("FINISHED")
+  }).fail(function(response){
+    console.log("ERROR")
+    console.log(response)
+  })
+};
 
 var givePoints = function(e){
   e.preventDefault();

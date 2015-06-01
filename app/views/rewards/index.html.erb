@@ -36,18 +36,7 @@
 </div>
 </body>
 
-<div id="overlay">
-     <div>
-      <form class='purchase'>
-        <p>Are you sure you want to buy this reward?</p>
-        <select>
-          <option value='yes'>Yes</option>
-          <option value='no'> No</option>
-        </select>
-        <input type='submit' value='Submit!'>
-      </form>
-     </div>
-</div>
+
 
 <script id="reward-template" type="text/x-handlebars-template">
 <div class="reward-box">
@@ -84,9 +73,22 @@ var buyReward = function(e){
   }).fail(function(response){
     console.log(response)
   })
-}
+};
+
+// var approveReward = function(e){
+//   e.preventDefault();
+//   $.ajax({
+//     url: '/members/give_reward',
+//     method: 'post',
+//     data: $(e.target).serialize()
+//   }).done(function(response){
+//     console.log(response)
+//     console.log('FISHIN')
+//   })
+// }
 
 $(document).on('submit', '.buyreward', buyReward);
+// $(document).on('submit', '.giveanewreward', approveReward)
 
 </script>
 

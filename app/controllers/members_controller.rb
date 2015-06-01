@@ -26,9 +26,9 @@ class MembersController < ApplicationController
 	end
 
 	def give_reward
-		member = Member.find_by(id: params[:member_id])
-		reward = Reward.find_by(id: params[:reward_id])
-		member.task_points -= reward.cost
+		p params
+		reward = Reward.find_by(id: params[:id])
+		reward.member.task_points -= reward.cost
 		member.save
 		reward.status = 'closed'
 	end
