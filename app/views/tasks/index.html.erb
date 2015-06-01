@@ -5,10 +5,53 @@
 
 <body>
 
-<a href="#login-box" class="login-window">Add Member</a>
+
 <h1 class="welcome"><span id="date"></span></h1><h2 id='weather'></h2>
 <div class="clear"></div>
 <button class="rlink"><a href="/rewards" onclick="getRewards()">Rewards></a></button>
+
+<a href="#chore-box" class="chore-window">New Chore</a>
+    <div id="chore-box" class="chore-popup">
+    <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <form method="post" class="signin" action="tasks">
+      <%= token_tag(nil) %>
+      <fieldset class="textbox">
+        <label class="username">
+        <span>New Chore</span>
+        <input id="title" name="title" type="text" autocomplete="on" placeholder="Chore">
+        </label>
+        <label class="points">
+        <span>Point Value</span>
+        <input id="points" name="points" type="text" autocomplete="on" placeholder="Point Value">
+        </label>
+        <label class="deadline">
+        <span>Deadline</span>
+        <input id="deadline" name="deadline" type="date" autocomplete="on" placeholder="Deadline" value='2015-05-31'>
+        </label>
+        <label class="assign">
+          <span>Assign to:</span>
+          <select id="child-options" name="name">
+            <option> </option>
+
+            </select>
+            <br><br>
+        </label>
+        <input type='submit' class='submitchore' name="Assign_Chore">
+      </fieldset>
+  </form>
+</div>
+<div id="loginmodal" style="display:none;">
+   <h1>Parent Login</h1>
+   <form id="loginform" name="loginform" method="post" action="sessions/admin">
+     <%= token_tag(nil) %>
+     <label for="password">Password:</label>
+     <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+     <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+   </form>
+ </div>
+<div>
+  <%= yield %>
+</div>
 <div class="people-container">
 
 
