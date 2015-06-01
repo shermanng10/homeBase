@@ -48,6 +48,7 @@ var createReward = function(e){
   })
 };
 
+
 var getRewards = function(){
   $.ajax({
     url: "http://localhost:3000/rewards",

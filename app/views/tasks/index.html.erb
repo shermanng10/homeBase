@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
+
 </head>
 
 <body>
@@ -125,22 +126,24 @@
 
 
 		<script id="task-template" type="text/x-handlebars-template">
-  	<tr class='button-container'>
-    	<td class="task-d"><button type='button' class="title" name="{{id}}">{{title}}</button></td>
-      <td class="point-d"><button class="point_value">{{point_value}}</button></td>
-
-        <td class="icons">
-        <%= image_tag "icons/greencheck.png" %>
-        <form id="red-x"><%= image_tag "icons/redx.png" %></form>
-        <%= image_tag "icons/redo.png" %>
-        </td>
-
-    </tr>
+  	<div class='button-container'>
+    <form class="unassigned-task">
+    	<span class="task-d"><input type="submit" value="{{title}}" class="title" ></span>
+      <span class="point-d"><span class="point_value">{{point_value}}</span></span>
+      <span>
+      <input type="hidden" name="task_id" value="{{id}}">
+      <span>Assign to:</span>
+      <select name="member_id" class="unassigned-dropdown">
+      </select>
+      </span>
+    </form>
+    </div>
 		</script>
 
-  <script id="child-chore" type="text/x-handlebars-template">
+  <script id="unassigned-option" type="text/x-handlebars-template">
     <option value="{{id}}">{{name}}</option>
   </script>
+
 
 
 
