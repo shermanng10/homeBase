@@ -17,6 +17,9 @@
   <h1>The {{familyName}} Family</h1>
 </script>
 
+<script id="child-points" type="text/x-handlebars-template">
+  <option value="{{id}}">{{name}}</option>
+</script>
 
 <script id="memberMedal-template" type="text/x-handlebars-template">
   <h2 class="memberMain">{{role}}      {{name}}      
@@ -32,3 +35,138 @@
   {{/pendingRewards}}
 </script>
 
+<% if parent_mode? %>
+  <a href="#points-box" id='addpointsbtn' class="points-window">Add Points</a>
+    <div id="points-box" class="points-popup">
+    <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <form method="post" class="addpoints" action="members/add_points">
+      <%= token_tag(nil) %>
+      <fieldset class="textbox">
+        <label class="username">
+        <span>Points to Add</span>
+        <input id="addpoints" name="points" type="number" autocomplete="on" placeholder="+ points">
+        </label>
+        <label class="assign">
+          <span>Give to:</span>
+          <select class="child-points" name="name">
+            <option> </option>
+            </select>
+            <br><br>
+        </label>
+        <input type='submit' class='submitchore' name="Assign_Chore">
+      </fieldset>
+  </form>
+<% end %>
+
+<script>
+$(document).ready(function(){
+  getFamilyname();
+  getFamilymembers();
+});
+
+
+var getFamilyname = function(){
+  $.ajax({
+    url: "http://localhost:3000/families.json",
+    type: 'get',
+    dataType: 'json'
+  }).done(function(response){
+    console.log(response);
+    var familynameTemplate = $('#familyname-template').html();
+    var showName = function(name){
+    var familynameRender = Mustache.render(familynameTemplate, name);
+    $('.familyname-container').append(familynameRender);
+    };
+    showName(response)
+    });
+};
+
+
+var getFamilymembers = function(){
+  $.ajax({
+    url: "http://localhost:3000/families.json",
+    type: 'get',
+    dataType: 'json'
+  }).done(function(response){
+    var memberMedalTemplate = $('#memberMedal-template').html();
+    var dropdown = $('#child-points').html()
+    response.members.forEach(function(member){
+      console.log(member)
+      var memberMedalRender = Mustache.render(memberMedalTemplate, member);
+      var renderChildPoints = Mustache.render(dropdown, member)
+      $('.members-medals-container').append(memberMedalRender);
+      $('.child-points').append(renderChildPoints);
+    })
+    });
+};
+</script>
+<script>
+$(document).ready(function() {
+  $('a.points-window').click(function() {
+
+    var pointsBox = $(this).attr('href');
+
+    $(pointsBox).fadeIn(300);
+
+    var popMargTop = ($(pointsBox).height() + 24) / 2;
+    var popMargLeft = ($(pointsBox).width() + 24) / 2;
+
+    $(pointsBox).css({
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+
+    $('body').append('<div id="mask"></div>');
+    $('#mask').fadeIn(300);
+
+    return false;
+  });
+
+  $('.addpoints').on('submit', givePoints)
+
+// When clicking on the button close or the mask layer the popup closed
+$(document).on('click', 'a.close, #mask', function() {
+  $('#mask, .points-popup').fadeOut(300, function(e) {
+    $('#mask').remove();
+  });
+  return false;
+});
+
+
+});
+
+var givePoints = function(e){
+  e.preventDefault();
+  console.log(e.target)
+  $('#mask, .points-popup').fadeOut(300, function(e) {
+  $('#mask').remove();
+  });
+  $.ajax({
+    url: '/members/add_points',
+    method: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    console.log(response)
+    location.reload(false)
+  }).fail(function(error){
+    console.log(error)
+  })
+}
+
+var assignChore = function(e){
+  e.preventDefault();
+  $('#mask, .points-popup').fadeOut(300, function(e) {
+    $('#mask').remove();
+  });
+  $.ajax({
+    url: '/tasks',
+    method: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    console.log(response)
+    location.reload(false)
+  }).fail(function(error){
+    console.log(error)
+  })
+}
+</script>
