@@ -105,6 +105,9 @@ $(document).ready(function(){
   getUnassigned();
   $(document).on('submit','.chore-form', updateChore);
   $(document).on('submit', '.reject-chore', deleteChore);
+  $(document).on('click', '.chore-form input', function(){
+    $(this).addClass('true');
+  });
 });
 
 var deleteChore = function(e){

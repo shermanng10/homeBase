@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ $(document).ready(function() {
 	$('a.chore-window').click(function() {
 
     var choreBox = $(this).attr('href');
