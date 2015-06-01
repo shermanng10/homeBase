@@ -36,7 +36,7 @@ $(function() {
 
 
 var loginWindow = function(e){
-  var loginBox = $(e).attr('href');
+  var loginBox = ('.login-popup');
   $(loginBox).fadeIn(300);
   var popMargTop = ($(loginBox).height() + 24) / 2;
   var popMargLeft = ($(loginBox).width() + 24) / 2;

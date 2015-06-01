@@ -17,7 +17,7 @@ class TasksController < ApplicationController
 		end
 	end
 
-	def delete_task
+	def destroy
 		@task = Task.find_by(id: params[:task_id])
 		if @task.delete
 			all_tasks = Task.all
