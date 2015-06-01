@@ -30,10 +30,21 @@
     {{/badges}}
     {{#pendingRewards}}
   <div style="text-align:center">
-    <div class="pendingReward">  - {{name}} -  </div>
+  
+  <form class='giveanewreward'>
+    <input type='hidden' name='reward_id' value='{{id}}'>
+    <input type='image' style='height: 25px' src='/assets/greencheck.png'>
+  </form>
+  <div class="pendingReward">  - {{name}} -  </div>
+  <form class='denyanewreward'>
+    <input type='hidden' name='reward_id' value='{{id}}'>
+    <input type='image' style='height: 25px' src='/assets/redx.png'>
+  </form>
+
   </div> 
   {{/pendingRewards}}
 </script>
+
 
 <% if parent_mode? %>
   <a href="#points-box" id='addpointsbtn' class="points-window">Add Points</a>
@@ -115,6 +126,8 @@ $(document).on('click', 'a.close, #mask', function() {
 });
 
 $(document).ready(function() {
+  $(document).on('submit', '.giveanewreward', giveReward)
+  $(document).on('submit', '.denyanewreward', denyReward)
   $('a.rmpoints-window').click(function() {
 
     var rmpointsBox = $(this).attr('href');
@@ -145,6 +158,32 @@ $(document).on('click', 'a.close, #mask', function() {
 });
 
 });
+
+var giveReward = function(e){
+  e.preventDefault();
+  $.ajax({
+    url: '/members/give_reward',
+    method: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    getFamilymembers()
+  }).fail(function(response){
+    console.log(response)
+  })
+};
+
+var denyReward = function(e){
+  e.preventDefault();
+  $.ajax({
+    url: '/members/deny_reward',
+    method: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    getFamilymembers()
+  }).fail(function(response){
+    console.log(response)
+  })
+};
 
 var givePoints = function(e){
   e.preventDefault();
