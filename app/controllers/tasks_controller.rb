@@ -36,11 +36,8 @@ class TasksController < ApplicationController
 
 
 	def parent_complete
-		p params
 		task = Task.find_by(id: params[:task_id])
 		member = task.completed_member
-		p task
-		p member
 		task.complete = true
 		task.save
 		member.task_points += task.point_value
