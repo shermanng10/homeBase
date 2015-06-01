@@ -9,9 +9,7 @@ var approveChore = function(e){
     method: "post",
     data: $(e.target).serialize(),
   }).done(function(response){
-    console.log(response);
     location.reload(false);
   }).fail(function(error){
-    console.log(error);
   });
 }

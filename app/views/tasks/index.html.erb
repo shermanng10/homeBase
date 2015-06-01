@@ -8,7 +8,7 @@
 <a href="#login-box" class="login-window">Add Member</a>
 <h1 class="welcome"><span id="date"></span></h1><h2 id='weather'></h2>
 <div class="clear"></div>
-<button class="rlink"><a href="/rewards">Rewards ></a></button>
+<button class="rlink"><a href="/rewards">Rewards></a></button>
 <div class="people-container">
 
 
@@ -97,79 +97,6 @@
     <option value="{{id}}">{{name}}</option>
   </script>
 
-<script>
-$(document).ready(function(){
-	var date = new Date()
-	$('#date').text(date.toDateString());
-  getPeople();
-  getUnassigned();
-  $(document).on('submit','.chore-form', updateChore);
-  $(document).on('submit', '.reject-chore', deleteChore);
-});
-
-var deleteChore = function(e){
-  console.log($(e.target))
-  e.preventDefault();
-  $.ajax({
-    url: 'tasks/delete_task',
-    type: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    console.log(response)
-    location.reload(false)
-  }).fail(function(error){
-    console.log(error)
-  })
-};
-
-var updateChore = function(e){
-  e.preventDefault();
-  $.ajax({
-    url: "tasks/kid_complete",
-    type: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    console.log(response)
-  }).fail(function(error){
-    console.log(error)
-  })
-};
-
-var getPeople = function(){
-  $.ajax({
-    url: "http://localhost:3000/families.json",
-    type: 'get',
-    dataType: 'json'
-  }).done(function(response){
-    console.log(response);
-    var template = $('#person-template').html();
-    var dropdown = $('#child-chore').html()
-    response.members.forEach(function(member){
-    	var renderPeople = Mustache.render(template, member);
-      var renderChildChores = Mustache.render(dropdown, member)
-    	$('.people-container').append(renderPeople);
-      $('#child-options').append(renderChildChores);
-    });
-  });
-};
-
-
-var getUnassigned = function(){
-  $.ajax({
-    url: "http://localhost:3000/families.json",
-    type: 'get',
-    dataType: 'json'
-  }).done(function(response){
-    var taskTemplate = $('#task-template').html();
-    response.unassignedTasks.forEach(function(task){
-    	var renderUnassigned = Mustache.render(taskTemplate, task);
-    	$('#unassigned').append(renderUnassigned);
-    })
-    });
-};
-
-
-</script>
 
 
 

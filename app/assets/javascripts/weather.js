@@ -12,6 +12,5 @@ var getWeather = function(){
 //       description = response.weather[0].description
 //       $('#weather').text(temp + " and " + description)
 //     }).fail(function(error){
-//       console.log(error)
 //     })
 }
