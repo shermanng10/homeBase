@@ -27,15 +27,20 @@ class MembersController < ApplicationController
 
 	def give_reward
 		p params
-		reward = Reward.find_by(id: params[:id])
+		reward = Reward.find_by(id: params[:reward_id])
+		member = reward.member
 		reward.member.task_points -= reward.cost
 		member.save
 		reward.status = 'closed'
+		reward.save
+		redirect_to :back
 	end
 
 	def deny_reward
 		reward = Reward.find_by(id: params[:reward_id])
 		reward.status = 'open'
+		reward.save
+		redirect_to :back
 	end
 
 	def add_points 
