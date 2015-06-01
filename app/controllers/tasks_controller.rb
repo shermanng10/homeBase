@@ -45,14 +45,15 @@ class TasksController < ApplicationController
 
 	def parent_delete
 		task = Task.find_by(id: params[:task_id])
-		task.delete
-		task.save
+		task.destroy
+		redirect_to :back
 	end
 
 	def parent_redo
 		task = Task.find_by(id: params[:task_id])
 		task.completed_member_id = nil
 		task.save
+		redirect_to :back
 	end
 
 	private
