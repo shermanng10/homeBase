@@ -15,9 +15,9 @@ class Member < ActiveRecord::Base
 
   # validates_attachment_content_type :img_url, :content_type => /\Aimage\/.*\Z/
 
-  # def tasks_left_to_do
-  #   self.assigned_tasks - self.completed_tasks
-  # end
+  def tasks_left_to_do
+    self.assigned_tasks - self.completed_tasks.where(complete: true)
+  end
 
   def assign_color
     colors = ["#7E57C2", "#42A5F5", "#26A69A", "#FF9800", "#FFEE58", "#78909C", "#EC407A", "#AB47BC", "#26C6DA", "#8BC34A", "#FFCA28", "#69F0AE"]

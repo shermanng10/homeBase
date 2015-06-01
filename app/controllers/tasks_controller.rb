@@ -3,8 +3,7 @@ class TasksController < ApplicationController
 	# before_action :require_login
 
 	def index
-		p session[:user_id]
-		task = Task.where(family_id: session[:user_id])
+		task = Task.where(family_id: session[:user_id], complete: false)
 	end
 
 	def create
@@ -37,11 +36,16 @@ class TasksController < ApplicationController
 
 
 	def parent_complete
+		p params
 		task = Task.find_by(id: params[:task_id])
-		member = Member.find_by(id: params[:task_id])
+		member = task.completed_member
+		p task
+		p member
 		task.complete = true
+		task.save
 		member.task_points += task.point_value
 		member.save
+		redirect_to :back
 	end
 
 	def parent_delete

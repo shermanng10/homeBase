@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   post 'members/remove_points' => 'members#remove_points'
 
   post 'tasks/kid_complete' => 'tasks#kid_complete'
+  post 'tasks/parent_complete' => 'tasks#parent_complete'
   post 'tasks/parent_delete' => 'tasks#parent_delete'
   post 'tasks/parent_redo' => 'tasks#parent_redo'
 
