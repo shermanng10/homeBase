@@ -47,17 +47,28 @@
 		{{#assignedTasks}}
 	<td class="task-d">
   <form class = "chore-form">
-  <input type="hidden" name="task_id" value="{{task_id}}">
-  <input type="hidden" name="member_id" value="{{id}}">
-  <input type="submit" value="{{title}}" />
+    <input type="hidden" name="task_id" value="{{task_id}}">
+    <input type="hidden" name="member_id" value="{{id}}">
+    <input type="submit" value="{{title}}" />
   </form>
   </td>
   <td class="point-d"><button class="point_value">{{point_value}}</button></td>
   <% if session[:admin] == true %>
   <td class="icons">
-  <%= image_tag "icons/greencheck.png" %>
-  <%= image_tag "icons/redx.png" %>
-  <%= image_tag "icons/redo.png" %>
+   <form class="approve-chore">
+    <input type="hidden" name="task_id" value="{{task_id}}">
+    <input type="image" src="<%= image_path('icons/greencheck.png') %>">
+  </form>
+  <td class="icons">
+  <form class="reject-chore">
+    <input type="hidden" name="task_id" value="{{task_id}}">
+    <input type="image" src="<%= image_path('icons/redx.png') %>">
+  </form>
+  <td class="icons">
+  <form class="redo-chore">
+    <input type="hidden" name="task_id" value="{{task_id}}">
+    <input type="image" src="<%= image_path('icons/redo.png') %>">
+  </form>
   </td>
   <% end %>
   </tr>
@@ -93,7 +104,23 @@ $(document).ready(function(){
   getPeople();
   getUnassigned();
   $(document).on('submit','.chore-form', updateChore);
+  $(document).on('submit', '.reject-chore', deleteChore);
 });
+
+var deleteChore = function(e){
+  console.log($(e.target))
+  e.preventDefault();
+  $.ajax({
+    url: 'tasks/delete_task',
+    type: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    console.log(response)
+    location.reload(false)
+  }).fail(function(error){
+    console.log(error)
+  })
+};
 
 var updateChore = function(e){
   console.log($(e.target))
