@@ -8,7 +8,9 @@ class RewardsController < ApplicationController
 	def create
 		@reward = Reward.new(reward_params)
 		@reward.family_id = current_user.id
-		render json: @reward
+		@reward.save
+		redirect_to :back
+		# render json: @reward
 	end
 
 	def update

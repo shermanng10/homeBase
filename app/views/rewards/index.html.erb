@@ -3,10 +3,9 @@
 </head>
 
 <body>
+  <a href="#new-reward" class="new-reward-link">Add Reward</a>
 <div class="reward-intro">
 <h1>Fabulous Rewards!</h1>
-<h2 class="dropdown-menu">Kendall: 500 Points</h2>
-
 <button class="rlink"><a href="/families">Family ></a></button>
 <button class="Llink"><a href="/tasks">To Tasks</a></button>
 
@@ -16,38 +15,44 @@
 
 <div class="space"></div>
 
+<div id="new-reward" class="new-reward-popup">
+  <form method="post" class="create-reward" action="/rewards">
+    <%= token_tag(nil) %>
 
+    <label> <span>Reward Description</span>
+      <input name="reward[name]" type="text" placeholder="Description">
+    </label>
+    <label> <span>Cost</span>
+      <input name="reward[cost]" type="text" placeholder="Cost">
+    </label>
+    <label class="assign">
+      <span>Assign to:</span>
+      <select class="child-options" name="reward[member_id]">
+
+      </select>
+    </label>
+    <input class="button" type="submit" value="submit" />
+  </form>
+</div>
 </body>
 
 <script id="reward-template" type="text/x-handlebars-template">
 <div class="reward-box">
-<h4 class="rewardMember">{{name}}  <span style="color:#3498db">{{task_points}}</span></h4>
+<h4 class="rewardMember">{{name}}<span style="color:#3498db">{{task_points}}</span></h4>
   {{#rewards}}
 	<tr class='button-container'>
-	<td class="reward-d"><button class="name">{{name}}</button></td><td class="cost-d"><button class="cost">{{cost}}</button></td><td class="t-cat"></td></tr><br>
+  	<td class="reward-d">
+      <button class="name">{{name}}</button>
+    </td>
+    <td class="cost-d">
+      <button class="cost">{{cost}}</button>
+    </td>
+  </tr>
   {{/rewards}}
   </div>
-		</script>
-
-<script>
-$(document).ready(function(){
-  getRewards();
-});
-
-var getRewards = function(){
-  $.ajax({
-    url: "http://localhost:3000/rewards",
-    type: 'get',
-    dataType: 'json'
-  }).done(function(response){
-    console.log(response);
-    var rewardTemplate = $('#reward-template').html();
-
-    response.members.forEach(function(member){
-    var rewardRender = Mustache.render(rewardTemplate, member);
-    $('.rewards-container').append(rewardRender);
-    });
-    });
-};
-
 </script>
+
+<script id="child-reward" type="text/x-handlebars-template">
+  <option value="{{id}}">{{name}}</option>
+</script>
+
