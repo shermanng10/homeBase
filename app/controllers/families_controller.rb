@@ -1,8 +1,12 @@
 class FamiliesController < ApplicationController
-  before_action :require_login
+  # before_action :require_login
 
   def index
+
     @family = Member.where(family_id: session[:user_id])
+    respond_to do |format|
+      format.json {}
+    end
   end
 
   def new

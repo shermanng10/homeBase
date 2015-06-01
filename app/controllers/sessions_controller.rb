@@ -1,9 +1,10 @@
 class SessionsController < ApplicationController
   def create
+
     user = Family.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       log_in user
-      redirect_to :back
+      render json: {logged_in: true}
     else
       flash.now[:danger] = "Invalid email or password"
     end

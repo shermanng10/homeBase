@@ -7,6 +7,7 @@ class TasksController < ApplicationController
 	end
 
 	def create
+		response.headers["Access-Control-Allow-Origin"] = "*"
 		@task = Task.new
 		@task.point_value = params[:points]
 		@task.title = params[:title]
