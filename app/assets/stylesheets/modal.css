@@ -70,6 +70,21 @@ strong { font-weight: bold; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 
+#lean_overlay {
+position: fixed;
+z-index: 10000;
+top: 0px;
+left: 0px;
+height:100%;
+width:100%;
+background: #000;
+display: none;
+}
+
+#loginmodel {
+  background-color: gray;
+}
+
 
 #topbar {
   background: #4f4a41;

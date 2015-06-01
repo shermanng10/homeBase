@@ -11,7 +11,6 @@ class MembersController < ApplicationController
 		@member.save
 		@member.assign_color
 		@member.save
-		# redirect_to :back
 	end
 
 	def destroy
@@ -27,7 +26,6 @@ class MembersController < ApplicationController
 	end
 
 	def give_reward
-		#assuming the params coming back are member id and reward id
 		member = Member.find_by(id: params[:member_id])
 		reward = Reward.find_by(id: params[:reward_id])
 		member.task_points -= reward.cost
@@ -36,7 +34,6 @@ class MembersController < ApplicationController
 	end
 
 	def deny_reward
-		#assuming the param coming back is task id
 		reward = Reward.find_by(id: params[:reward_id])
 		reward.status = 'open'
 	end
