@@ -7,7 +7,6 @@ class TasksController < ApplicationController
 	end
 
 	def create
-		p params
 		@task = Task.new
 		@task.point_value = params[:points]
 		@task.title = params[:title]
@@ -19,7 +18,6 @@ class TasksController < ApplicationController
 	end
 
 	def delete_task
-		p params
 		@task = Task.find_by(id: params[:task_id])
 		if @task.delete
 			all_tasks = Task.all

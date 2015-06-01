@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def create
-    p params[:email]
     user = Family.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       log_in user
