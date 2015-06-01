@@ -19,57 +19,54 @@
 
 <div class="unassigned-container">
 <h4>Unassigned Tasks</h4>
-<table id="unassigned">
+<table id="unassigned"></table>
 
-</table>
 </div>
 <div id="login-box" class="login-popup">
   <form method="post" class="create-member" action="/members">
     <%= token_tag(nil) %>
-    <label>
-    <span>Role in family</span>
-    <input name="member[role]" type="text" placeholder="Role">
+    <label> <span>Role in family</span>
+      <input name="member[role]" type="text" placeholder="Role">
     </label>
-    <label>
-    <span>Name</span>
-    <input name="member[name]" type="text" placeholder="Name">
+    <label> <span>Name</span>
+      <input name="member[name]" type="text" placeholder="Name">
     </label>
     <input class="button" type="submit" value="submit" />
   </form>
 </div>
+
 </body>
-		<script id="person-template" type="text/x-handlebars-template">
-		<div class="kid-container">
-		<p class="kid-name"><%= image_tag "kendall.png" %>{{name}}</p>
-		<div class="clear"></div>
-		<table class="tasks-container">
-		<tr class='button-container'>
+	<script id="person-template" type="text/x-handlebars-template">
+	<div class="kid-container">
+	<p class="kid-name"><%= image_tag "kendall.png" %> {{name}} </p>
+	<div class="clear"></div>
+	<table class="tasks-container">
+	<tr class='button-container'>
 		{{#assignedTasks}}
 	<td class="task-d">
-  <form class = "chore-form">
-  <input type="hidden" name="task_id" value="{{task_id}}">
-  <input type="hidden" name="member_id" value="{{id}}">
-    <input type="submit" class = "{{isComplete}}" value="{{title}}" />
-
-  </form>
+    <form class = "chore-form">
+      <input type="hidden" name="task_id" value="{{task_id}}">
+      <input type="hidden" name="member_id" value="{{id}}">
+      <input type="submit" class = "{{isComplete}}" value="{{title}}" />
+    </form>
   </td>
   <td class="point-d"><button class="point_value">{{point_value}}</button></td>
-  <% if session[:admin] == true %>
-  <td class="icons">
-  <form class="approve-chore">
-  <input type="hidden" name="task_id" value="{{task_id}}">
-  <input type="image" src="<%= image_path('icons/greencheck.png') %>">
-  </form>
+    <% if session[:admin] == true %>
+    <td class="icons">
+    <form class="approve-chore">
+      <input type="hidden" name="task_id" value="{{task_id}}">
+      <input type="image" src="<%= image_path('icons/greencheck.png') %>">
+    </form>
   </td>
   <td class="icons">
-  <form class="reject-chore">
-  <input type="hidden" name="task_id" value="{{task_id}}">
-  <input type="image" src="<%= image_path('icons/redx.png') %>">
-  </form>
+    <form class="reject-chore">
+      <input type="hidden" name="task_id" value="{{task_id}}">
+      <input type="image" src="<%= image_path('icons/redx.png') %>">
+    </form>
   </td>
   <td class="icons">
-  <form class="redo-chore">
-  <input type="hidden" name="task_id" value="{{task_id}}">
+    <form class="redo-chore">
+    <input type="hidden" name="task_id" value="{{task_id}}">
   <input type="image" src="<%= image_path('icons/redo.png') %>">
   </form>
   </td>
@@ -126,7 +123,6 @@ var deleteChore = function(e){
 };
 
 var updateChore = function(e){
-  console.log($(e.target))
   e.preventDefault();
   $.ajax({
     url: "tasks/kid_complete",
@@ -154,7 +150,7 @@ var getPeople = function(){
     	$('.people-container').append(renderPeople);
       $('#child-options').append(renderChildChores);
     });
-    });
+  });
 };
 
 
@@ -171,14 +167,6 @@ var getUnassigned = function(){
     })
     });
 };
-
-// var deleteTask = function(){
-//   $.ajax({
-//     url:"http://localhost:3000/families.json",
-//     type:'delete',
-//     data: ,
-//   });
-// }
 
 
 </script>

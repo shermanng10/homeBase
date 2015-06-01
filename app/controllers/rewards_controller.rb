@@ -1,9 +1,8 @@
 class RewardsController < ApplicationController
 	before_action :require_login
+
 	def index
 		@family = Member.where(family_id: session[:user_id])
-
-		# @rewards = Reward.where(family_id: current_user.id, status: 'open').group(:member_id, :id)
 	end
 
 	def create
@@ -11,7 +10,6 @@ class RewardsController < ApplicationController
 		@reward.family_id = current_user.id
 		render json: @reward
 	end
-
 
 	def update
 		reward = Reward.find_by(id: params[:id])
