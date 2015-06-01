@@ -4,12 +4,26 @@
 </head>
 
 <body>
+
+<div id="login-box" class="login-popup">
+  <form method="post" class="create-member" action="/members">
+    <%= token_tag(nil) %>
+    <label> <span>Role in family</span>
+      <input name="member[role]" type="text" placeholder="Role">
+    </label>
+    <label> <span>Name</span>
+      <input name="member[name]" type="text" placeholder="Name">
+    </label>
+    <input class="button" type="submit" value="submit" />
+  </form>
+</div>
   <div class="familyname-container"></div>
     <button class="Llink">
       <a href="/rewards">To Rewards</a>
     </button>
   <div class="clear"></div>
   <div class="members-medals-container"></div>
+  <p class="add-member"><button class="add"><a href="#login-box" class="login-window">Add Family Member</a></button></p>
 </body>
 
 
