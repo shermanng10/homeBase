@@ -56,6 +56,30 @@
         <input type='submit' class='submitchore' name="Assign_Chore">
       </fieldset>
   </form>
+  </div>
+
+  <a href="#rmpoints-box" id='removepointsbtn' class="rmpoints-window">Remove Points</a>
+    <div id="rmpoints-box" class="rmpoints-popup">
+    <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <form method="post" class="rmpoints" action="members/remove_points">
+      <%= token_tag(nil) %>
+      <fieldset class="textbox">
+        <label class="username">
+        <span>Points to Add</span>
+        <input id="rmpoints" name="points" type="number" autocomplete="on" placeholder="- points">
+        </label>
+        <label class="assign">
+          <span>Give to:</span>
+          <select class="child-points" name="name">
+            <option> </option>
+            </select>
+            <br><br>
+        </label>
+        <input type='submit' class='submitchore' name="Assign_Chore">
+      </fieldset>
+  </form>
+  </div>
+
 <% end %>
 
 <script>
@@ -90,6 +114,7 @@ var getFamilymembers = function(){
   }).done(function(response){
     var memberMedalTemplate = $('#memberMedal-template').html();
     var dropdown = $('#child-points').html()
+    $('.members-medals-container').html("");
     response.members.forEach(function(member){
       console.log(member)
       var memberMedalRender = Mustache.render(memberMedalTemplate, member);
@@ -132,6 +157,37 @@ $(document).on('click', 'a.close, #mask', function() {
   return false;
 });
 
+});
+
+$(document).ready(function() {
+  $('a.rmpoints-window').click(function() {
+
+    var rmpointsBox = $(this).attr('href');
+
+    $(rmpointsBox).fadeIn(300);
+
+    var popMargTop = ($(rmpointsBox).height() + 24) / 2;
+    var popMargLeft = ($(rmpointsBox).width() + 24) / 2;
+
+    $(rmpointsBox).css({
+        'margin-top' : -popMargTop,
+        'margin-left' : -popMargLeft
+    });
+
+    $('body').append('<div id="mask"></div>');
+    $('#mask').fadeIn(300);
+
+    return false;
+  });
+
+  $('.rmpoints').on('submit', removePoints)
+
+$(document).on('click', 'a.close, #mask', function() {
+  $('#mask, .rmpoints-popup').fadeOut(300, function(e) {
+    $('#mask').remove();
+  });
+  return false;
+});
 
 });
 
@@ -147,7 +203,25 @@ var givePoints = function(e){
     data: $(e.target).serialize()
   }).done(function(response){
     console.log(response)
-    location.reload(false)
+    getFamilymembers()
+  }).fail(function(error){
+    console.log(error)
+  })
+}
+
+var removePoints = function(e){
+  e.preventDefault();
+  console.log(e.target)
+  $('#mask, .rmpoints-popup').fadeOut(300, function(e) {
+  $('#mask').remove();
+  });
+  $.ajax({
+    url: '/members/remove_points',
+    method: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    console.log(response)
+    getFamilymembers()
   }).fail(function(error){
     console.log(error)
   })
