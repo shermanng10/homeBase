@@ -8,14 +8,15 @@ json.members @family do |member|
   json.badges member.badges
   json.imgUrl member.img_url
   json.pendingRewards member.pending_rewards
-  json.assignedTasks member.assigned_tasks do |task|
+  json.assignedTasks member.tasks_left_to_do do |task|
     json.task_id task.id
     json.title task.title
     json.point_value task.point_value
     json.assigned_member task.assigned_member.name
     json.deadline task.deadline
-    json.complete? task.complete?
+    json.complete task.complete
     if task.completed_member
+      json.isComplete true
       json.completedMember task.completed_member.name
     end
   end
@@ -24,8 +25,9 @@ json.members @family do |member|
    json.point_value task.point_value
    json.assigned_member task.assigned_member.name
    json.deadline task.deadline
-   json.complete? task.complete?
+   json.complete task.complete
    if task.completed_member
+
       json.completedMember task.completed_member.name
     end
   end

@@ -47,9 +47,10 @@
 		{{#assignedTasks}}
 	<td class="task-d">
   <form class = "chore-form">
-    <input type="hidden" name="task_id" value="{{task_id}}">
-    <input type="hidden" name="member_id" value="{{id}}">
-    <input type="submit" value="{{title}}" />
+  <input type="hidden" name="task_id" value="{{task_id}}">
+  <input type="hidden" name="member_id" value="{{id}}">
+    <input type="submit" class = "{{isComplete}}" value="{{title}}" />
+
   </form>
   </td>
   <td class="point-d"><button class="point_value">{{point_value}}</button></td>
@@ -59,11 +60,13 @@
   <input type="hidden" name="task_id" value="{{task_id}}">
   <input type="image" src="<%= image_path('icons/greencheck.png') %>">
   </form>
+  </td>
   <td class="icons">
   <form class="reject-chore">
   <input type="hidden" name="task_id" value="{{task_id}}">
   <input type="image" src="<%= image_path('icons/redx.png') %>">
   </form>
+  </td>
   <td class="icons">
   <form class="redo-chore">
   <input type="hidden" name="task_id" value="{{task_id}}">
