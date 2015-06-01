@@ -16,6 +16,7 @@ json.members @family do |member|
     json.deadline task.deadline
     json.complete task.complete
     if task.completed_member
+      json.isComplete true
       json.completedMember task.completed_member.name
     end
   end
@@ -26,6 +27,7 @@ json.members @family do |member|
    json.deadline task.deadline
    json.complete task.complete
    if task.completed_member
+
       json.completedMember task.completed_member.name
     end
   end

@@ -10,6 +10,7 @@ var approveChore = function(e){
     data: $(e.target).serialize(),
   }).done(function(response){
     console.log(response);
+    location.reload(false);
   }).fail(function(error){
     console.log(error);
   });
