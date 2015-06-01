@@ -1,5 +1,6 @@
 json.members @family do |member|
   json.name member.name
+  json.id member.id
   json.rewards member.rewards do |reward|
     if reward.status == "open"
       json.name reward.name
