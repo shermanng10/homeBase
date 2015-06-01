@@ -25,7 +25,7 @@ module Merit
       # Should be "current_user" after registration for badge to be granted.
       # Find badge by badge_id, badge_id takes presidence over badge
       # grant_on 'users#create', badge_id: 7, badge: 'just-registered', to: :itself
-      grant_on ['members#update', 'members#create'],  badge_id: 3, to: :member, temporary: false do |member|
+      grant_on 'tasks#parent_complete',  badge_id: 3, model_name: 'Member', to: :member do |member|
         member.task_points > 100
       end
 
