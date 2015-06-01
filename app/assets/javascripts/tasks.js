@@ -4,20 +4,7 @@
   getPeople();
   getUnassigned();
   $(document).on('submit','.chore-form', updateChore);
-  $(document).on('submit', '.reject-chore', deleteChore);
 });
-
-var deleteChore = function(e){
-  e.preventDefault();
-  $.ajax({
-    url: 'tasks/delete_task',
-    type: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    location.reload(false)
-  }).fail(function(error){
-  })
-};
 
 var updateChore = function(e){
   e.preventDefault();
@@ -25,7 +12,7 @@ var updateChore = function(e){
     url: "tasks/kid_complete",
     type: 'post',
     data: $(e.target).serialize()
-  }).done(function(response){
+  }).then(function(response){
     getPeople();
   }).fail(function(error){
   })
@@ -40,6 +27,7 @@ var getPeople = function(){
     var template = $('#person-template').html();
     var dropdown = $('#child-chore').html()
     $('.people-container').html("");
+    $('#child-options').html("")
     response.members.forEach(function(member){
       var renderPeople = Mustache.render(template, member);
       var renderChildChores = Mustache.render(dropdown, member)

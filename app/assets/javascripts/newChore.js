@@ -1,4 +1,4 @@
- $(document).ready(function() {
+$(document).ready(function() {
 	$('a.chore-window').click(function() {
     var choreBox = $(this).attr('href');
     $(choreBox).fadeIn(300);
@@ -13,6 +13,7 @@
     return false;
 	});
 
+	$('.signin').on('submit', assignChore)
 
 // When clicking on the button close or the mask layer the popup closed
 $(document).on('click', 'a.close, #mask', function() {
@@ -33,7 +34,7 @@ var assignChore = function(e){
 		method: 'post',
 		data: $(e.target).serialize()
 	}).done(function(response){
-    getPeople();
+    getPeople()
     // location.reload(false)
 	}).fail(function(error){
 	})

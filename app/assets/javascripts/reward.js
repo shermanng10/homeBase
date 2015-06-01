@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('ready on:load', function() {
   $('a.new-reward-link').click(function() {
 
     var rewardBox = $(this).attr('href');
@@ -28,24 +28,22 @@ $(document).on('click', 'a.close, #mask', function() {
   });
   return false;
 });
-
-
 });
 
-var assignReward = function(e){
-  e.preventDefault();
-  $('#mask, .new-reward-popup').fadeOut(300, function(e) {
-    $('#mask').remove();
-  });
-  $.ajax({
-    url: '/tasks',
-    method: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    location.reload(false)
-  }).fail(function(error){
-  })
-}
+// var assignReward = function(e){
+//   e.preventDefault();
+//   $('#mask, .new-reward-popup').fadeOut(300, function(e) {
+//     $('#mask').remove();
+//   });
+//   $.ajax({
+//     url: '/tasks',
+//     method: 'post',
+//     data: $(e.target).serialize()
+//   }).done(function(response){
+//     location.reload(false)
+//   }).fail(function(error){
+//   })
+// }
 
 var getRewards = function(){
   $.ajax({
