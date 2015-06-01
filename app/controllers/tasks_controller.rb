@@ -19,10 +19,10 @@ class TasksController < ApplicationController
 		end
 	end
 
-	def destroy
-		p "hello"
-		@task = Task.find_by(id: params[:id])
-		if @task.destroy
+	def delete_task
+		p params
+		@task = Task.find_by(id: params[:task_id])
+		if @task.delete
 			all_tasks = Task.all
 			render json: all_tasks
 		end

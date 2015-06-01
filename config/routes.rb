@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   post 'tasks/kid_complete' => 'tasks#kid_complete'
   post 'tasks/parent_delete' => 'tasks#parent_delete'
   post 'tasks/parent_redo' => 'tasks#parent_redo'
-
+  post 'tasks/delete_task' => 'tasks#delete_task'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
