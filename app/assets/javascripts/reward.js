@@ -55,6 +55,7 @@ var getRewards = function(){
   }).done(function(response){
     var rewardTemplate = $('#reward-template').html();
     var dropdown = $('#child-reward').html();
+    $('.rewards-container').html("");
     response.members.forEach(function(member){
       var rewardRender = Mustache.render(rewardTemplate, member);
       var rewardDropdownMember = Mustache.render(dropdown, member);

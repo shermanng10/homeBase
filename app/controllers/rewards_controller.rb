@@ -40,6 +40,7 @@ class RewardsController < ApplicationController
 		reward = Reward.find_by(id: params[:reward_id])
 		reward.status = 'pending'
 		reward.save
+		redirect_to :back
 	end
 
 	private
