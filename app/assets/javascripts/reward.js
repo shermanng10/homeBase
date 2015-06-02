@@ -14,7 +14,7 @@ $(document).on('ready on:load', function() {
   });
   $(document).on('submit', '.create-reward', createReward)
   getRewards();
-  $(document).on('click', 'a.close, #mask', function() {
+  $(document).on('click', '#mask', function() {
     $('#mask, #new-reward').fadeOut(300, function(e) {
       $('#mask').remove();
     });
@@ -48,6 +48,7 @@ var getRewards = function() {
     var rewardTemplate = $('#reward-template').html();
     var dropdown = $('#child-reward').html();
     $('.rewards-container').html("");
+    $('.child-options').html("");
     response.members.forEach(function(member) {
       var rewardRender = Mustache.render(rewardTemplate, member);
       var rewardDropdownMember = Mustache.render(dropdown, member);

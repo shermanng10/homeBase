@@ -24,7 +24,7 @@ $(document).ready(function() {
   getUnassigned();
   $(document).on('submit', '.chore-form', updateChore);
   $(document).on('submit', '.unassigned-task', reassignChore);
-  $(document).on('submit', '.signin', assignChore)
+  $(document).on('submit', '.chore-form', assignChore)
 });
 
 var assignChore = function(e) {
