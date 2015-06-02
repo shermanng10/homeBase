@@ -41,7 +41,7 @@ var createReward = function(e) {
 
 var getRewards = function() {
   $.ajax({
-    url: "http://localhost:3000/rewards",
+    url: "http://10.0.0.53:3000/rewards",
     type: 'get',
     dataType: 'json'
   }).done(function(response) {
