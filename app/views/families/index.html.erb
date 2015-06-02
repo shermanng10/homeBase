@@ -7,7 +7,6 @@
 </head>
 <script>
 $(document).ready(function(){
-
   var date = new Date();
   var d = date.getDate();
   var m = date.getMonth();
@@ -39,15 +38,14 @@ $(document).ready(function(){
   //   changeMonth: true,
   //   changeYear: true
   // });
-
 });
 </script>
 <body>
 
 
-<div id="new-member-box" class="modal">
-  <h1>New Family Member</h1>
 <div id="calendar"></div>
+
+
 <form method="post" class="create-event" action="/events">
   <%= token_tag(nil) %>
   <input name="event[title]" type='text'>
@@ -63,6 +61,8 @@ $(document).ready(function(){
   <input type="submit" value='Submit'>
 </form>
 
+<div id="new-member-box" class="modal">
+<h1>New Family Member</h1>
   <form method="post" class="create-member" action="/members">
     <%= token_tag(nil) %>
     <label for="member[role">Role:</label>
@@ -160,3 +160,4 @@ $(document).ready(function(){
   </form>
   </div>
 <% end %>
+
