@@ -1,4 +1,10 @@
 
+<head>
+
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
+</head>
+
+
 <body>
   <a href="#new-reward" class="new-reward-link">Add Reward</a>
 <div class="reward-intro">
@@ -7,7 +13,7 @@
 <button class="Llink"><a href="/tasks">To Tasks</a></button>
 
 </div>
-<table class="rewards-container"></table>
+<div class="rewards-container"></div>
 </div>
 
 <div class="space"></div>
@@ -38,19 +44,20 @@
 <div class="reward-box">
 <h4 class="rewardMember">{{name}}<span style="color:#3498db">{{task_points}}</span></h4>
   {{#rewards}}
-  <tr class='button-container'>
-  	<td class="reward-d">
+  <div class='button-container'>
+  	<div class="reward-d">
     <form class='buyreward'>
       <input type='hidden' name='reward_id' value='{{reward_id}}'>
-      <input type='submit' value='{{name}}' class='name'>
+      <%= image_tag "tag_bag.png" %><input type='submit' value='{{name}}' class='item-name'>
     </form>
-    </td>
-    <td class="cost-d">
-      <button class="cost">{{cost}}</button>
-    </td>
-  </tr>
+    </div>
+    <div class="cost-d">
+      <div class="cost">{{cost}}</div>
+    </div>
+  </div>
   {{/rewards}}
   </div>
+  <div class="clear"></div>
 </script>
 
 <script id="child-reward" type="text/x-handlebars-template">
