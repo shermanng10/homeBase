@@ -179,3 +179,8 @@ reward12 = Reward.create!(name: "Gruel", category:"Basic Living", cost: 20, fami
 
 reward13 = Reward.create!(name: "Basketball", category:"Technology", cost: 20, family_id: 4, member_id: 15)
 reward14 = Reward.create!(name: "Pack of Gum", category:"Basic Living", cost: 100, family_id: 4, member_id: 15)
+
+event1 = Event.create!(title: "Sherman's Birthday", start_time: Date.today+2, end_time: Date.today+6, family_id: 1, member_id: 3)
+event2 = Event.create!(title: "Cersei's Birthday", start_time: Date.today+4, end_time: Date.today+7, family_id: 1)
+event3 = Event.create!(title: "Tyrion's Birthday", start_time: Date.today+5, end_time: Date.today+8, family_id: 1, member_id: 1)
+event4 = Event.create!(title: "Red Wedding", start_time: Date.today+1, end_time: Date.today+3, family_id: 1, member_id: 2)

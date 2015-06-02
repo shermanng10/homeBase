@@ -30,8 +30,8 @@ json.members @family do |member|
   end
   json.events member.events do |event|
     json.title event.title
-    json.eventDate event.event_date
-    json.eventTime event.event_time
+    json.eventDate event.start_time
+    json.eventTime event.end_time
   end
 end
 json.unassignedTasks @family.first.unassigned_tasks

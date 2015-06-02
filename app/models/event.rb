@@ -2,7 +2,7 @@ class Event < ActiveRecord::Base
 	belongs_to :member
 	belongs_to :family
 
-	validates :title, :event_date, :event_time, :family, presence: :true
+	validates :title, :start_time, :end_time, :family, presence: :true
 	validate :event_in_future
 	validate :member_in_family
 
@@ -10,8 +10,8 @@ class Event < ActiveRecord::Base
 	private
 
 		def event_in_future
-			if (event_date && event_date < Date.today)
-				errors.add(:event_date, "has already happened")
+			if (start_time && start_time< Date.today)
+				errors.add(:start_time, "has already happened")
 			end
 		end
 
@@ -20,7 +20,7 @@ class Event < ActiveRecord::Base
 				errors.add(:member, "is not in your family")
 			end
 		end
-		
+
 end
 
 

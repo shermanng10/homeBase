@@ -12,7 +12,7 @@ $(document).ready(function(){
   var d = date.getDate();
   var m = date.getMonth();
   var y = date.getFullYear();
-  $('#calendar').fullCalendar({
+  var calendar = $('#calendar').fullCalendar({
     theme: true,
     contentHeight: 300,
     fixedWeekCount: false,
@@ -25,19 +25,44 @@ $(document).ready(function(){
     selectable: true,
     selectHelper: true,
     editable: true,
-    events: [
-      {
-        title: "Sherman's Birthday",
-        start: new Date(y, m, 1)
-    }]
-})
+    eventSources: [{
+      url: '/events'
+    }],
+    timeFormat: 'h:mm'
+  });
+
+  // $('#datepicker').datepicker({
+  //   changeMonth: true,
+  //   changeYear: true
+  // });
+  //  $('#datepicker2').datepicker({
+  //   changeMonth: true,
+  //   changeYear: true
+  // });
+
 });
 </script>
 <body>
 
+
 <div id="new-member-box" class="modal">
   <h1>New Family Member</h1>
 <div id="calendar"></div>
+<form method="post" class="create-event" action="/events">
+  <%= token_tag(nil) %>
+  <input name="event[title]" type='text'>
+  <input name="event[start_time]" type="date" id="datepicker">
+  <input name="event[end_time]" type="date" id="datepicker2">
+  <label class="assign">
+      <span>Event for:</span>
+      <select class="child-points" name="event[member_id]">
+          <option> </option>
+        </select>
+        <br><br>
+  </label>
+  <input type="submit" value='Submit'>
+</form>
+
   <form method="post" class="create-member" action="/members">
     <%= token_tag(nil) %>
     <label for="member[role">Role:</label>
@@ -64,7 +89,7 @@ $(document).ready(function(){
 </script>
 
 <script id="child-points" type="text/x-handlebars-template">
-  <option value="{{id}}">{{name}}</option>
+  <option value={{id}}>{{name}}</option>
 </script>
 
 <script id="memberMedal-template" type="text/x-handlebars-template">

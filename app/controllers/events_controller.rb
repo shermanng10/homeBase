@@ -6,7 +6,8 @@ class EventsController < ApplicationController
 
   def create
     @event= Event.new(event_params)
-    @event.save
+    @event.family = current_user
+    @event.save!
     redirect_to :back
   end
 
