@@ -18,8 +18,9 @@ $(document).on('ready on:load', function() {
 
     return false;
   });
+  $(document).on('submit','.create-reward', createReward)
   getRewards();
-  $('.signin').on('submit', assignReward)
+
 
 // When clicking on the button close or the mask layer the popup closed
 $(document).on('click', 'a.close, #mask', function() {
@@ -30,18 +31,20 @@ $(document).on('click', 'a.close, #mask', function() {
 });
 });
 
-var assignReward = function(e){
+var createReward = function(e){
+  console.log("hello")
   e.preventDefault();
   $('#mask, .new-reward-popup').fadeOut(300, function(e) {
     $('#mask').remove();
   });
   $.ajax({
-    url: '/tasks',
+    url: '/rewards',
     method: 'post',
     data: $(e.target).serialize()
   }).done(function(response){
-    location.reload(false)
+    getRewards();
   }).fail(function(error){
+    console.log(error)
   })
 };
 

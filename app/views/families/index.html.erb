@@ -36,7 +36,7 @@
 </script>
 
 <script id="memberMedal-template" type="text/x-handlebars-template">
-  <h2 class="memberMain">{{role}}      {{name}}      
+  <h2 class="memberMain">{{role}}      {{name}}
     <span class="points">{{task_points}}</span>
   </h2>
     {{#badges}}
@@ -44,7 +44,7 @@
     {{/badges}}
     {{#pendingRewards}}
   <div style="text-align:center">
-  
+
   <form class='giveanewreward'>
     <input type='hidden' name='reward_id' value='{{id}}'>
     <input type='image' style='height: 25px' src='/assets/greencheck.png'>
@@ -55,7 +55,7 @@
     <input type='image' style='height: 25px' src='/assets/redx.png'>
   </form>
 
-  </div> 
+  </div>
   {{/pendingRewards}}
 </script>
 
@@ -230,23 +230,6 @@ var removePoints = function(e){
   }).done(function(response){
     console.log(response)
     getFamilymembers()
-  }).fail(function(error){
-    console.log(error)
-  })
-}
-
-var assignChore = function(e){
-  e.preventDefault();
-  $('#mask, .points-popup').fadeOut(300, function(e) {
-    $('#mask').remove();
-  });
-  $.ajax({
-    url: '/tasks',
-    method: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    console.log(response)
-    location.reload(false)
   }).fail(function(error){
     console.log(error)
   })

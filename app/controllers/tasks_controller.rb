@@ -7,6 +7,11 @@ class TasksController < ApplicationController
 	end
 
 	def create
+		if request.xhr?
+			p "ajax"
+		else
+			p "regular"
+		end
 		@task = Task.new
 		@task.point_value = params[:points]
 		@task.title = params[:title]

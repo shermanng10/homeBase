@@ -1,4 +1,4 @@
-  $(document).ready(function(){
+$(document).ready(function(){
   var date = new Date()
   $('#date').text(date.toDateString());
   getPeople();
@@ -27,7 +27,7 @@ var getPeople = function(){
     var template = $('#person-template').html();
     var dropdown = $('#child-chore').html()
     $('.people-container').html("");
-    $('#child-options').html("")
+    $('#child-options').html('<option></option>')
     response.members.forEach(function(member){
       var renderPeople = Mustache.render(template, member);
       var renderChildChores = Mustache.render(dropdown, member)
