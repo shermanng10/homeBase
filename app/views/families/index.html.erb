@@ -1,9 +1,25 @@
 <head>
+<!--   <link rel='stylesheet' href='../../lib/assets/jquery-ui-1.11.4.custom/jquery-ui.theme.css' /> -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css' />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
-  <script scr='javascripts/getFamilies.js'></script>
 </head>
-
+<script>
+$(document).ready(function(){
+  $('#calendar').fullCalendar({
+    contentHeight: 400,
+    header: {
+      left: "previous, next today",
+      center: "title",
+      right: "month,week,day"
+    }
+})
+});
+</script>
 <body>
+
+<div id="calendar"></div>
 
 <div id="login-box" class="login-popup">
   <form method="post" class="create-member" action="/members">
@@ -36,7 +52,7 @@
 </script>
 
 <script id="memberMedal-template" type="text/x-handlebars-template">
-  <h2 class="memberMain">{{role}}      {{name}}      
+  <h2 class="memberMain">{{role}}      {{name}}
     <span class="points">{{task_points}}</span>
   </h2>
     {{#badges}}
@@ -44,7 +60,7 @@
     {{/badges}}
     {{#pendingRewards}}
   <div style="text-align:center">
-  
+
   <form class='giveanewreward'>
     <input type='hidden' name='reward_id' value='{{id}}'>
     <input type='image' style='height: 25px' src='/assets/greencheck.png'>
@@ -55,7 +71,7 @@
     <input type='image' style='height: 25px' src='/assets/redx.png'>
   </form>
 
-  </div> 
+  </div>
   {{/pendingRewards}}
 </script>
 
