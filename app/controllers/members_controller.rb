@@ -6,11 +6,13 @@ class MembersController < ApplicationController
 	end
 
 	def create
+		p params
 		@member = Member.new(member_params)
 		@member.family_id = current_user.id
 		@member.save
 		@member.assign_color
-		@member.save
+		@member.save!
+		redirect_to :back
 	end
 
 	def destroy
@@ -23,6 +25,11 @@ class MembersController < ApplicationController
 		else
 			#can't delete someone not in your family.
 		end
+	end
+
+	def add_img
+		p params
+		p '***' * 1000
 	end
 
 	def give_reward
@@ -62,7 +69,7 @@ class MembersController < ApplicationController
 
 	private
 	def member_params
-		params.require(:member).permit :role, :name
+		params.require(:member).permit :name, :img_url
 	end
 
 	def require_login

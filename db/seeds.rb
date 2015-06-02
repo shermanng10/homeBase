@@ -12,97 +12,96 @@ Family.create!(surname: "Kardashian",
 							password: "1234567")
 
 Member.create!(name: "Tywin",
-							role: "father",
+					
 							family_id: 1,
 							task_points: 3,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Tyrion",
-							role: "son",
+							
 							family_id: 1,
 							task_points: 78,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Cersei",
-							role: "daughter",
+						
 							family_id: 1,
 							task_points: 0,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Bob",
-							role: "son",
+							
 							family_id: 1,
 							task_points: 0,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Eddard",
-							role: "father",
+						
 							family_id: 2,
 							task_points: 0,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Rob",
-							role: "son",
+					
 							family_id: 2,
 							task_points: 14,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Jon",
-							role: "son",
+						
 							family_id: 2,
 							task_points: 0,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Arya",
-							role: "daughter",
+							
 							family_id: 2,
 							task_points: 0,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Dayanares",
-							role: "mother",
+						
 							family_id: 3,
 							task_points: -4,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Barry",
-							role: "son",
+						
 							family_id: 3,
 							task_points: 0,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Mendel",
-							role: "son",
+							
 							family_id: 3,
 							task_points: 10,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Schlomo",
-							role: "son",
+						
 							family_id: 3,
 							task_points: 0,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Kris",
-							role: "mother",
 							family_id: 4,
 							task_points: 0,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Kourtney",
-							role: "daughter",
+						
 							family_id: 4,
 							task_points: 0,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Kylie",
-							role: "daughter",
+							
 							family_id: 4,
 							task_points: 45,
 							color: "red",
 							img_url: "http://thumbnails.eonline.com/p/kar_820_highlight_b_tunein_214150.jpg")
 Member.create!(name: "Kendall",
-							role: "daughter",
+						
 							family_id: 4,
 							task_points: 500,
 							color: "red",
