@@ -42,13 +42,13 @@
 
 </body>
 	<script id="person-template" type="text/x-handlebars-template">
+  <div class="big-container">
 	<div class="kid-container">
-	<p class="kid-name"><img src='{{imgUrl}}'>{{name}} </p>
-	<div class="clear"></div>
-	<table class="tasks-container">
-	<tr class='button-container'>
-		{{#assignedTasks}}
-	<td class="task-d">
+    <table class="tasks-container">
+    <h3 class="chore">Chores</h3>
+  <tr class='button-container'>
+    {{#assignedTasks}}
+  <td class="task-d">
     <form class = "chore-form">
       <input type="hidden" name="task_id" value="{{task_id}}">
       <input type="hidden" name="member_id" value="{{id}}">
@@ -77,8 +77,12 @@
   </td>
   <% end %>
   </tr>
-		{{/assignedTasks}}
-		</table>
+    {{/assignedTasks}}
+    </table>
+	<img class="kidimg" src='{{imgUrl}}'><h2 class="kid-name">{{name}} </h2>
+	<div class="clear"></div>
+  </div>
+
 		</div>
     <div class="space"></div>
 		</script>
@@ -87,6 +91,8 @@
   </script>
 
 		<script id="task-template" type="text/x-handlebars-template">
+    <p class="center">
+    <div class="clear">
   	<div class='button-container'>
     <form class="unassigned-task">
     	<span class="task-d"><input type="submit" value="{{title}}" class="title" ></span>
@@ -98,6 +104,7 @@
       </select>
       </span>
     </form>
+    </p>
     </div>
 		</script>
 
