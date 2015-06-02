@@ -32,7 +32,7 @@ class MembersController < ApplicationController
 		reward.member.task_points -= reward.cost
 		member.save
 		reward.status = 'closed'
-		reward.save
+		reward.save!
 		redirect_to :back
 	end
 
@@ -43,7 +43,7 @@ class MembersController < ApplicationController
 		redirect_to :back
 	end
 
-	def add_points 
+	def add_points
 		points = params[:points].to_i
 		member = Member.find_by(id: params[:name].to_i)
 		member.task_points += points

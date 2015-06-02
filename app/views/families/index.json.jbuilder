@@ -1,7 +1,6 @@
 json.familyName @family.first.family.surname
 json.members @family do |member|
   json.id member.id
-  json.role member.role
   json.name member.name
   json.task_points member.task_points
   json.color member.color
