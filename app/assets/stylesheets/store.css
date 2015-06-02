@@ -1,11 +1,14 @@
+
 .rewards-container {
-  width: 60vw;
+  width: 75vw;
   margin: 0 auto;
-  border: 1px double black;
+
 }
 
 .reward-box {
-  border: 1px solid red;
+  background-color:white;
+ border:1px solid black;
+ margin-top: 5vw;
 }
 
 .reward-d{
@@ -13,17 +16,42 @@
 }
 
 .item-name {
-
   font-size:18px;
 }
 
+.itemn{
+  text-align:center;
+}
+
 .reward-d img{
-
-
+  margin:0 auto;
+  text-align:center;
 }
 
 .cart-container img{
   margin-top:-5px;
   float:right;
   width:25px;
+}
+
+.r-contents{
+  border: 1px solid green;
+}
+
+.cost{
+  font-color:blue;
+  font-size:12px;
+  float:right;
+}
+
+.nameof{
+  text-align:center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rewardMember{
+  margin-left:20px;
+  font-size:22px;
 }

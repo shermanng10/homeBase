@@ -45,17 +45,27 @@
 <h4 class="rewardMember">{{name}}<span style="color:#3498db">{{task_points}}</span></h4>
   {{#rewards}}
   <div class='button-container'>
+
   	<div class="reward-d">
+
     <form class='buyreward'>
+
     <div class="cart-container"><%= image_tag "cart.png" %></div>
+
       <input type='hidden' name='reward_id' value='{{reward_id}}'>
-      <%= image_tag "tag_bag.png" %><input type='submit' value='{{name}}' class='item-name'>
+      <div class="cost-d">
+
+      <div class="cost">{{cost}}</div>
+      <%= image_tag "tag_bag.png" %>
+      <div class="clear"></div>
+      <p class="nameof">{{name}}</p>
+      <p class="itemn"><input type='submit' value='Buy' class='item-name'><p>
+
+    </div>
     </form>
     </div>
 
-    <div class="cost-d">
-      <div class="cost">{{cost}}</div>
-    </div>
+
   </div>
   {{/rewards}}
   </div>
