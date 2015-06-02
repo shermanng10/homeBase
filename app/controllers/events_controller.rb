@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.where(family_id: 1)
+    @events = Event.where(family_id: session[:user_id ])
   end
 
   def create
