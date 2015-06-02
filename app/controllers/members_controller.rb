@@ -6,11 +6,13 @@ class MembersController < ApplicationController
 	end
 
 	def create
+		p params
 		@member = Member.new(member_params)
 		@member.family_id = current_user.id
 		@member.save
 		@member.assign_color
-		@member.save
+		@member.save!
+		redirect_to :back
 	end
 
 	def destroy
@@ -32,7 +34,7 @@ class MembersController < ApplicationController
 		reward.member.task_points -= reward.cost
 		member.save
 		reward.status = 'closed'
-		reward.save
+		reward.save!
 		redirect_to :back
 	end
 
@@ -43,7 +45,7 @@ class MembersController < ApplicationController
 		redirect_to :back
 	end
 
-	def add_points 
+	def add_points
 		points = params[:points].to_i
 		member = Member.find_by(id: params[:name].to_i)
 		member.task_points += points
@@ -62,7 +64,7 @@ class MembersController < ApplicationController
 
 	private
 	def member_params
-		params.require(:member).permit :role, :name
+		params.require(:member).permit :name, :img_url
 	end
 
 	def require_login
