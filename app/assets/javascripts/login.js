@@ -3,7 +3,7 @@ $('document').ready(function() {
   $('.create-member').on('submit', createMember)
   $('a.login-window').on('click', loginWindow)
   $(document).on('click', 'a.close, #mask, .submit', function() {
-  $('#mask , .new-member-popup').fadeOut(300, function() {
+  $('#mask , #new-member-box').fadeOut(300, function() {
       $('#mask').remove();
     });
     return false;
@@ -34,7 +34,7 @@ $(function() {
 
 
 var loginWindow = function(e){
-  var loginBox = ('.new-member-popup');
+  var loginBox = ('#new-member-box');
   $(loginBox).fadeIn(300);
   var popMargTop = ($(loginBox).height() + 24) / 2;
   var popMargLeft = ($(loginBox).width() + 24) / 2;

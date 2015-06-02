@@ -422,30 +422,6 @@ p {
     z-index: 999;
 }
 
-/* You can customize to your needs  */
-.chore-popup {
-    display: none;
-    background: #333;
-    padding: 10px;
-    border: 2px solid #ddd;
-    float: left;
-    font-size: 1.2em;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 99999;
-    box-shadow: 0px 0px 20px #999;
-    /* CSS3 */
-        -moz-box-shadow: 0px 0px 20px #999;
-    /* Firefox */
-        -webkit-box-shadow: 0px 0px 20px #999;
-    /* Safari, Chrome */
-  border-radius: 3px 3px 3px 3px;
-    -moz-border-radius: 3px;
-    /* Firefox */
-        -webkit-border-radius: 3px;
-    /* Safari, Chrome */;
-}
 
 .new-reward-popup {
  display: none;
@@ -600,7 +576,7 @@ form.signin input::-webkit-input-placeholder {
 }
 
 /* You can customize to your needs  */
-.new-member-popup {
+.modal {
     width: 300px;
     padding: 15px 20px;
     background: #f3f6fa;

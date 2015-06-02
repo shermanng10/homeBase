@@ -15,23 +15,22 @@
 
 <div class="space"></div>
 
-<div id="new-reward" class="new-reward-popup">
+<div id="new-reward" class="modal">
+  <h1>New Reward</h1>
   <form method="post" class="create-reward" action="/rewards">
     <%= token_tag(nil) %>
 
-    <label> <span>Reward Description</span>
-      <input name="reward[name]" type="text" placeholder="Description">
-    </label>
-    <label> <span>Cost</span>
-      <input name="reward[cost]" type="text" placeholder="Cost">
-    </label>
-    <label class="assign">
-      <span>Assign to:</span>
-      <select class="child-options" name="reward[member_id]">
+    <label for="reard[name]">Reward Description</label>
+      <input name="reward[name]" type="text" placeholder="Description" class="txtfield">
+
+    <label for="reward[cost]"> Cost </label>
+      <input name="reward[cost]" type="text" placeholder="Cost" class="txtfield">
+
+    <label for="reward[member_id]">Assign to:</label>
+      <select class="child-options" name="reward[member_id]" class="txtfield">
 
       </select>
-    </label>
-    <input class="button" type="submit" value="submit" />
+    <input class="flatbtn-blu" type="submit" value="submit" />
   </form>
 </div>
 </body>
