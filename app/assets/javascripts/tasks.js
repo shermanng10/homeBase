@@ -55,7 +55,7 @@ var updateChore = function(e) {
 
 var getPeople = function() {
   $.ajax({
-    url: "http://10.0.0.53:3000/families.json",
+    url: "http://localhost:3000/families.json",
     type: 'get',
     dataType: 'json'
   }).done(function(response) {
@@ -75,7 +75,7 @@ var getPeople = function() {
 
 var getUnassigned = function() {
   $.ajax({
-    url: "http://10.0.0.53:3000/families.json",
+    url: "http://localhost:3000/families.json",
     type: 'get',
     dataType: 'json'
   }).done(function(response) {
