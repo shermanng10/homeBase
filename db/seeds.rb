@@ -113,7 +113,7 @@ task1 = Task.create!(title: "Empty the dishwasher" ,
 										family_id: 1,
 										assigned_member_id: 1,
 										completed_member_id: 1,
-										deadline: Date.today)
+										)
 task2 = Task.create!(title: "Clean Bedroom",
 										point_value: 10,
 										family_id: 1,
@@ -122,7 +122,7 @@ task2 = Task.create!(title: "Clean Bedroom",
 task3 = Task.create!(title: "Take out trash" ,
 										point_value: 20,
 										family_id: 1,
-										deadline: Date.today)
+										)
 task4 = Task.create!(title: "Sweep Kitchen floor",
 										point_value: 35,
 										family_id: 2,
@@ -133,7 +133,7 @@ task5 = Task.create!(title: "Vaccuum living room",
 										point_value: 30,
 										family_id: 2,
 										assigned_member_id: 6,
-										deadline: Date.today + 3)
+										)
 
 task6 = Task.create!(title: "Walk the dog",
 										point_value: 20,
@@ -149,18 +149,18 @@ task8 = Task.create!(title: "Fold laundry",
 										family_id: 3,
 										assigned_member_id: 10,
 										completed_member_id: 10,
-										deadline: Date.today)
+										)
 
 task9 = Task.create!(title: "Vaccuum pool", point_value: 50, family_id: 3)
 
 
 task10 = Task.create!(title: "Clean countertops", point_value: 20, family_id: 4, assigned_member_id: 13)
 task11 = Task.create!(title: "Feed the dog", point_value: 10, family_id: 4, assigned_member_id: 14, completed_member_id: 15)
-task12 = Task.create!(title: "Fold laundry", point_value: 25, family_id: 4, deadline: Date.today)
+task12 = Task.create!(title: "Fold laundry", point_value: 25, family_id: 4, )
 
 task13 = Task.create!(title: "Empty dishwasher", point_value: 20, family_id: 4, assigned_member_id: 16 )
 task14 = Task.create!(title: "Pick up all toys", point_value: 15, family_id: 2, assigned_member_id: 5, completed_member_id: 5)
-task15 = Task.create!(title: "Dust", point_value: 25, family_id: 3, deadline: Date.today)
+task15 = Task.create!(title: "Dust", point_value: 25, family_id: 3, )
 
 
 reward1 = Reward.create!(name: "Spinach", category:"Delicious Food", cost: 10, family_id: 1, member_id: 3)

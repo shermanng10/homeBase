@@ -1,20 +1,18 @@
 <head>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
-  <script scr='javascripts/getFamilies.js'></script>
 </head>
 
 <body>
 
-<div id="login-box" class="login-popup">
+<div id="new-member-box" class="new-member-popup">
+  <h1>New Family Member</h1>
   <form method="post" class="create-member" action="/members">
     <%= token_tag(nil) %>
-    <label> <span>Role in family</span>
-      <input name="member[role]" type="text" placeholder="Role">
-    </label>
-    <label> <span>Name</span>
-      <input name="member[name]" type="text" placeholder="Name">
-    </label>
-    <input class="button" type="submit" value="submit" />
+    <label for="member[role">Role:</label>
+      <input name="member[role]" type="text" placeholder="Role" class="txtfield" tabindex="2">
+    <label for="member[name">Name:</label>
+      <input name="member[name]" type="text" placeholder="Name" class="txtfield" tabindex="2">
+    <div class="center"><input type="submit" id="loginbtn" class="flatbtn-blu hidemodal" value="Submit" tabindex="3"></div>
   </form>
 </div>
   <div class="familyname-container"></div>
@@ -24,7 +22,7 @@
   <div class="clear"></div>
   <div class="members-medals-container"></div>
   <% if parent_mode? %>
-  <p class="add-member"><button class="add"><a href="#login-box" class="login-window">Add Family Member</a></button></p>
+  <p class="add-member"><button class="add"><a href="#new-member-box" class="login-window">Add Family Member</a></button></p>
   <% end %>
 </body>
 
@@ -106,133 +104,3 @@
   </div>
 <% end %>
 
-<script>
-$(document).ready(function() {
-  $('a.points-window').click(function() {
-
-    var pointsBox = $(this).attr('href');
-
-    $(pointsBox).fadeIn(300);
-
-    var popMargTop = ($(pointsBox).height() + 24) / 2;
-    var popMargLeft = ($(pointsBox).width() + 24) / 2;
-
-    $(pointsBox).css({
-        'margin-top' : -popMargTop,
-        'margin-left' : -popMargLeft
-    });
-
-    $('body').append('<div id="mask"></div>');
-    $('#mask').fadeIn(300);
-
-    return false;
-  });
-
-  $('.addpoints').on('submit', givePoints)
-
-// When clicking on the button close or the mask layer the popup closed
-$(document).on('click', 'a.close, #mask', function() {
-  $('#mask, .points-popup').fadeOut(300, function(e) {
-    $('#mask').remove();
-  });
-  return false;
-});
-
-});
-
-$(document).ready(function() {
-  $(document).on('submit', '.giveanewreward', giveReward)
-  $(document).on('submit', '.denyanewreward', denyReward)
-  $('a.rmpoints-window').click(function() {
-
-    var rmpointsBox = $(this).attr('href');
-
-    $(rmpointsBox).fadeIn(300);
-
-    var popMargTop = ($(rmpointsBox).height() + 24) / 2;
-    var popMargLeft = ($(rmpointsBox).width() + 24) / 2;
-
-    $(rmpointsBox).css({
-        'margin-top' : -popMargTop,
-        'margin-left' : -popMargLeft
-    });
-
-    $('body').append('<div id="mask"></div>');
-    $('#mask').fadeIn(300);
-
-    return false;
-  });
-
-  $('.rmpoints').on('submit', removePoints)
-
-$(document).on('click', 'a.close, #mask', function() {
-  $('#mask, .rmpoints-popup').fadeOut(300, function(e) {
-    $('#mask').remove();
-  });
-  return false;
-});
-
-});
-
-var giveReward = function(e){
-  e.preventDefault();
-  $.ajax({
-    url: '/members/give_reward',
-    method: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    getFamilymembers()
-  }).fail(function(response){
-    console.log(response)
-  })
-};
-
-var denyReward = function(e){
-  e.preventDefault();
-  $.ajax({
-    url: '/members/deny_reward',
-    method: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    getFamilymembers()
-  }).fail(function(response){
-    console.log(response)
-  })
-};
-
-var givePoints = function(e){
-  e.preventDefault();
-  console.log(e.target)
-  $('#mask, .points-popup').fadeOut(300, function(e) {
-  $('#mask').remove();
-  });
-  $.ajax({
-    url: '/members/add_points',
-    method: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    console.log(response)
-    getFamilymembers()
-  }).fail(function(error){
-    console.log(error)
-  })
-}
-
-var removePoints = function(e){
-  e.preventDefault();
-  console.log(e.target)
-  $('#mask, .rmpoints-popup').fadeOut(300, function(e) {
-  $('#mask').remove();
-  });
-  $.ajax({
-    url: '/members/remove_points',
-    method: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    console.log(response)
-    getFamilymembers()
-  }).fail(function(error){
-    console.log(error)
-  })
-}
-</script>

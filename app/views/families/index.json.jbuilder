@@ -12,7 +12,6 @@ json.members @family do |member|
     json.title task.title
     json.point_value task.point_value
     json.assigned_member task.assigned_member.name
-    json.deadline task.deadline
     json.complete task.complete
     if task.completed_member
       json.isComplete true
@@ -23,7 +22,6 @@ json.members @family do |member|
    json.user task.title
    json.point_value task.point_value
    json.assigned_member task.assigned_member.name
-   json.deadline task.deadline
    json.complete task.complete
    if task.completed_member
 

@@ -43,7 +43,7 @@
       </fieldset>
   </form>
 </div>
-<div id="loginmodal" style="display:none;">
+<div id="loginmodal">
    <h1>Parent Login</h1>
    <form id="loginform" name="loginform" method="post" action="sessions/admin">
      <%= token_tag(nil) %>
@@ -55,30 +55,11 @@
 <div>
   <%= yield %>
 </div>
-<div class="people-container">
-
-
-</div>
-
-
-
-
+<div class="people-container"></div>
 <div class="unassigned-container">
 <h4>Unassigned Tasks</h4>
 <table id="unassigned"></table>
 
-</div>
-<div id="login-box" class="login-popup">
-  <form method="post" class="create-member" action="/members">
-    <%= token_tag(nil) %>
-    <label> <span>Role in family</span>
-      <input name="member[role]" type="text" placeholder="Role">
-    </label>
-    <label> <span>Name</span>
-      <input name="member[name]" type="text" placeholder="Name">
-    </label>
-    <input class="button" type="submit" value="submit" />
-  </form>
 </div>
 
 </body>
