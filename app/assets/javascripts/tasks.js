@@ -13,7 +13,7 @@ $(document).ready(function() {
     return false;
   });
   $(document).on('click', 'a.close, #mask', function() {
-    $('#mask, .chore-popup').fadeOut(300, function(e) {
+    $('#mask, #chore-box').fadeOut(300, function(e) {
       $('#mask').remove();
     });
     return false;
@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 var assignChore = function(e) {
   e.preventDefault();
-  $('#mask, .chore-popup').fadeOut(300, function(e) {
+  $('#mask, #chore-box').fadeOut(300, function(e) {
     $('#mask').remove();
   });
   $.ajax({

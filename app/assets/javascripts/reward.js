@@ -15,7 +15,7 @@ $(document).on('ready on:load', function() {
   $(document).on('submit', '.create-reward', createReward)
   getRewards();
   $(document).on('click', 'a.close, #mask', function() {
-    $('#mask, .new-reward-popup').fadeOut(300, function(e) {
+    $('#mask, #new-reward').fadeOut(300, function(e) {
       $('#mask').remove();
     });
     return false;
@@ -24,7 +24,7 @@ $(document).on('ready on:load', function() {
 
 var createReward = function(e) {
   e.preventDefault();
-  $('#mask, .new-reward-popup').fadeOut(300, function(e) {
+  $('#mask, #new-reward').fadeOut(300, function(e) {
     $('#mask').remove();
   });
   $.ajax({
