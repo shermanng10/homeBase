@@ -9,6 +9,7 @@ var getFamilymembers = function(){
     type: 'get',
     dataType: 'json'
   }).done(function(response){
+    $('.familyname-container').html("");
     var memberMedalTemplate = $('#memberMedal-template').html();
     var dropdown = $('#child-points').html();
     var familynameTemplate = $('#familyname-template').html();

@@ -1,6 +1,11 @@
 <head>
-<!--   <link rel='stylesheet' href='../../lib/assets/jquery-ui-1.11.4.custom/jquery-ui.theme.css' /> -->
+<head>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css' />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
 
+</head>
 </head>
 
 <body>
@@ -40,7 +45,7 @@
 </script>
 
 <script id="memberMedal-template" type="text/x-handlebars-template">
-  <h2 class="memberMain">{{role}}      {{name}}
+  <h2 class="memberMain">{{name}}
     <span class="points">{{task_points}}</span>
   </h2>
     {{#pendingRewards}}
