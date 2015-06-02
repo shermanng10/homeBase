@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 var getFamilymembers = function(){
   $.ajax({
-    url: "http://localhost:3000/families.json",
+    url: "http://10.0.0.53:3000/families.json",
     type: 'get',
     dataType: 'json'
   }).done(function(response){
