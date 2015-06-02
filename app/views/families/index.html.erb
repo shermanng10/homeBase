@@ -1,11 +1,30 @@
 <head>
+<!--   <link rel='stylesheet' href='../../lib/assets/jquery-ui-1.11.4.custom/jquery-ui.theme.css' /> -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css' />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
 </head>
-
+<script>
+$(document).ready(function(){
+  $('#calendar').fullCalendar({
+    contentHeight: 400,
+    header: {
+      left: "previous, next today",
+      center: "title",
+      right: "month,week,day"
+    }
+})
+});
+</script>
 <body>
 
 <div id="new-member-box" class="modal">
   <h1>New Family Member</h1>
+
+<div id="calendar"></div>
+
+
   <form method="post" class="create-member" action="/members">
     <%= token_tag(nil) %>
     <label for="member[role">Role:</label>
@@ -103,4 +122,3 @@
   </form>
   </div>
 <% end %>
-
