@@ -8,6 +8,10 @@
   border: 1px solid red;
 }
 
+.reward-d{
+  border-top: 1px solid blue;
+}
+
 .item-name {
 
   font-size:18px;
@@ -18,3 +22,8 @@
 
 }
 
+.cart-container img{
+  margin-top:-5px;
+  float:right;
+  width:25px;
+}

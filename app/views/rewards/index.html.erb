@@ -47,10 +47,12 @@
   <div class='button-container'>
   	<div class="reward-d">
     <form class='buyreward'>
+    <div class="cart-container"><%= image_tag "cart.png" %></div>
       <input type='hidden' name='reward_id' value='{{reward_id}}'>
       <%= image_tag "tag_bag.png" %><input type='submit' value='{{name}}' class='item-name'>
     </form>
     </div>
+
     <div class="cost-d">
       <div class="cost">{{cost}}</div>
     </div>
@@ -59,6 +61,8 @@
   </div>
   <div class="clear"></div>
 </script>
+
+
 
 <script id="child-reward" type="text/x-handlebars-template">
   <option value="{{id}}">{{name}}</option>
