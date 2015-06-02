@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://10.0.0.56:3000/tasks -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Homebase2</title>
+  <link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/jquery-ui.self-9bf54efd89fa4932e2bffdfc77a97784d3f9f17dedae3460640db8f02ed88b21.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/jquery-ui.min.self-32c86ce32d42091929af71da43a3d872759a8329754f6c48838c9165f0754bd5.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/jquery-ui.structure.self-65dc3d01fb802f30a305e6c5f1d62a540c2260444e7df7eb299d46079ec2a205.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/jquery-ui.structure.min.self-d133c43460c3ba9a86d53e8baa23b685eca69bc056a94d1cf3796c389c192694.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/jquery-ui.theme.self-fbf99411ae8ffa4f4b0ab806a88e4d6ef4d39dfadf30185bc5c16fcf175a3dc1.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/jquery-ui.theme.min.self-2684454a88a4b454b5c1badf0327be9af3fb29e24f9b7d5cb8b7e7cfc1a57a07.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/modal.self-77df3d215d9fee32ada4c726289708935a6f9661c092e584107b86dc335854c9.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/store.self-45d5b69ec092ae74743d8a8057c04cd42c3b8e7192508cfaa4f6f7bfd312c480.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/style.self-14b2c7191adf3f40caea92d25ce3c5d797b09bb0ef0d8bacfe5ac7c2648b6cb0.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/tasks.self-8c9a0ca9a2b0dfbf758e1ca5f363994d2e13830bb34221aee5b2f9f7238a8968.css?body=1">
+<link rel="stylesheet" media="all" href="http://10.0.0.56:3000/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1">
+  <script src="./Homebase2_files/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js"></script>
+<script src="./Homebase2_files/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js"></script>
+<script src="./Homebase2_files/calendar.self-bbaf50f550d607424884867c0d0a0688e6a3440bcdf100352bffc1bc407ce618.js"></script>
+<script src="./Homebase2_files/events.self-a9ff2488874e4fe0f90cb0a41376c3bc185d0d4b39d002ec731213a4f3659426.js"></script>
+<script src="./Homebase2_files/getFamilies.self-48f212e71d0b9f7481434082e8363ec449ed1635ce116eb136a30c82ef195f21.js"></script>
+<script src="./Homebase2_files/jquery-2.1.4.min.self-92bfaaece1eee1e40fd3b55441ee536e7f6a03242aa5fe10e2597a27103c9dae.js"></script>
+<script src="./Homebase2_files/jquery-ui.self-70ed054b0ecadd0339bf662287f173bbbb80018aef305ea2cba814f40f35af1d.js"></script>
+<script src="./Homebase2_files/jquery-ui.min.self-0fe7f18358c88b857b97e9434453c7b9b6537b7acc497f26b5f9221c454483a2.js"></script>
+<script src="./Homebase2_files/jquery.leanModal.min.self-3333737a9bf576c66a62494e2382749fb2eb0ea496e7faf06e586d79f490bb79.js"></script>
+<script src="./Homebase2_files/login.self-aab4ea879d2c94d00e5e48af6d54e559479f8890f0e9448cb5f5950f433e8b26.js"></script>
+<script src="./Homebase2_files/parent-moderation.self-458698570d8e67549c86c87d18a5405e0e2539397b39b49c1710034bbf9f4b28.js"></script>
+<script src="./Homebase2_files/reward.self-4d14deddf0d12c0a4e66e9bba4e0602678b1d76563b8bbccf241434310d9ef23.js"></script>
+<script src="./Homebase2_files/tasks.self-99c0ada80a5c466a6c86203913954e91bd7c3cd309b83c5a7d8f48fd6249b49a.js"></script>
+<script src="./Homebase2_files/updatePoints.self-97bd48f5f6a4872f45b3525a6cd8df95a076ccd91cb638b2567cab68f94fa9e5.js"></script>
+<script src="./Homebase2_files/weather.self-0c31d40e8fe931c5f6785f706442af3da6659af28460c76f8d942ed66aa68ba7.js"></script>
+<script src="./Homebase2_files/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js"></script>
+  <script src="./Homebase2_files/mustache.js"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="aplFvbPPGaRwmW+qjy4ETr7/AijNbut55aZavbMgDn5//zktur7gbmLE1NJ9qeIbLROn9KlnolgQYGldMIR9/Q==">
+
+</head>
+<body cz-shortcut-listen="true">
+  <div class="collapse navbar-collapse">
+        <a href="http://10.0.0.56:3000/tasks#loginmodal" class="flatbtn" id="parenttrigger">Enter Parent Mode</a>
+
+<div id="loginmodal" class="modal">
+   <h1>Parent Login</h1>
+   <form id="loginform" name="loginform" method="post" action="http://10.0.0.56:3000/sessions/admin">
+     <input type="hidden" name="authenticity_token" value="aplFvbPPGaRwmW+qjy4ETr7/AijNbut55aZavbMgDn5//zktur7gbmLE1NJ9qeIbLROn9KlnolgQYGldMIR9/Q==">
+     <label for="password">Password:</label>
+     <input type="password" name="password" id="password" class="txtfield" tabindex="2">
+     <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+   </form>
+ </div>
+<div>
+  
+
+
+
+<h1 class="welcome"><span id="date">Tue Jun 02 2015</span></h1><h2 id="weather">54.79 and light rain</h2>
+
+<div class="clear"></div>
+<button class="chore-button"><a href="http://10.0.0.56:3000/tasks#chore-box" class="chore-window">New Chore</a></button>
+<button class="rlink"><a href="http://10.0.0.56:3000/rewards" onclick="getRewards()">Rewards&gt;</a></button>
+
+
+    <div id="chore-box" class="modal">
+    <a href="http://10.0.0.56:3000/tasks#" class="close"><img src="./Homebase2_files/close_pop.png" class="btn_close" title="Close Window" alt="Close"></a>
+    <form method="post" class="chore-form" action="./Homebase2_files/Homebase2.html">
+      <input type="hidden" name="authenticity_token" value="aplFvbPPGaRwmW+qjy4ETr7/AijNbut55aZavbMgDn5//zktur7gbmLE1NJ9qeIbLROn9KlnolgQYGldMIR9/Q==">
+      <fieldset class="textbox">
+        <label for="title">New Chore</label>
+        <input id="title" name="title" type="text" placeholder="Chore" class="txtfield">
+
+        <label for="points">Point Value</label>
+        <input id="points" name="points" type="text" placeholder="Point Value" class="txtfield">
+        <label for="name">Assign to:</label>
+          <select id="child-options" name="name"><option></option>
+    <option value="13">Kris</option>
+  
+    <option value="14">Kourtney</option>
+  
+    <option value="15">Kylie</option>
+  
+    <option value="16">Kendall</option>
+  </select>
+            <br><br>
+
+        <input type="submit" class="submitchore" name="Assign_Chore">
+      </fieldset>
+  </form>
+</div>
+<div>
+  
+</div>
+<div class="people-container">
+	<div class="kid-container">
+    <table class="tasks-container">
+  <tbody><tr class="button-container">
+  <td class="task-d">
+    <form class="chore-form">
+      <input type="hidden" name="task_id" value="10">
+      <input type="hidden" name="member_id" value="13">
+      <input type="submit" class="" value="Clean countertops">
+    </form>
+  </td>
+  <td class="point-d"><button class="point_value">20</button></td>
+  </tr>
+  <tr><td class="task-d">
+    <form class="chore-form">
+      <input type="hidden" name="task_id" value="16">
+      <input type="hidden" name="member_id" value="13">
+      <input type="submit" class="" value="do the things">
+    </form>
+  </td>
+  <td class="point-d"><button class="point_value">44</button></td>
+  </tr>
+    </tbody></table>
+	<img class="kidimg" src="./Homebase2_files/girl4.jpg"><h2 class="kid-name">Kris </h2>
+	<div class="clear"></div>
+
+		</div>
+    <div class="space"></div>
+		
+	<div class="kid-container">
+    <table class="tasks-container">
+  <tbody><tr class="button-container">
+  <td class="task-d">
+    <form class="chore-form">
+      <input type="hidden" name="task_id" value="11">
+      <input type="hidden" name="member_id" value="14">
+      <input type="submit" class="true" value="Feed the dog">
+    </form>
+  </td>
+  <td class="point-d"><button class="point_value">10</button></td>
+  </tr>
+    </tbody></table>
+	<img class="kidimg" src="./Homebase2_files/girl3.jpg"><h2 class="kid-name">Kourtney </h2>
+	<div class="clear"></div>
+
+		</div>
+    <div class="space"></div>
+		
+	<div class="kid-container">
+    <table class="tasks-container">
+  <tbody><tr class="button-container">
+    </tr></tbody></table>
+	<img class="kidimg" src="./Homebase2_files/girl1.jpg"><h2 class="kid-name">Kylie </h2>
+	<div class="clear"></div>
+
+		</div>
+    <div class="space"></div>
+		
+	<div class="kid-container">
+    <table class="tasks-container">
+  <tbody><tr class="button-container">
+  <td class="task-d">
+    <form class="chore-form">
+      <input type="hidden" name="task_id" value="13">
+      <input type="hidden" name="member_id" value="16">
+      <input type="submit" class="" value="Empty dishwasher">
+    </form>
+  </td>
+  <td class="point-d"><button class="point_value">20</button></td>
+  </tr>
+    </tbody></table>
+	<img class="kidimg" src="./Homebase2_files/girl4.jpg"><h2 class="kid-name">Kendall </h2>
+	<div class="clear"></div>
+
+		</div>
+    <div class="space"></div>
+		</div>
+<div class="unassigned-container">
+<h4>Unassigned Tasks</h4>
+<table id="unassigned">
+  	<div class="button-container">
+    <form class="unassigned-task">
+    	<span class="task-d"><input type="submit" value="Fold laundry" class="title"></span>
+      <span class="point-d">25</span>
+      <span>
+      <input type="hidden" name="task_id" value="12">
+      <span>Assign to:</span>
+      <select name="member_id" class="unassigned-dropdown">
+      
+    <option value="13">Kris</option>
+  
+    <option value="14">Kourtney</option>
+  
+    <option value="15">Kylie</option>
+  
+    <option value="16">Kendall</option>
+  </select>
+      </span>
+    </form>
+    </div>
+		</table>
+
+</div>
+
+
+	<script id="person-template" type="text/x-handlebars-template">
+	<div class="kid-container">
+    <table class="tasks-container">
+  <tr class='button-container'>
+    {{#assignedTasks}}
+  <td class="task-d">
+    <form class = "chore-form">
+      <input type="hidden" name="task_id" value="{{task_id}}">
+      <input type="hidden" name="member_id" value="{{id}}">
+      <input type="submit" class= "{{isComplete}}" value="{{title}}" />
+    </form>
+  </td>
+  <td class="point-d"><button class="point_value">{{point_value}}</button></td>
+  </tr>
+    {{/assignedTasks}}
+    </table>
+	<img class="kidimg" src='{{imgUrl}}'><h2 class="kid-name">{{name}} </h2>
+	<div class="clear"></div>
+
+		</div>
+    <div class="space"></div>
+		</script>
+  <script id="child-chore" type="text/x-handlebars-template">
+    <option value="{{id}}">{{name}}</option>
+  </script>
+
+		<script id="task-template" type="text/x-handlebars-template">
+  	<div class='button-container'>
+    <form class="unassigned-task">
+    	<span class="task-d"><input type="submit" value="{{title}}" class="title" ></span>
+      <span class="point-d">{{point_value}}</span>
+      <span>
+      <input type="hidden" name="task_id" value="{{id}}">
+      <span>Assign to:</span>
+      <select name="member_id" class="unassigned-dropdown">
+      </select>
+      </span>
+    </form>
+    </div>
+		</script>
+
+  <script id="unassigned-option" type="text/x-handlebars-template">
+    <option value="{{id}}">{{name}}</option>
+  </script>
+
+
+
+
+
+
+</div>
+
+  <script id="child-chore" type="text/x-handlebars-template">
+    <option value="{{id}}">{{name}}</option>
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><div id="lean_overlay"></div></body></html>

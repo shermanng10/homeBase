@@ -12,73 +12,73 @@ Family.create!(surname: "Kardashian",
 							password: "1234567")
 
 Member.create!(name: "Tywin",
-					
+
 							family_id: 1,
 							task_points: 3,
 							color: "red",
 							img_url: "/assets/boy4.jpg")
 Member.create!(name: "Tyrion",
-							
+
 							family_id: 1,
 							task_points: 78,
 							color: "red",
 							img_url: "/assets/girl2.jpg")
 Member.create!(name: "Cersei",
-						
+
 							family_id: 1,
 							task_points: 0,
 							color: "red",
 							img_url: "/assets/girl1.jpg")
 Member.create!(name: "Bob",
-							
+
 							family_id: 1,
 							task_points: 0,
 							color: "red",
 							img_url: "/assets/boy5.jpg")
 Member.create!(name: "Eddard",
-						
+
 							family_id: 2,
 							task_points: 0,
 							color: "red",
 							img_url: "/assets/boy1.jpg")
 Member.create!(name: "Rob",
-					
+
 							family_id: 2,
 							task_points: 14,
 							color: "red",
 							img_url: "/assets/boy2.jpg")
 Member.create!(name: "Jon",
-						
+
 							family_id: 2,
 							task_points: 0,
 							color: "red",
 							img_url: "/assets/girl2.jpg")
 Member.create!(name: "Arya",
-							
+
 							family_id: 2,
 							task_points: 0,
 							color: "red",
 							img_url: "/assets/girl1.jpg")
 Member.create!(name: "Dayanares",
-						
+
 							family_id: 3,
 							task_points: -4,
 							color: "red",
 							img_url: "/assets/girl4.jpg")
 Member.create!(name: "Barry",
-						
+
 							family_id: 3,
 							task_points: 0,
 							color: "red",
 							img_url: "/assets/girl1.jpg")
 Member.create!(name: "Mendel",
-							
+
 							family_id: 3,
 							task_points: 10,
 							color: "red",
 							img_url: "/assets/girl2.jpg")
 Member.create!(name: "Schlomo",
-						
+
 							family_id: 3,
 							task_points: 0,
 							color: "red",
@@ -87,21 +87,21 @@ Member.create!(name: "Kris",
 							family_id: 4,
 							task_points: 0,
 							color: "red",
-							img_url: "/assets/baby.jpg")
+							img_url: "/assets/girl4.jpg")
 Member.create!(name: "Kourtney",
-						
+
 							family_id: 4,
 							task_points: 0,
 							color: "red",
 							img_url: "/assets/girl3.jpg")
 Member.create!(name: "Kylie",
-							
+
 							family_id: 4,
 							task_points: 45,
 							color: "red",
 							img_url: "/assets/girl1.jpg")
 Member.create!(name: "Kendall",
-						
+
 							family_id: 4,
 							task_points: 500,
 							color: "red",
