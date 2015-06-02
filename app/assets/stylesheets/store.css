@@ -1,0 +1,29 @@
+.rewards-container {
+  width: 60vw;
+  margin: 0 auto;
+  border: 1px double black;
+}
+
+.reward-box {
+  border: 1px solid red;
+}
+
+.reward-d{
+  border-top: 1px solid blue;
+}
+
+.item-name {
+
+  font-size:18px;
+}
+
+.reward-d img{
+
+
+}
+
+.cart-container img{
+  margin-top:-5px;
+  float:right;
+  width:25px;
+}

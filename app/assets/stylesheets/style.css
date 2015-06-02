@@ -1,4 +1,4 @@
-
+/*
 body {
   background: #f0f0f0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -208,3 +208,9 @@ p img {
 .style_image {
 	height: 50px
 }
+*/
+
+.clear {
+  clear: both;
+}
+
