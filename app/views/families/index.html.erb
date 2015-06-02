@@ -7,13 +7,29 @@
 </head>
 <script>
 $(document).ready(function(){
+
+  var date = new Date();
+  var d = date.getDate();
+  var m = date.getMonth();
+  var y = date.getFullYear();
   $('#calendar').fullCalendar({
-    contentHeight: 400,
+    theme: true,
+    contentHeight: 300,
+    fixedWeekCount: false,
+    defaultView: 'basicWeek',
     header: {
-      left: "previous, next today",
+      left: "prev, next today",
       center: "title",
-      right: "month,week,day"
-    }
+      right: "month,agendaWeek,agendaDay"
+    },
+    selectable: true,
+    selectHelper: true,
+    editable: true,
+    events: [
+      {
+        title: "Sherman's Birthday",
+        start: new Date(y, m, 1)
+    }]
 })
 });
 </script>
@@ -21,10 +37,7 @@ $(document).ready(function(){
 
 <div id="new-member-box" class="modal">
   <h1>New Family Member</h1>
-
 <div id="calendar"></div>
-
-
   <form method="post" class="create-member" action="/members">
     <%= token_tag(nil) %>
     <label for="member[role">Role:</label>
