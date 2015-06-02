@@ -27,11 +27,6 @@ class MembersController < ApplicationController
 		end
 	end
 
-	def add_img
-		p params
-		p '***' * 1000
-	end
-
 	def give_reward
 		p params
 		reward = Reward.find_by(id: params[:reward_id])
