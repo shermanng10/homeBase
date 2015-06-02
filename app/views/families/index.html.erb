@@ -23,7 +23,9 @@
     </button>
   <div class="clear"></div>
   <div class="members-medals-container"></div>
+  <% if parent_mode? %>
   <p class="add-member"><button class="add"><a href="#login-box" class="login-window">Add Family Member</a></button></p>
+  <% end %>
 </body>
 
 
@@ -39,22 +41,21 @@
   <h2 class="memberMain">{{role}}      {{name}}
     <span class="points">{{task_points}}</span>
   </h2>
-    {{#badges}}
-  <h3 class="memberBadge"> * {{name}} *</h3>
-    {{/badges}}
     {{#pendingRewards}}
   <div style="text-align:center">
-
+  <% if parent_mode? %>
   <form class='giveanewreward'>
     <input type='hidden' name='reward_id' value='{{id}}'>
     <input type='image' style='height: 25px' src='/assets/greencheck.png'>
   </form>
-  <div class="pendingReward">  - {{name}} -  </div>
+  <% end %>
+    <div class="pendingReward">  - {{name}} -  </div>
+  <% if parent_mode? %>
   <form class='denyanewreward'>
     <input type='hidden' name='reward_id' value='{{id}}'>
     <input type='image' style='height: 25px' src='/assets/redx.png'>
   </form>
-
+  <% end %>
   </div>
   {{/pendingRewards}}
 </script>

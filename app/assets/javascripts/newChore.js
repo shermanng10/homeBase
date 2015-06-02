@@ -34,8 +34,8 @@ var assignChore = function(e){
     	method: 'post',
     	data: $(e.target).serialize()
 	}).done(function(response){
-    console.log("on newchore.js")
-    getPeople()
+    getPeople();
+    getUnassigned();
 	}).fail(function(error){
 	})
 }

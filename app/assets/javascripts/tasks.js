@@ -48,6 +48,7 @@ var getUnassigned = function(){
   }).done(function(response){
     var taskTemplate = $('#task-template').html();
     var unassignedDropdownOption = $("#unassigned-option").html()
+    $("#unassigned").html("")
     response.unassignedTasks.forEach(function(task){
       var renderUnassigned = Mustache.render(taskTemplate, task);
       $('#unassigned').append(renderUnassigned);
@@ -68,6 +69,7 @@ var reassignChore = function(e){
     data: $(e.target).serialize()
   }).done(function(response){
     getUnassigned();
+    getPeople();
   }).fail(function(error){
   console.log(error);
   });
