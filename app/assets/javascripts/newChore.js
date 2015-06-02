@@ -13,7 +13,7 @@ $(document).ready(function() {
     return false;
 	});
 
-	$('.signin').on('submit', assignChore)
+	$(document).on('submit','.signin', assignChore)
 
 // When clicking on the button close or the mask layer the popup closed
 $(document).on('click', 'a.close, #mask', function() {
@@ -30,12 +30,12 @@ var assignChore = function(e){
     $('#mask').remove();
 	});
 	$.ajax({
-		url: '/tasks',
-		method: 'post',
-		data: $(e.target).serialize()
+    	url: '/tasks',
+    	method: 'post',
+    	data: $(e.target).serialize()
 	}).done(function(response){
-    getPeople()
-    // location.reload(false)
+    getPeople();
+    getUnassigned();
 	}).fail(function(error){
 	})
 }

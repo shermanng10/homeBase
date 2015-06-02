@@ -10,7 +10,6 @@ class RewardsController < ApplicationController
 		@reward.family_id = current_user.id
 		@reward.save
 		redirect_to :back
-		# render json: @reward
 	end
 
 	def update

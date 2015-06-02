@@ -11,7 +11,8 @@ var approveChore = function(e){
     method: "post",
     data: $(e.target).serialize(),
   }).done(function(response){
-    location.reload(false);
+    console.log("parent mod")
+    getPeople();
   }).fail(function(error){
   });
 }

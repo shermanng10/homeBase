@@ -5,7 +5,6 @@ json.members @family do |member|
   json.name member.name
   json.task_points member.task_points
   json.color member.color
-  json.badges member.badges
   json.imgUrl member.img_url
   json.pendingRewards member.pending_rewards
   json.assignedTasks member.tasks_left_to_do do |task|
