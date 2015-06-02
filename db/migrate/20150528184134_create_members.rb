@@ -1,7 +1,7 @@
 class CreateMembers < ActiveRecord::Migration
   def change
     create_table :members do |t|
-    	t.string :role, null: false
+    	t.string :role
     	t.string :name, null: false
     	t.integer :family_id, null: false
     	t.integer :task_points, default: 0
