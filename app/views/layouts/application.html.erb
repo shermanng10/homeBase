@@ -22,9 +22,9 @@
     <% else %>
       <div id='form-login'>
         <%= form_tag "/login", method: "post" do %>
-        <%= label_tag :email %>:
+        <%= label_tag :email %>
         <%= text_field_tag :email %>
-        <%= label_tag :password %>:
+        <%= label_tag :password %>
         <%= password_field_tag :password %>
         <%= submit_tag "sign in", :class => 'btn btn-default' %>
         <%= link_to "Signup",  new_family_path %>
@@ -32,7 +32,7 @@
       </div>
     <% end %>
 
-<div id="loginmodal" style="display:none;">
+<div id="loginmodal" class="modal">
    <h1>Parent Login</h1>
    <form id="loginform" name="loginform" method="post" action="sessions/admin">
      <%= token_tag(nil) %>
