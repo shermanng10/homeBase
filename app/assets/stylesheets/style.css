@@ -219,3 +219,9 @@ p img {
 	padding-right: 40px;
 	padding-top:  60px;
 }
+
+.create-event{
+  width: 30%;
+  border: 1px #d3d3d3 solid;
+  margin: 5px;
+}
