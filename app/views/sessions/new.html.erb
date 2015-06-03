@@ -1,0 +1,26 @@
+<body>
+  <div id='form-login'>
+    <%= form_tag "/login", method: "post" do %>
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <%= submit_tag "sign in", :class => 'btn btn-default' %>
+    <%= link_to "Signup",  new_family_path %>
+    <% end %>
+  </div>
+  <div class="form-signup">
+    <%= form_tag "/families", method: "post" do %>
+    <%= label_tag :surname %>
+    <%= text_field_tag 'family[surname]' %>
+    <%= label_tag :email %>
+    <%= text_field_tag 'family[email]' %>
+    <%= label_tag :password %>
+    <%= password_field_tag 'family[password]' %>
+    <%= submit_tag "Sign Up", :class => 'btn btn-default' %>
+    <% end %>
+  </div>
+</body>
+
+
+

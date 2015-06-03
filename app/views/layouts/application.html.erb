@@ -9,10 +9,7 @@
 
 </head>
 <body>
-  <% if !current_user %>
-    <span id="create-account"></span>
-  <% end %>
-  <div class="collapse navbar-collapse">
+  <div class="collapse">
     <% if logged_in? %>
       <% if parent_mode? %>
         <%= link_to "Logout", '/logout', method: :delete, class: "logout" %>
@@ -20,17 +17,6 @@
       <% else %>
         <a href="#loginmodal" class="flatbtn" id="parenttrigger">Enter Parent Mode</a>
       <% end %>
-    <% else %>
-      <div id='form-login'>
-        <%= form_tag "/login", method: "post" do %>
-        <%= label_tag :email %>
-        <%= text_field_tag :email %>
-        <%= label_tag :password %>
-        <%= password_field_tag :password %>
-        <%= submit_tag "sign in", :class => 'btn btn-default' %>
-        <%= link_to "Signup",  new_family_path %>
-        <% end %>
-      </div>
     <% end %>
 
 <div id="loginmodal" class="modal">
@@ -46,9 +32,6 @@
   <%= yield %>
 </div>
 </body>
-  <script id="child-chore" type="text/x-handlebars-template">
-    <option value="{{id}}">{{name}}</option>
-  </script>
 </html>
 
 
