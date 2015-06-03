@@ -15,7 +15,6 @@ li {
 }
 
 .kid-container{
-border: 1px solid #2c3e50;
 border-radius: 20px;
 width: 35vw;
 margin: 0 auto;
@@ -44,9 +43,10 @@ p img {
 
 
 .point_value{
-
-	display: inline-block;
 	font-size: 24px;
+	display: flex; 
+	justify-content: center; 
+	flex-direction: column;
 }
 
 .reward-intro{
@@ -64,6 +64,42 @@ p img {
 	display: inline-block;
 	font-size: 24px;
 	color:#34495e;
+
+}
+
+.space{
+	margin-bottom: 35px;
+}
+
+.unassigned-container{
+	width: 80vw;
+	margin: 0 auto;
+	border-radius: 10px;
+	border: 1px solid black;
+	margin-bottom: 80px;
+	margin-top: 20px;
+}
+
+.unassigned {
+	text-align:left;
+	list-style-type: none;
+	padding: 2px;
+}
+
+
+.memberMain{
+  text-align: center;
+  font-size: 30px;
+}
+
+.memberBadge{
+  text-align: center;
+  font-size: 24px;
+  color: #d35400;
+}
+
+.points {
+  color:#2980b9;
 }
 
 #form-login{
@@ -96,7 +132,7 @@ p img {
 }
 
 .true {
-    border-color: #000;
+    border-color: #34495e !important;
     border-width: 1px;
     border-radius: 4px 4px 4px 4px;
     -moz-border-radius: 4px;
@@ -107,8 +143,9 @@ p img {
     padding: 6px 6px 4px;
     margin-top: 10px;
     font: 12px;
+    text-decoration: line-through;
     width: auto;
-		background-color: #d3d3d3 !important;
+		background-color: #34495e !important;
 		color:#f39c12;
 }
 
@@ -236,4 +273,23 @@ p img {
   width: 30%;
   border: 1px #d3d3d3 solid;
   margin: 5px;
+}
+.bb {
+	font-size: 14px;
+	font: arial;
+}
+
+.points_earned {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.center-chore{
+	display: flex; 
+	justify-content: center; 
+	flex-direction: column
+}
+
+.unassigned-header {
+	margin-bottom: 3px;
 }
