@@ -15,6 +15,14 @@ class ApplicationController < ActionController::Base
   end
 
   def parent_mode?
-    session[:admin]
+    flash[:warn] = "Please enter parent mode" unless session[:admin]
+    return session[:admin]
+  end
+
+  def require_login
+    if !current_user
+      flash[:error] = "You must be logged in."
+      redirect_to :root
+    end
   end
 end

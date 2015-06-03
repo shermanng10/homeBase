@@ -11,6 +11,7 @@
     <h1 class="welcome"><span id="date"></span></h1><h2 id='weather'></h2>
     <div class="clear"></div>
     <a href="#chore-box" class="chore-window button icon-left ion-compose button-energized">New Chore</a>
+
     <div id="chore-box" class="modal">
       <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
       <form method="post" class="chore-form" action="tasks">
@@ -23,20 +24,24 @@
           <label for="name">Assign to:</label>
           <select id="child-options" name="name">
             <option> </option>
-          </select>
-          <br><br>
-          <input type='submit' class='submitchore' name="Assign_Chore">
-        </fieldset>
-      </form>
-    </div>
-    <div>
-      <%= yield %>
-    </div>
-    <div class="people-container"></div>
-    <div class="unassigned-container">
-      <h4>Unassigned Tasks</h4>
-    <table id="unassigned"></table>
-  </div>
+
+
+            </select>
+            <br><br>
+
+        <input type='submit' class='submitchore' name="Assign_Chore">
+      </fieldset>
+  </form>
+</div>
+<%= flash[:message] %>
+<%= flash[:error] %>
+<div class="people-container"></div>
+
+<div class="unassigned-container">
+<h4>Unassigned Tasks</h4>
+<table id="unassigned"></table>
+
+</div>
 </div>
 </body>
 <script id="person-template" type="text/x-handlebars-template">

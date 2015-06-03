@@ -1,5 +1,6 @@
 <body>
 <div class="cont">
+
   <div id='form-login' class="row">
     <%= form_tag "/login", method: "post", class: "list list-inset" do %>
     <%= text_field_tag :email,'Email', class: "item-input-wrapper" %>
@@ -8,6 +9,10 @@
     <br>
     <%= submit_tag "Sign in", :class => 'button button-positive' %>
     <% end %>
+    </div>
+    <div class="row">
+        <p class="col"><%= flash[:error] %></p>
+        <p class="col"><%= flash[:warn] %></p>
     </div>
     <div class="row" id="link-to-signup">
         <a href="#" class="toggle-login button button-positive col">Signup</a>

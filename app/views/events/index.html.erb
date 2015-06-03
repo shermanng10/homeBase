@@ -10,6 +10,8 @@
 
 <div class="customscroll has-header has-footer">
 <div id="calendar" class='calendar-padding'></div>
+<%= flash[:error] %>
+<%= flash[:message] %>
 <div class="list" style="margin:20px 0 100px 30px;">
 <form method="post" class="create-event" action="/events">
   <%= token_tag(nil) %>
@@ -19,11 +21,11 @@
   </label>
   <label class="tem item-input item-stacked-label">
   <span class="input-label">Starts At</span>
-  <input name="event[start_time]" type="date" id="datepicker">
+  <input name="event[start_time]" type="datetime-local" id="datepicker">
   </label>
   <label class="tem item-input item-stacked-label">
   <span class="input-label">Ends At</span>
-  <input name="event[end_time]" type="date" id="datepicker2">
+  <input name="event[end_time]" type="datetime-local" id="datepicker2">
   </label>
   <label class="item item-input item-select">
       <div class="input-label">Event for:</div>

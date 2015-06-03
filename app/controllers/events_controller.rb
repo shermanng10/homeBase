@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
-
+  before_action :require_login
+  
   def index
     @events = Event.where(family_id: session[:user_id ])
   end
@@ -7,7 +8,11 @@ class EventsController < ApplicationController
   def create
     @event= Event.new(event_params)
     @event.family = current_user
-    @event.save!
+    if @event.save
+      flash[:message] = "Your event has been saved"
+    else
+      flash[:error] = "Please enter a valid event"
+    end
     redirect_to :back
   end
 
