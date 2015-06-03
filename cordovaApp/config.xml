@@ -7,7 +7,7 @@ A family application that allows parents to delegate tasks with point values and
      <author email="sherman.ng10@gmail.com">
         DevBootcamp Pocket Gophers 2015
     </author>
-    <content src="http://10.0.0.56:3000" />
+    <content src="http://localhost:3000" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
