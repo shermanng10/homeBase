@@ -7,6 +7,7 @@ class RewardsController < ApplicationController
 
 	def create
 		@reward = Reward.new(reward_params)
+		@reward.name = @reward.name.titleize
 		@reward.family_id = current_user.id
 		@reward.save
 		redirect_to :back

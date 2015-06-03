@@ -19,7 +19,7 @@ class Member < ActiveRecord::Base
 
   def assign_color
     colors = ["#7E57C2", "#42A5F5", "#26A69A", "#FF9800", "#FFEE58", "#78909C", "#EC407A", "#AB47BC", "#26C6DA", "#8BC34A", "#FFCA28", "#69F0AE"]
-    count = self.family.members.length
+    count = self.family.members.length + 1
     self.color = colors[count]
   end
 
@@ -29,6 +29,14 @@ class Member < ActiveRecord::Base
 
   def unassigned_tasks
     Task.where(family_id: self.family.id, assigned_member_id: nil)
+  end
+
+  def pointcolor
+    if self.task_points > 0
+      return 'greenpoints'
+    else
+      return 'redpoints'
+    end
   end
 
 end
