@@ -84,6 +84,19 @@ p img {
   margin-left: 30%;
 }
 
+#link-to-login{
+	display: none;
+}
+
+#form-signup{
+	display: none;
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 200px;
+  margin-left: 30%;
+}
+
 .rlink{
 	float:right;
 }
