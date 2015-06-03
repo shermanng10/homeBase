@@ -227,3 +227,55 @@ p img {
 	fill: #424242;
 }
 
+.customscroll{
+  position: absolute;
+  width: 100%;
+  overflow:scroll;
+  top: 0;
+  bottom: 0;
+
+}
+
+.greenpoints {
+	color: green;
+	float: right;
+}
+
+.redpoints {
+	color: red;
+	float: right;
+}
+
+.bottom-margin {
+	margin-bottom: 40px;
+}
+
+.col-font {
+	font-family: 'Lora', serif;
+	font-size: 20px !important;
+	border: 2px #d3d3d3 solid;
+	border-radius: 5px;
+}
+
+.col-list {
+	font-family: 'Lora', serif;
+	font-size: 20px !important;
+	font-style: bold;
+}
+
+.reward-name {
+	opacity: 0.7;
+	border-radius: 5px;
+}
+
+.center-reward {
+	display: flex; 
+	justify-content: center; 
+	flex-direction: column
+}
+
+.calendar-padding {
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top:  60px;
+}

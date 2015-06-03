@@ -9,7 +9,7 @@ class MembersController < ApplicationController
 		p params
 		@member = Member.new(member_params)
 		@member.family_id = current_user.id
-		@member.save
+		@member.name = @member.name.titleize
 		@member.assign_color
 		@member.save!
 		redirect_to :back

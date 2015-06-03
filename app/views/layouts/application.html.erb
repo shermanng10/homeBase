@@ -8,11 +8,11 @@
   <%= csrf_meta_tags %> 
 
   <script type='text/javascript' src='http://code.ionicframework.com/1.0.0/js/ionic.min.js'></script>
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
   <link rel='stylesheet' type='text/css' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 </head>
-<body>
-
-<div class="bar bar-header bar-balanced">
+<header>
+  <div class="bar bar-header bar-balanced">
   <h1 class="title">HomeBase</h1>
 
     <% if logged_in? %>
@@ -24,6 +24,9 @@
       <% end %>
     <% end %>
 </div>
+  </header>
+<body>
+<div class="customscroll has-header has-footer">
  
 <div id="loginmodal" class="modal">
    <h1>Parent Login</h1>
@@ -56,6 +59,7 @@
   </a>
   </div>
   <%= yield %>
+</div>
 </div>
 </body>
 </html>

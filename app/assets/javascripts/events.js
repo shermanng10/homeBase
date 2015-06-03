@@ -5,9 +5,8 @@ $(document).ready(function(){
   var y = date.getFullYear();
   var calendar = $('#calendar').fullCalendar({
     theme: true,
-    contentHeight: 300,
+    aspectRatio: 1.5,
     fixedWeekCount: false,
-    defaultView: 'basicWeek',
     header: {
       left: "prev, next today",
       center: "title",
