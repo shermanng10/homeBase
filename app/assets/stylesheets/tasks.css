@@ -1,0 +1,60 @@
+.kid-container{
+  padding: 20px;
+  margin:0 auto;
+  width:80vw;
+  border:1px solid black;
+}
+
+.kidimg{
+  float:right;
+
+}
+
+.kid-name{
+  font-size:20px;
+  float:right;
+}
+
+.tasks-container{
+float:left;
+}
+
+.chore-form input {
+  border-radius:10px;
+  font-size: 36px;
+}
+
+.unassigned-task{
+
+  border:1px solid ;
+  text-align:center;
+}
+
+.big-container{
+  margin-top:30px;
+
+}
+
+.unassigned-task input{
+  border-radius:10px;
+font-size: 22px;
+
+
+}
+
+.space {
+  margin-top:20px;
+}
+
+.center{
+  text-align:center;
+}
+
+.chore{
+  font-size: 22px;
+  margin-bottom:10px;
+}
+
+.true{
+background-color:#3498db;
+}
