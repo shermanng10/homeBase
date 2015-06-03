@@ -852,6 +852,7 @@ body .ui-tooltip {
 	color: #2c4359;
 }
 .ui-widget-header {
+	font-size: 14px;
 	border: 1px solid #2c4359;
 	background: #35414f url("images/ui-bg_dots-small_35_35414f_2x2.png") 50% 50% repeat;
 	color: #e1e463;
