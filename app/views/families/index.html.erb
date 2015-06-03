@@ -2,7 +2,7 @@
 <head>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css' />
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
 
 </head>
@@ -16,7 +16,7 @@
     <%= token_tag(nil) %>
     <label for="member[name">Name:</label>
     <input name="member[name]" type="text" placeholder="Name" class="txtfield" tabindex="2">
-    <input type="radio" name="member[img_url]" value="<%= asset_path 'boy1.jpg' %>" ><%= image_tag 'avatars/boy1.jpg', class: 'style_image' %>
+    <input type="radio" name="member[img_url]" value="<%= asset_path 'boy1.jpg' %>"><%= image_tag 'avatars/boy1.jpg', class: 'style_image' %>
     <input type="radio" name="member[img_url]" value="<%= asset_path 'boy2.jpg' %>"><%= image_tag 'avatars/boy2.jpg', class: 'style_image' %>
     <input type="radio" name="member[img_url]" value="<%= asset_path 'boy3.jpg' %>"><%= image_tag 'avatars/boy3.jpg', class: 'style_image'  %>
     <input type="radio" name="member[img_url]" value="<%= asset_path 'boy5.jpg' %>"><%= image_tag 'avatars/boy5.jpg', class: 'style_image'  %>
