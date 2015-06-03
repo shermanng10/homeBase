@@ -1,7 +1,7 @@
 $('document').ready(function() {
   $('#normaltrigger').on('click', switchMode)
   $('.create-member').on('submit', createMember)
-  $('a.login-window').on('click', loginWindow)
+  $('.login-window').on('click', loginWindow)
   $(document).on('click', 'a.close, #mask, .submit', function() {
   $('#mask , .login-popup').fadeOut(300, function() {
           $('#mask').remove();
@@ -36,7 +36,9 @@ $(function() {
 
 
 var loginWindow = function(e){
-  var loginBox = $(e).attr('href');
+  console.log("hello")
+  var loginBox = '.login-popup'
+  // $(e).attr('href');
   $(loginBox).fadeIn(300);
   var popMargTop = ($(loginBox).height() + 24) / 2;
   var popMargLeft = ($(loginBox).width() + 24) / 2;
