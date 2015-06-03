@@ -209,9 +209,21 @@ p img {
 	height: 50px
 }
 
+<<<<<<< HEAD
 */
 
 .clear {
   clear: both;
+}
+
+
+.icon-parent-task-approve {
+	fill: #4CAF50;
+}
+.icon-parent-task-x {
+	fill: #FF3D00;
+}
+.icon-parent-task-redo {
+	fill: #424242;
 }
 
