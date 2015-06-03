@@ -8,7 +8,8 @@ class RewardsController < ApplicationController
 	def create
 		@reward = Reward.new(reward_params)
 		@reward.family_id = current_user.id
-		render json: @reward
+		@reward.save
+		redirect_to :back
 	end
 
 	def update
@@ -38,6 +39,7 @@ class RewardsController < ApplicationController
 		reward = Reward.find_by(id: params[:reward_id])
 		reward.status = 'pending'
 		reward.save
+		redirect_to :back
 	end
 
 	private

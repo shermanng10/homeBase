@@ -6,11 +6,13 @@ class MembersController < ApplicationController
 	end
 
 	def create
+		p params
 		@member = Member.new(member_params)
 		@member.family_id = current_user.id
 		@member.save
 		@member.assign_color
-		@member.save
+		@member.save!
+		redirect_to :back
 	end
 
 	def destroy
@@ -26,33 +28,43 @@ class MembersController < ApplicationController
 	end
 
 	def give_reward
-		member = Member.find_by(id: params[:member_id])
+		p params
 		reward = Reward.find_by(id: params[:reward_id])
-		member.task_points -= reward.cost
+		member = reward.member
+		reward.member.task_points -= reward.cost
 		member.save
 		reward.status = 'closed'
+		reward.save!
+		redirect_to :back
 	end
 
 	def deny_reward
 		reward = Reward.find_by(id: params[:reward_id])
 		reward.status = 'open'
+		reward.save
+		redirect_to :back
 	end
 
-	def add_points points
-		member = Member.find_by(id: params[:member_id])
+	def add_points
+		points = params[:points].to_i
+		member = Member.find_by(id: params[:name].to_i)
 		member.task_points += points
 		member.save
+		render json: member
 	end
 
-	def remove_points points
-		member = Member.find_by(id: params[:member_id])
-		member.task_points -+ points
+	def remove_points
+		p params
+		points = params[:points].to_i
+		member = Member.find_by(id: params[:name].to_i)
+		member.task_points -= points
 		member.save
+		render json: member
 	end
 
 	private
 	def member_params
-		params.require(:member).permit :role, :name
+		params.require(:member).permit :name, :img_url
 	end
 
 	def require_login

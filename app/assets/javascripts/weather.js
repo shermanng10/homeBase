@@ -1,7 +1,6 @@
 $('document').ready(function() {
-    getWeather();
+  getWeather();
 })
-
 
 var getWeather = function(){
   // $.ajax({
@@ -14,4 +13,5 @@ var getWeather = function(){
   //   }).fail(function(error){
   //     console.log(error)
   //   })
+
 }

@@ -3,10 +3,10 @@ $('document').ready(function() {
   $('.create-member').on('submit', createMember)
   $('.login-window').on('click', loginWindow)
   $(document).on('click', 'a.close, #mask, .submit', function() {
-  $('#mask , .login-popup').fadeOut(300, function() {
-          $('#mask').remove();
-      });
-      return false;
+  $('#mask , #new-member-box').fadeOut(300, function() {
+      $('#mask').remove();
+    });
+    return false;
   });
 });
 
@@ -21,9 +21,7 @@ $(function() {
       data: $(e.target).serialize()
     }).done(function(response) {
       location.reload(false);
-      console.log(response)
     }).fail(function(error) {
-      console.log(error)
     })
   });
 
@@ -36,9 +34,7 @@ $(function() {
 
 
 var loginWindow = function(e){
-  console.log("hello")
-  var loginBox = '.login-popup'
-  // $(e).attr('href');
+  var loginBox = ('#new-member-box');
   $(loginBox).fadeIn(300);
   var popMargTop = ($(loginBox).height() + 24) / 2;
   var popMargLeft = ($(loginBox).width() + 24) / 2;
@@ -58,7 +54,6 @@ var switchMode = function(e) {
     method: "GET"
   }).done(function(response) {
     location.reload(false);
-    console.log(response)
   }).fail(function(error) {
     console.log(error)
   })
@@ -72,7 +67,6 @@ var parentMode = function(e) {
   }).done(function(response) {
        location.reload(false);
   }).fail(function(error) {
-      console.log(error)
   })
 }
 
@@ -86,6 +80,5 @@ var createMember = function(event){
     location.reload(false)
   }).fail(function(error){
     location.reload(false);
-    console.log(error, "hello");
   });
 }

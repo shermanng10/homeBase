@@ -7,6 +7,11 @@ class TasksController < ApplicationController
 	end
 
 	def create
+		if request.xhr?
+			p "ajax"
+		else
+			p "regular"
+		end
 		@task = Task.new
 		@task.point_value = params[:points]
 		@task.title = params[:title]
@@ -17,12 +22,20 @@ class TasksController < ApplicationController
 		end
 	end
 
-	def delete_task
+	def destroy
 		@task = Task.find_by(id: params[:task_id])
 		if @task.delete
 			all_tasks = Task.all
 			render json: all_tasks
 		end
+	end
+
+	def assign_unassigned_task
+		p "hello this is me"
+		@task = Task.find_by(id: params[:task_id])
+		@task.assigned_member_id = params[:member_id]
+		@task.save!
+		redirect_to :back
 	end
 
 	def kid_complete
@@ -45,14 +58,15 @@ class TasksController < ApplicationController
 
 	def parent_delete
 		task = Task.find_by(id: params[:task_id])
-		task.delete
-		task.save
+		task.destroy
+		redirect_to :back
 	end
 
 	def parent_redo
 		task = Task.find_by(id: params[:task_id])
 		task.completed_member_id = nil
 		task.save
+		redirect_to :back
 	end
 
 	private
