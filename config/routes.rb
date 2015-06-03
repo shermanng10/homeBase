@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   resources :tasks, :events, :rewards, :families, :members, :sessions
   # You can have the root of your site routed with "root"
-  root 'tasks#index'
+  root 'sessions#new'
   get    'login'  => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
   post "sessions/admin" => "sessions#admin"
-  get "sessions/normal" => "sessions#normal_mode"
+  post "sessions/normal" => "sessions#normal_mode"
 
   post 'members/give_reward' => 'members#give_reward'
   post 'members/deny_reward' => 'members#deny_reward'
