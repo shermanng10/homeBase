@@ -33,8 +33,6 @@ var createReward = function(e) {
     data: $(e.target).serialize()
   }).done(function(response) {
     getRewards();
-  }).fail(function(error) {
-    console.log(error)
   })
 };
 

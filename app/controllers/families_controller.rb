@@ -22,7 +22,6 @@ class FamiliesController < ApplicationController
   	family = Family.find_by(id: current_user.id)
   	if family.destroy
   		flash[:success] = "Your ENTIRE account has been deleted"
-  	else
   	end
   end
 

@@ -31,8 +31,6 @@ var giveReward = function(e) {
     data: $(e.target).serialize()
   }).done(function(response) {
     getFamilymembers()
-  }).fail(function(response) {
-    console.log(response)
   })
 };
 
@@ -44,14 +42,11 @@ var denyReward = function(e) {
     data: $(e.target).serialize()
   }).done(function(response) {
     getFamilymembers()
-  }).fail(function(response) {
-    console.log(response)
   })
 };
 
 var givePoints = function(e) {
   e.preventDefault();
-  console.log(e.target)
   $('#mask, .points-popup').fadeOut(300, function(e) {
     $('#mask').remove();
   });
@@ -61,8 +56,6 @@ var givePoints = function(e) {
     data: $(e.target).serialize()
   }).done(function(response) {
     getFamilymembers()
-  }).fail(function(error) {
-    console.log(error)
   })
 }
 
@@ -78,8 +71,6 @@ var removePoints = function(e) {
     data: $(e.target).serialize()
   }).done(function(response) {
     getFamilymembers()
-  }).fail(function(error) {
-    console.log(error)
   })
 }
 
