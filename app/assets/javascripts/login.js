@@ -1,7 +1,7 @@
 $('document').ready(function() {
   $('#normaltrigger').on('click', switchMode)
   $('.create-member').on('submit', createMember)
-  $('a.login-window').on('click', loginWindow)
+  $('.login-window').on('click', loginWindow)
   $(document).on('click', 'a.close, #mask, .submit', function() {
   $('#mask , #new-member-box').fadeOut(300, function() {
       $('#mask').remove();
