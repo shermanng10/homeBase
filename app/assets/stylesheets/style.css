@@ -221,6 +221,7 @@ p img {
 }
 
 .create-event{
+  margin: 0 auto;
   width: 30%;
   border: 1px #d3d3d3 solid;
   margin: 5px;

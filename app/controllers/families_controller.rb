@@ -2,6 +2,7 @@ class FamiliesController < ApplicationController
   before_action :require_login
 
   def index
+    p "in the controller"
     @family = Member.where(family_id: session[:user_id])
   end
 

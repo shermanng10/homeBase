@@ -1,6 +1,6 @@
 class Member < ActiveRecord::Base
 
-  
+  belongs_to :family
   has_many :events, dependent: :destroy
   has_many :rewards, dependent: :destroy
   has_many :assigned_tasks, foreign_key: :assigned_member_id, class_name: "Task", dependent: :destroy
