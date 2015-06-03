@@ -10,8 +10,7 @@
   <div class="customscroll has-header has-footer">
     <h1 class="welcome"><span id="date"></span></h1><h2 id='weather'></h2>
     <div class="clear"></div>
-    <a href="#chore-box" class="chore-window button icon-left ion-compose button-energized">New Chore</a>
-
+    <a href="#chore-box" class="chore-window button icon-left ion-compose button-energized" style='margin-top: 6vw;'>New Chore</a>
     <div id="chore-box" class="modal">
       <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
       <form method="post" class="chore-form" action="tasks">
@@ -24,45 +23,46 @@
           <label for="name">Assign to:</label>
           <select id="child-options" name="name">
             <option> </option>
-
-
             </select>
             <br><br>
-
         <input type='submit' class='submitchore' name="Assign_Chore">
       </fieldset>
   </form>
 </div>
 <%= flash[:message] %>
 <%= flash[:error] %>
-<div class="people-container"></div>
-
-<div class="unassigned-container">
-<h4>Unassigned Tasks</h4>
-<table id="unassigned"></table>
-
-</div>
-</div>
+    <div class="people-container"></div>
+      <div class="unassigned-container">
+        <div class="item item-divider" style='border-radius: 10px'>
+          <div class='unassigned-header'>Unassigned Tasks</div>
+          <div id="unassigned"></div>
+        </div>
+    </div>
+  </div>
 </body>
+
 <script id="person-template" type="text/x-handlebars-template">
-<div class="list" style="border:solid 1px red">
+<div class="list" style='padding: 0px 30px'>
   <div class="list" style='margin-top: 2vw'>
-    <a class="item item-avatar reward-name" style='background-color: {{membercolor}}' href="#">
+    <a class="item item-avatar reward-name" style='background-color: {{color}}' href="#">
       <img src="{{imgUrl}}">
       <div class="item item-divider"> {{name}} </div>
     </a>
-
     {{#assignedTasks}}
     <div class='item item-button-right row col-font'>
-
-    <div class='col col-40 center-reward'> {{title}} </div>
-
-    <div class="point_value">{{point_value}}</div>
-     <form class = "chore-form col">
-      <input type="hidden" name="task_id" value="{{task_id}}">
-      <input type="hidden" name="member_id" value="{{id}}">
-      <input type="submit" class= "{{isComplete}} button button-balanced" value='Complete' />
-    </form></div>
+      <div class='col col-60 center-reward'> 
+        {{title}} 
+      </div>
+      <div class="col col-30 points_earned">
+        {{point_value}} 
+        <span class='bb'>bB</span>
+      </div>
+      <form class = "chore-form col col-10">
+        <input type="hidden" name="task_id" value="{{task_id}}">
+        <input type="hidden" name="member_id" value="{{id}}">
+        <input type="submit" class= "{{isComplete}} button button-balanced" style='float: right;'value='Complete' />
+      </form>
+    </div>
   <% if session[:admin] == true %>
     <form class="approve-chore">
       <input type="hidden" name="task_id" value="{{task_id}}">
@@ -92,22 +92,28 @@
 
 
 <script id="task-template" type="text/x-handlebars-template">
-<p class="center">
-  <div class="clear">
-    <div class='button-container'>
-      <form class="unassigned-task">
-        <span class="task-d"><input type="submit" value="{{title}}" class="title" ></span>
-        <span class="point-d">{{point_value}}</span>
-        <span>
-          <input type="hidden" name="task_id" value="{{id}}">
-          <span>Assign to:</span>
-          <select name="member_id" class="unassigned-dropdown">
-          </select>
-        </span>
-      </form>
-    </p>
+<div class="center">
+  <div class="clear"></div>
+  <div class='button-container'>
+  <ul class='list'>
+  <li class='item' style='border-radius: 7px;'>
+    <form class="list unassigned-task">
+      <span class="col"><input type="submit" value="{{title}}" class="title button button-outline button-positive" ></span>
+      <span class="col">{{point_value}}<span class='bb'> bB</span></span>
+      <span>
+        <input type="hidden" name="task_id" value="{{id}}">
+        <span>Assign to:</span>
+        <select name="member_id" class="unassigned-dropdown">
+        </select>
+     </span>
+     </li>
+    </ul>
+     
+    </form>
+    </div>
   </div>
-  </script>
-  <script id="unassigned-option" type="text/x-handlebars-template">
-  <option value="{{id}}">{{name}}</option>
-  </script>
+</script>
+
+<script id="unassigned-option" type="text/x-handlebars-template">
+<option value="{{id}}">{{name}}</option>
+</script>
