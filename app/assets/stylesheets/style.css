@@ -227,3 +227,11 @@ p img {
 	fill: #424242;
 }
 
+.customscroll{
+  position: absolute;
+  width: 100%;
+  overflow:scroll;
+  top: 0;
+  bottom: 0;
+
+}

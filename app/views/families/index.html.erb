@@ -1,14 +1,13 @@
 <head>
-<head>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.css' />
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.1/fullcalendar.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
-
-</head>
 </head>
 
 <body>
+<div class="customscroll has-header has-footer">
+
 
 <div id="new-member-box" class="modal">
 <h1>New Family Member</h1>
@@ -32,14 +31,14 @@
     </form>
 </div>
 
-  <div class="familyname-container"></div>
+<div class="familyname-container"></div>
+<div class="clear"></div>
+<div class="members-medals-container"></div>
 
-  <div class="clear"></div>
-  
-  <div class="members-medals-container"></div>
-  <% if parent_mode? %>
+<% if parent_mode? %>
   <p class="add-member"><button class="add"><a href="#new-member-box" class="login-window">Add Family Member</a></button></p>
-  <% end %>
+<% end %>
+</div>
 </body>
 
 
