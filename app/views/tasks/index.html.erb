@@ -60,20 +60,25 @@
     <td class="icons">
     <form class="approve-chore">
       <input type="hidden" name="task_id" value="{{task_id}}">
-      <input type="image" src="<%= image_path('icons/greencheck.png') %>">
+      <input type="image" class="icon-parent-task-approve" src="<%= image_path('svg/check.svg') %>">
     </form>
   </td>
   <td class="icons">
     <form class="reject-chore" action='/tasks' method='post'>
       <input type="hidden" name="task_id" value="{{task_id}}" action='delete'>
-      <input type="image" src="<%= image_path('icons/redx.png') %>">
+      <input type="image" class="icon-parent-task-x" src="<%= image_path('svg/x.svg') %>">
     </form>
   </td>
   <td class="icons">
     <form class="redo-chore">
     <input type="hidden" name="task_id" value="{{task_id}}">
-  <input type="image" src="<%= image_path('icons/redo.png') %>">
+  <input type="image"  src="<%= image_path('svg/reload.svg') %>">
+  <svg viewBox="0 0 8 8">
+    <use xlink:href="#reload" class="icon-parent-task-approve"></use>
+  </svg>
+
   </form>
+
   </td>
   <% end %>
   </tr>

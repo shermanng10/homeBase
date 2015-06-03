@@ -47,8 +47,12 @@
 </body>
 
 
+
+  
 <script id="familyname-template" type="text/x-handlebars-template">
-  <h1>The {{familyName}} Family</h1>
+  <div class="bar bar-subheader bar-calm">
+    <h1 class="title">The {{familyName}} Family </h1>
+  </div>
 </script>
 
 <script id="child-points" type="text/x-handlebars-template">
@@ -56,9 +60,14 @@
 </script>
 
 <script id="memberMedal-template" type="text/x-handlebars-template">
+ <ul class="list">
+  <li class="item"> 
+  <a class="item item-avatar" href="#">
+    <img src={{imgUrl}}>
   <h2 class="memberMain">{{name}}
     <span class="points">{{task_points}}</span>
   </h2>
+  </a>
     {{#pendingRewards}}
   <div style="text-align:center">
   <% if parent_mode? %>
@@ -76,6 +85,8 @@
   <% end %>
   </div>
   {{/pendingRewards}}
+  </li>
+  </ul>
 </script>
 
 
