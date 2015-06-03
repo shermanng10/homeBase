@@ -12,21 +12,19 @@
 </head>
 <body>
 
-  <div class="collapse bar bar-header">
+<div class="bar bar-header bar-balanced">
+  <h1 class="title">HomeBase</h1>
 
     <% if logged_in? %>
       <% if parent_mode? %>
-        <%= link_to "Logout", '/logout', method: :delete, class: "logout" %>
-      <button class="button button-icon icon ion-navicon">
-        <a href="#loginmodal" class="flatbtn2" id="normaltrigger">Exit Parent Mode</a>
-      </button>
+        <%= link_to "Logout", '/logout', method: :delete, class: "button button-block button-positive" %>
+        <a href="#loginmodal" class="button button-block button-positive" id="normaltrigger">Exit Parent Mode</a>
       <% else %>
-      <button class="button button-icon icon ion-navicon">
-        <a href="#loginmodal" class="flatbtn" id="parenttrigger">Enter Parent Mode</a>
-      </button>
+        <a href="#loginmodal" class="button button-block button-positive" id="parenttrigger">Enter Parent Mode</a>
       <% end %>
     <% end %>
-   
+</div>
+ 
 <div id="loginmodal" class="modal">
    <h1>Parent Login</h1>
    <form id="loginform" name="loginform" method="post" action="sessions/admin">
@@ -36,24 +34,27 @@
      <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
    </form>
  </div>
-<div>
+
+
 
   <div class="tabs tabs-icon-left tabs-positive">
-  <a class="tab-item">
+  <a class="tab-item" href='/tasks'>
     <i class='icon ion-android-clipboard'> </i>
     Work
   </a>
-  <a class="tab-item">
+  <a class="tab-item" href='/families'>
     <i class="icon ion-social-usd"></i>
     Bank
   </a>
-  <a class="tab-item">
+  <a class="tab-item" href='/rewards'>
      <i class='icon ion-android-cart'> </i>
     Store
   </a>
-
-</div>
-<div>
+  <a class="tab-item" href='/events'>
+     <i class='icon ion-calendar'> </i>
+    Events
+  </a>
+  </div>
   <%= yield %>
 </div>
 </body>
