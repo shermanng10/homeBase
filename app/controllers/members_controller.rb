@@ -10,7 +10,10 @@ class MembersController < ApplicationController
 		@member = Member.new(member_params)
 		@member.family_id = current_user.id
 		@member.name = @member.name.titleize
+		p @member
 		@member.assign_color
+		p 'assigned'
+		p @member
 		@member.save!
 		redirect_to :back
 	end

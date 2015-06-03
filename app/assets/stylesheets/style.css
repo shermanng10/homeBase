@@ -205,10 +205,6 @@ p img {
 	float:left;
 }
 
-.style_image {
-	height: 50px
-}
-
 <<<<<<< HEAD
 */
 
@@ -272,6 +268,14 @@ p img {
 	display: flex; 
 	justify-content: center; 
 	flex-direction: column
+}
+
+.style_image {
+	height: 45px;
+}
+
+.adding-space{
+	padding: 100px 0;
 }
 
 .calendar-padding {
