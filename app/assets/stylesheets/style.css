@@ -1,4 +1,4 @@
-/*
+
 body {
   background: #f0f0f0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -182,7 +182,7 @@ p img {
     margin-top: 10px;
     font: 12px;
     width: auto;
-		background-color:#2980b9;
+		background-color: #d3d3d3 !important;
 		color:#f39c12;
 }
 
@@ -210,7 +210,7 @@ p img {
 }
 
 <<<<<<< HEAD
-*/
+
 
 .clear {
   clear: both;
