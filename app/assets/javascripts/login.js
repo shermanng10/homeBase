@@ -72,8 +72,9 @@ var parentMode = function(e) {
     url: "sessions/admin",
     method: "GET"
   }).done(function(response) {
-       location.reload(false);
+    location.reload(false);
   }).fail(function(error) {
+    location.reload(false);
   })
 }
 

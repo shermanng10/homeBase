@@ -16,11 +16,10 @@ class RewardsController < ApplicationController
 	def update
 		reward = Reward.find_by(id: params[:id])
 		if reward.update_attributes(reward_params)
-			flash[:success] = "The reward was changed"
+			flash[:message] = "The reward was changed"
 			render json: reward
 		else
-			#flash[:error] = "The reward was not changed. Please try again."
-			#
+			flash[:error] = "The reward was not changed. Please try again."
 		end
 	end
 
