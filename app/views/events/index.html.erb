@@ -10,8 +10,7 @@
 
 <div class="customscroll has-header has-footer">
 <div id="calendar" class='calendar-padding'></div>
-
-<div class="list">
+<div class="list" style="margin:20px 0 100px 30px;">
 <form method="post" class="create-event" action="/events">
   <%= token_tag(nil) %>
   <label class="item item-input item-stacked-label">
@@ -26,14 +25,15 @@
   <span class="input-label">Ends At</span>
   <input name="event[end_time]" type="date" id="datepicker2">
   </label>
-  <label class="assign">
-      <span>Event for:</span>
+  <label class="item item-input item-select">
+      <div class="input-label">Event for:</div>
       <select class="child-points" name="event[member_id]">
           <option> </option>
         </select>
-        <br><br>
   </label>
-  <input type="submit" value='Submit'>
+  <div class="row">
+  <input class="button button-royal col" style="margin:0 auto;"type="submit" value='Submit'>
+  </div>
 </form>
 </div>
 </body>
