@@ -1,9 +1,17 @@
 class SessionsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
+
+  def new
+    if session[:user_id]
+      redirect_to "/tasks"
+    end
+  end
+
   def create
     user = Family.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       log_in user
-      redirect_to :back
+      redirect_to :root
     else
       flash.now[:danger] = "Invalid email or password"
     end
@@ -11,7 +19,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session.clear
-    redirect_to :back
+    redirect_to :root
   end
 
   def admin
@@ -24,6 +32,6 @@ class SessionsController < ApplicationController
 
   def normal_mode
     session[:admin] = nil
-    redirect_to :back
+    redirect_to :root
   end
 end

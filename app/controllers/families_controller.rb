@@ -5,17 +5,13 @@ class FamiliesController < ApplicationController
     @family = Member.where(family_id: session[:user_id])
   end
 
-  def new
-    @new_family = Family.new
-  end
 
   def create
   	@new_family = Family.new(family_params)
-  	if @new_family.save
-  		redirect_to :root
+  	if @new_family.save!
       session[:user_id] = @new_family.id
       session[:admin] = true
-  	else
+      redirect_to :root
   	end
   end
 

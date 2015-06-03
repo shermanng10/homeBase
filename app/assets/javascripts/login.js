@@ -51,7 +51,7 @@ var switchMode = function(e) {
   e.preventDefault();
   $.ajax({
     url: "sessions/normal",
-    method: "GET"
+    method: "post"
   }).done(function(response) {
     location.reload(false);
   }).fail(function(error) {
