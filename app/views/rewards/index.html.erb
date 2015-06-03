@@ -1,7 +1,6 @@
 
 <head>
-
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.js'></script>
 </head>
 
 <div class="bar bar-subheader bar-royal">
@@ -71,6 +70,9 @@
 </script>
 
 <script>
+$(document).on('submit', '.buyreward', buyReward);
+$(document).on('submit', '.giveanewreward', approveReward)
+
 var buyReward = function(e){
   e.preventDefault();
   $.ajax({
@@ -85,20 +87,17 @@ var buyReward = function(e){
   })
 };
 
-// var approveReward = function(e){
-//   e.preventDefault();
-//   $.ajax({
-//     url: '/members/give_reward',
-//     method: 'post',
-//     data: $(e.target).serialize()
-//   }).done(function(response){
-//     console.log(response)
-//     console.log('FISHIN')
-//   })
-// }
-
-$(document).on('submit', '.buyreward', buyReward);
-// $(document).on('submit', '.giveanewreward', approveReward)
+var approveReward = function(e){
+  e.preventDefault();
+  $.ajax({
+    url: '/members/give_reward',
+    method: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    console.log(response)
+    console.log('FISHIN')
+  })
+}
 
 </script>
 
