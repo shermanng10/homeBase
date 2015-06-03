@@ -20,13 +20,4 @@ $(document).ready(function(){
     }],
     timeFormat: 'h:mm'
   });
-
-  // $('#datepicker').datepicker({
-  //   changeMonth: true,
-  //   changeYear: true
-  // });
-  //  $('#datepicker2').datepicker({
-  //   changeMonth: true,
-  //   changeYear: true
-  // });
 });

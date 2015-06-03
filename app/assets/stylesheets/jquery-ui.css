@@ -855,11 +855,11 @@ body .ui-tooltip {
 	font-size: 14px;
 	border: 1px solid #2c4359;
 	background: #35414f url("images/ui-bg_dots-small_35_35414f_2x2.png") 50% 50% repeat;
-	color: #e1e463;
+	color: #3498db;
 	font-weight: bold;
 }
 .ui-widget-header a {
-	color: #e1e463;
+	color: #3498db;
 }
 
 /* Interaction states
