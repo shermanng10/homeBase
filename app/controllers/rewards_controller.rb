@@ -47,10 +47,4 @@ class RewardsController < ApplicationController
 	def reward_params
 		params.require(:reward).permit :name, :cost, :category, :member_id
 	end
-
-	def require_login
-		if !current_user
-			flash[:error] = "You must be logged in."
-		end
-	end
 end

@@ -1,5 +1,6 @@
 $('document').ready(function() {
   $('#normaltrigger').on('click', switchMode)
+  $('.toggle-login').on('click', toggleLogin)
   $('.create-member').on('submit', createMember)
   $('.login-window').on('click', loginWindow)
   $(document).on('click', 'a.close, #mask, .submit', function() {
@@ -10,7 +11,13 @@ $('document').ready(function() {
   });
 });
 
-
+var toggleLogin = function(e) {
+  e.preventDefault();
+  $('#form-login').toggle();
+  $('#link-to-signup').toggle();
+  $('#link-to-login').toggle(); 
+  $('#form-signup').toggle();
+}
 $(function() {
   $('#loginform').submit(function(e) {
     e.preventDefault();

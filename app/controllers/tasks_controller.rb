@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
 	skip_before_filter  :verify_authenticity_token
-	# before_action :require_login
+	before_action :require_login
 
 	def index
 		task = Task.where(family_id: session[:user_id], complete: false)
@@ -66,11 +66,5 @@ class TasksController < ApplicationController
 	private
 	def task_params
 		params.require(:task).permit :title, :points, :name, :deadline
-	end
-
-	def require_login
-		if !current_user
-
-		end
 	end
 end

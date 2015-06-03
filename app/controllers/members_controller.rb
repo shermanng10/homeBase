@@ -6,13 +6,16 @@ class MembersController < ApplicationController
 	end
 
 	def create
-		p params
 		@member = Member.new(member_params)
 		@member.family_id = current_user.id
 		@member.name = @member.name.titleize
 		@member.assign_color
-		@member.save!
-		redirect_to :back
+		if @member.save
+			flash[:message] = "#{@member.name} is now in the family"
+		else
+			flash[:error] = "Please enter valid information."
+		end
+			redirect_to :back
 	end
 
 	def destroy
@@ -21,14 +24,14 @@ class MembersController < ApplicationController
 			if member.destroy
 				all_members = Member.all
 				render json: all_members
+				flash[:message] = "#{member.name} is no longer in your family"
 			end
 		else
-			#can't delete someone not in your family.
+			
 		end
 	end
 
 	def give_reward
-		p params
 		reward = Reward.find_by(id: params[:reward_id])
 		member = reward.member
 		reward.member.task_points -= reward.cost
@@ -54,7 +57,6 @@ class MembersController < ApplicationController
 	end
 
 	def remove_points
-		p params
 		points = params[:points].to_i
 		member = Member.find_by(id: params[:name].to_i)
 		member.task_points -= points
@@ -65,12 +67,6 @@ class MembersController < ApplicationController
 	private
 	def member_params
 		params.require(:member).permit :name, :img_url
-	end
-
-	def require_login
-		if !current_user
-			flash[:error] = "You must be logged in."
-		end
 	end
 
 end

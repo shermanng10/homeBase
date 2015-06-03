@@ -1,26 +1,35 @@
 <body>
-  <div id='form-login'>
-    <%= form_tag "/login", method: "post" do %>
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-    <%= submit_tag "sign in", :class => 'btn btn-default' %>
-    <%= link_to "Signup",  new_family_path %>
+<div class="cont">
+
+  <div id='form-login' class="row">
+    <%= form_tag "/login", method: "post", class: "list list-inset" do %>
+    <%= text_field_tag :email,'Email', class: "item-input-wrapper" %>
+    <br>
+    <%= password_field_tag :password,'Password', class: "item-input-wrapper" %>
+    <br>
+    <%= submit_tag "Sign in", :class => 'button button-positive' %>
     <% end %>
-  </div>
-  <div class="form-signup">
-    <%= form_tag "/families", method: "post" do %>
-    <%= label_tag :surname %>
-    <%= text_field_tag 'family[surname]' %>
-    <%= label_tag :email %>
-    <%= text_field_tag 'family[email]' %>
-    <%= label_tag :password %>
-    <%= password_field_tag 'family[password]' %>
-    <%= submit_tag "Sign Up", :class => 'btn btn-default' %>
+    </div>
+    <div class="row">
+        <p class="col"><%= flash[:error] %></p>
+        <p class="col"><%= flash[:warn] %></p>
+    </div>
+
+    <div class="row" id="link-to-signup">
+        <a href="#" class="toggle-login button button-positive col">Signup</a>
+    </div>
+
+  <div id="form-signup" class="row">
+    <%= form_tag "/families", method: "post", class: "list list-inset" do %>
+    <%= text_field_tag 'family[surname]','Surname', class: "item-input-wrapper" %>
+    <%= text_field_tag 'family[email]','Email', class: "item-input-wrapper" %>
+    <%= password_field_tag 'family[password]','Password', class: "item-input-wrapper" %>
+    <%= submit_tag "Sign Up", :class => 'button button-positive' %>
     <% end %>
+    </div>
+    <div class="row" id="link-to-login">
+        <a href="#" class="toggle-login button button-positive col">Login</a>
+    </div>
   </div>
+</div>
 </body>
-
-
-

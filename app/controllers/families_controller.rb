@@ -11,8 +11,11 @@ class FamiliesController < ApplicationController
   	if @new_family.save!
       session[:user_id] = @new_family.id
       session[:admin] = true
-      redirect_to :root
+      flash[:message] = "Congratulations on signing up"
+    else
+      flash[:warn] = "Please enter valid information."
   	end
+    redirect_to :root
   end
 
   def destroy
@@ -26,9 +29,5 @@ class FamiliesController < ApplicationController
   private
   def family_params
   	params.require(:family).permit :surname, :email, :password
-  end
-
-  def require_login
-    !current_user
   end
 end
