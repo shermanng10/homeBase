@@ -1,0 +1,27 @@
+2015-06-04 10:56:56.474 homeBase[30070:3175808] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/96D8D77C-727B-4622-8871-983435F95CA2/Library/Cookies/Cookies.binarycookies
+2015-06-04 10:56:56.631 homeBase[30070:3175808] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 10:56:56.631 homeBase[30070:3175808] Multi-tasking -> Device: YES, App: YES
+2015-06-04 10:56:56.637 homeBase[30070:3175808] Unlimited access to network resources
+2015-06-04 10:56:56.644 homeBase[30070:3175808] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 10:56:57.675 homeBase[30070:3175808] Resetting plugins due to page load.
+2015-06-04 10:57:00.773 homeBase[30070:3175808] Finished load of: http://10.0.2.101:3000/
+2015-06-04 10:57:28.050 homeBase[30070:3175808] Resetting plugins due to page load.
+2015-06-04 10:57:28.623 homeBase[30070:3175808] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 10:57:46.596 homeBase[30070:3175808] Resetting plugins due to page load.
+2015-06-04 10:57:47.309 homeBase[30070:3175808] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 10:57:56.744 homeBase[30070:3175808] Resetting plugins due to page load.
+2015-06-04 10:57:57.160 homeBase[30070:3175808] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 10:58:10.150 homeBase[30070:3175808] Resetting plugins due to page load.
+2015-06-04 10:58:10.350 homeBase[30070:3175808] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 10:58:10.516 homeBase[30070:3175808] Resetting plugins due to page load.
+2015-06-04 10:58:10.751 homeBase[30070:3175808] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 10:58:27.330 homeBase[30070:3176435] Communications error: <OS_xpc_error: <error: 0x2d5b5f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x2d5b83c> { length = 22, contents = "Connection interrupted" }
+}>
