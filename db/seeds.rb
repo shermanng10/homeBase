@@ -16,7 +16,7 @@ Member.create!(name: "Khloe",
 Member.create!(name: "Kendall",
               family_id: 1,
               task_points: 120,
-              color:"#2980b9"
+              color:"#2980b9",
               img_url: "/assets/girl3.jpg")
 Member.create!(name: "Kylie",
               family_id: 1,
@@ -51,7 +51,7 @@ task4 = Task.create!(title: "Sweep Kitchen floor",
 
 task5 = Task.create!(title: "Vaccuum living room",
                     point_value: 45,
-                    family_id: 2,
+                    family_id: 1,
                     assigned_member_id: 4,
                     completed_member_id:4
                     )
