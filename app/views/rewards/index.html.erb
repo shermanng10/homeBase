@@ -11,7 +11,9 @@
 <body>
 <div class="customscroll has-header has-footer bottom-margin">
 <div>
+  <% if parent_mode? %>
   <a href="#new-reward" class="new-reward-link button icon-left ion-icecream button-positive" style='margin-top: 9vw;'>Add a New Reward</a>
+  <% end %>
 </div>
 
 <div class="rewards-container"></div>

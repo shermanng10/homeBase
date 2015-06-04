@@ -10,7 +10,9 @@
   <div class="customscroll has-header has-footer">
     <h1 class="welcome"><span id="date"></span></h1>
     <div class="clear"></div>
+    <% if parent_mode? %>
     <a href="#chore-box" class="chore-window button icon-left ion-compose button-energized" style='margin-top: 6vw;'>New Chore</a>
+    <% end %>
     <div id="chore-box" class="modal">
       <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
       <form method="post" class="chore-form" action="tasks">
