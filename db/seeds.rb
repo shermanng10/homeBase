@@ -12,16 +12,12 @@ Family.create!(surname: "Kardashian",
 							password: "1234567")
 
 Member.create!(name: "Tywin",
-
 							family_id: 1,
 							task_points: 3,
-							
 							img_url: "/assets/boy4.jpg")
 Member.create!(name: "Tyrion",
-
 							family_id: 1,
 							task_points: 78,
-						
 							img_url: "/assets/girl2.jpg")
 Member.create!(name: "Cersei",
 
