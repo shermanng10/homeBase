@@ -8,16 +8,18 @@
 </div>
 
 
-<body>
+<body style='background-color: #ecf0f1'>
 <div class="customscroll has-header has-footer bottom-margin">
 <div>
+  <% if parent_mode? %>
   <a href="#new-reward" class="new-reward-link button icon-left ion-icecream button-positive" style='margin-top: 9vw;'>Add a New Reward</a>
+  <% end %>
 </div>
 
 <div class="rewards-container"></div>
 <div class="space"></div>
 
-<div id="new-reward" class="modal">
+<div id="new-reward" class="modal" style='background-color: #d3d3d3; height: 300px'>
   <h1>New Reward</h1>
   <form method="post" class="create-reward" action="/rewards">
     <%= token_tag(nil) %>
@@ -27,7 +29,6 @@
       <input name="reward[cost]" type="text" placeholder="Cost" class="txtfield">
     <label for="reward[member_id]">Assign to:</label>
       <select class="child-options" name="reward[member_id]" class="txtfield">
-
       </select>
     <input class="flatbtn-blu" type="submit" value="submit" />
   </form>
