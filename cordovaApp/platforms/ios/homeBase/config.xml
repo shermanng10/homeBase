@@ -18,12 +18,12 @@
     <allow-intent href="itms-apps:*" />
     <name>homeBase</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+A family application that allows parents to delegate tasks with point values and children to receive and redeem points after completing tasks.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="sherman.ng10@gmail.com">
+        DevBootcamp Pocket Gophers 2015
     </author>
-    <content src="index.html" />
+    <content src="http://10.0.2.101:3000" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
