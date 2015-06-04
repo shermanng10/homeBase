@@ -124,3 +124,39 @@
   </form>
   </div>
 <% end %>
+</div>
+</body>
+
+<script id="child-points" type="text/x-handlebars-template">
+  <option value={{id}}>{{name}}</option>
+</script>
+
+<script id="memberMedal-template" type="text/x-handlebars-template">
+ <ul class="list">
+  <li class="item"> 
+  <a class="item item-avatar" href="#">
+    <img src={{imgUrl}}>
+  <h2 class="memberMain">{{name}}
+    <span class="points">{{task_points}}</span>
+  </h2>
+  </a>
+    {{#pendingRewards}}
+  <div style="text-align:center">
+  <% if parent_mode? %>
+  <form class='giveanewreward'>
+    <input type='hidden' name='reward_id' value='{{id}}'>
+    <input type='image' style='height: 25px' src='/assets/greencheck.png'>
+  </form>
+  <% end %>
+    <div class="pendingReward">  - {{name}} -  </div>
+  <% if parent_mode? %>
+  <form class='denyanewreward'>
+    <input type='hidden' name='reward_id' value='{{id}}'>
+    <input type='image' style='height: 25px' src='/assets/redx.png'>
+  </form>
+  <% end %>
+  </div>
+  {{/pendingRewards}}
+  </li>
+  </ul>
+</script>

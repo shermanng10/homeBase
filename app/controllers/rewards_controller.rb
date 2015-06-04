@@ -36,6 +36,8 @@ class RewardsController < ApplicationController
 	end
 
 	def buy_reward
+		p params
+		p "in this function"
 		reward = Reward.find_by(id: params[:reward_id])
 		reward.status = 'pending'
 		reward.save
