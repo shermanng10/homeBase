@@ -76,9 +76,14 @@ p img {
 	margin: 0 auto;
 	border-radius: 10px;
 	border: 1px solid black;
-	margin-bottom: 80px;
+	margin-bottom: 50px !important;
 	margin-top: 20px;
 }
+
+/*#spacing-div{
+	margin:200px;
+}*/
+
 
 .unassigned {
 	text-align:left;

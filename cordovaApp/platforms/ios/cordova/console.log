@@ -25,3 +25,313 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-06-04 10:58:27.330 homeBase[30070:3176435] Communications error: <OS_xpc_error: <error: 0x2d5b5f4> { count = 1, contents =
 	"XPCErrorDescription" => <string: 0x2d5b83c> { length = 22, contents = "Connection interrupted" }
 }>
+2015-06-04 11:03:48.420 homeBase[30690:3181101] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/EB1E3C3C-B71C-4D33-8718-EEDAE6ACD941/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:03:48.539 homeBase[30690:3181101] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:03:48.540 homeBase[30690:3181101] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:03:48.557 homeBase[30690:3181101] Unlimited access to network resources
+2015-06-04 11:03:48.561 homeBase[30690:3181101] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:03:49.095 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:03:50.716 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:04:15.981 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:04:16.555 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:04:33.242 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:04:33.919 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:04:39.146 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:04:39.608 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:04:50.793 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:04:51.362 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:05:14.955 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:05:15.401 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:06:06.228 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:06:06.720 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:06:47.577 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:06:48.030 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:07:07.649 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:07:07.990 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:07:08.006 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:07:08.412 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:07:13.093 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:07:13.295 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 11:07:13.449 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:07:13.700 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 11:07:21.508 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:07:21.872 homeBase[30690:3181101] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-06-04 11:07:21.874 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:07:22.644 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 11:07:44.869 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:07:45.515 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 11:07:49.094 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:07:49.397 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:07:49.457 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:07:49.929 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:08:08.677 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:08:08.938 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:08:09.088 homeBase[30690:3181101] Resetting plugins due to page load.
+2015-06-04 11:08:09.494 homeBase[30690:3181101] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:13:28.674 homeBase[31117:3184361] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/602932B9-0532-4C1A-8D0B-2FA8E4378ED3/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:13:28.791 homeBase[31117:3184361] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:13:28.791 homeBase[31117:3184361] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:13:28.793 homeBase[31117:3184361] Unlimited access to network resources
+2015-06-04 11:13:28.796 homeBase[31117:3184361] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:13:29.158 homeBase[31117:3184361] Resetting plugins due to page load.
+2015-06-04 11:13:30.660 homeBase[31117:3184361] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:13:41.962 homeBase[31117:3184361] Resetting plugins due to page load.
+2015-06-04 11:13:42.418 homeBase[31117:3184361] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:13:59.603 homeBase[31117:3184700] Terminating since there is no system app.
+2015-06-04 11:14:14.422 homeBase[31279:3185380] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/1120630C-8066-4AAF-9377-370E54E5B02B/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:14:14.541 homeBase[31279:3185380] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:14:14.542 homeBase[31279:3185380] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:14:14.544 homeBase[31279:3185380] Unlimited access to network resources
+2015-06-04 11:14:14.547 homeBase[31279:3185380] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:14:14.908 homeBase[31279:3185380] Resetting plugins due to page load.
+2015-06-04 11:14:16.705 homeBase[31279:3185380] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:14:26.209 homeBase[31279:3185380] Resetting plugins due to page load.
+2015-06-04 11:14:26.738 homeBase[31279:3185380] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:15:07.765 homeBase[31400:3186327] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/AEDAEA9A-596B-4A05-81FD-3F9C21021910/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:15:07.914 homeBase[31400:3186327] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:15:07.914 homeBase[31400:3186327] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:15:07.917 homeBase[31400:3186327] Unlimited access to network resources
+2015-06-04 11:15:07.921 homeBase[31400:3186327] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:15:08.247 homeBase[31400:3186327] Resetting plugins due to page load.
+2015-06-04 11:15:09.848 homeBase[31400:3186327] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:15:17.623 homeBase[31400:3186327] Resetting plugins due to page load.
+2015-06-04 11:15:18.013 homeBase[31400:3186327] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:18:05.293 homeBase[31609:3188074] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/24CC18BE-C521-415A-B264-F778F30F2C00/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:18:05.419 homeBase[31609:3188074] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:18:05.419 homeBase[31609:3188074] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:18:05.422 homeBase[31609:3188074] Unlimited access to network resources
+2015-06-04 11:18:05.426 homeBase[31609:3188074] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:18:05.740 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:18:07.510 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:18:22.976 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:18:23.425 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:18:52.370 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:18:52.744 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:18:52.788 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:18:53.165 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:19:08.205 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:19:08.473 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:19:08.607 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:19:08.912 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:19:17.470 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:19:17.691 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:19:17.849 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:19:18.154 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:20:09.941 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:20:10.261 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:20:12.659 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:20:12.838 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 11:20:13.023 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:20:13.214 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 11:20:14.693 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:20:14.884 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:20:15.060 homeBase[31609:3188074] Resetting plugins due to page load.
+2015-06-04 11:20:15.310 homeBase[31609:3188074] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:20:25.611 homeBase[31609:3188956] Terminating since there is no system app.
+2015-06-04 11:20:41.930 homeBase[31819:3189671] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/626FF9DC-000E-4946-AFF7-B27276160B57/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:20:42.032 homeBase[31819:3189671] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:20:42.033 homeBase[31819:3189671] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:20:42.035 homeBase[31819:3189671] Unlimited access to network resources
+2015-06-04 11:20:42.038 homeBase[31819:3189671] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:20:42.316 homeBase[31819:3189671] Resetting plugins due to page load.
+2015-06-04 11:20:43.550 homeBase[31819:3189671] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:20:52.410 homeBase[31819:3189671] Resetting plugins due to page load.
+2015-06-04 11:20:52.828 homeBase[31819:3189671] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:21:13.791 homeBase[31819:3189955] Terminating since there is no system app.
+2015-06-04 11:21:44.735 homeBase[31986:3190680] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/2B85563A-34F3-44DD-A095-B12B81FEA32F/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:21:44.851 homeBase[31986:3190680] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:21:44.851 homeBase[31986:3190680] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:21:44.853 homeBase[31986:3190680] Unlimited access to network resources
+2015-06-04 11:21:44.856 homeBase[31986:3190680] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:21:45.191 homeBase[31986:3190680] Resetting plugins due to page load.
+2015-06-04 11:21:46.594 homeBase[31986:3190680] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:21:57.499 homeBase[31986:3190680] Resetting plugins due to page load.
+2015-06-04 11:21:57.914 homeBase[31986:3190680] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:22:46.167 homeBase[32150:3191722] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/12D8728F-C899-4DFA-BAAC-0F38BE9D7E3D/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:22:46.313 homeBase[32150:3191722] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:22:46.313 homeBase[32150:3191722] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:22:46.315 homeBase[32150:3191722] Unlimited access to network resources
+2015-06-04 11:22:46.320 homeBase[32150:3191722] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:22:46.806 homeBase[32150:3191722] Resetting plugins due to page load.
+2015-06-04 11:22:48.327 homeBase[32150:3191722] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:23:01.358 homeBase[32150:3191722] Resetting plugins due to page load.
+2015-06-04 11:23:01.777 homeBase[32150:3191722] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:23:56.493 homeBase[32279:3192728] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/7C4C0FE9-27ED-4A7E-9F13-D07BEA8DDC46/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:23:56.605 homeBase[32279:3192728] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:23:56.606 homeBase[32279:3192728] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:23:56.607 homeBase[32279:3192728] Unlimited access to network resources
+2015-06-04 11:23:56.611 homeBase[32279:3192728] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:23:56.899 homeBase[32279:3192728] Resetting plugins due to page load.
+2015-06-04 11:23:58.479 homeBase[32279:3192728] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:24:08.320 homeBase[32279:3192728] Resetting plugins due to page load.
+2015-06-04 11:24:08.745 homeBase[32279:3192728] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:24:26.039 homeBase[32433:3193628] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/29030F88-0310-4328-8447-DC3681B13A1B/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:24:26.147 homeBase[32433:3193628] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:24:26.147 homeBase[32433:3193628] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:24:26.153 homeBase[32433:3193628] Unlimited access to network resources
+2015-06-04 11:24:26.156 homeBase[32433:3193628] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:24:26.491 homeBase[32433:3193628] Resetting plugins due to page load.
+2015-06-04 11:24:27.552 homeBase[32433:3193628] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:24:41.142 homeBase[32433:3193628] Resetting plugins due to page load.
+2015-06-04 11:24:41.906 homeBase[32433:3193628] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:24:52.083 homeBase[32433:3193628] Resetting plugins due to page load.
+2015-06-04 11:24:52.634 homeBase[32433:3193628] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:25:41.938 homeBase[32433:3193628] Application tried to represent an active popover presentation: <UIPopoverPresentationController: 0x791cd260>
+2015-06-04 11:26:37.501 homeBase[32623:3194950] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/D71BC8BF-D2B8-4143-9A5E-5FC3B0D70D84/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:26:37.605 homeBase[32623:3194950] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:26:37.605 homeBase[32623:3194950] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:26:37.607 homeBase[32623:3194950] Unlimited access to network resources
+2015-06-04 11:26:37.610 homeBase[32623:3194950] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:26:37.897 homeBase[32623:3194950] Resetting plugins due to page load.
+2015-06-04 11:26:39.034 homeBase[32623:3194950] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:26:50.639 homeBase[32623:3194950] Resetting plugins due to page load.
+2015-06-04 11:26:51.081 homeBase[32623:3194950] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:26:56.156 homeBase[32623:3194978] Terminating since there is no system app.
+2015-06-04 11:34:12.279 homeBase[32961:3197358] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/1426865D-4A92-4C52-855D-AF23FB91C8A1/data/Containers/Data/Application/F788C5D3-8138-4C00-99C2-6BB1D4762DD3/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:34:12.584 homeBase[32961:3197358] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:34:12.585 homeBase[32961:3197358] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:34:12.612 homeBase[32961:3197358] Unlimited access to network resources
+2015-06-04 11:34:12.625 homeBase[32961:3197358] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:34:13.766 homeBase[32961:3197358] Resetting plugins due to page load.
+2015-06-04 11:34:15.400 homeBase[32961:3197358] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:34:44.990 homeBase[32961:3197358] Resetting plugins due to page load.
+2015-06-04 11:34:45.596 homeBase[32961:3197358] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:38:12.843 homeBase[33322:3200711] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/633F16A3-F4E4-42C9-93A5-1B9C0EB69ABB/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:38:12.982 homeBase[33322:3200711] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:38:12.982 homeBase[33322:3200711] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:38:12.986 homeBase[33322:3200711] Unlimited access to network resources
+2015-06-04 11:38:12.993 homeBase[33322:3200711] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:38:13.313 homeBase[33322:3200711] Resetting plugins due to page load.
+2015-06-04 11:38:14.516 homeBase[33322:3200711] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:38:32.783 homeBase[33322:3200711] Resetting plugins due to page load.
+2015-06-04 11:38:33.212 homeBase[33322:3200711] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:40:37.822 homeBase[33322:3200711] Resetting plugins due to page load.
+2015-06-04 11:40:38.103 homeBase[33322:3200711] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:42:21.507 homeBase[33552:3202490] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/7B7EA7BD-B3BE-4657-A21D-73816FC8B466/Library/Cookies/Cookies.binarycookies
+2015-06-04 11:42:21.618 homeBase[33552:3202490] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 11:42:21.618 homeBase[33552:3202490] Multi-tasking -> Device: YES, App: YES
+2015-06-04 11:42:21.620 homeBase[33552:3202490] Unlimited access to network resources
+2015-06-04 11:42:21.625 homeBase[33552:3202490] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 11:42:21.875 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:42:23.602 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/
+2015-06-04 11:42:33.298 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:42:33.759 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:42:45.345 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:42:45.661 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:42:45.725 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:42:46.094 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:42:48.059 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:42:48.261 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 11:43:03.471 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:43:03.987 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 11:44:18.636 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:44:18.992 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:44:19.011 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:44:19.406 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 11:44:20.501 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:44:20.687 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 11:44:20.882 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:44:21.248 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 11:44:32.080 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:44:32.306 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:44:32.511 homeBase[33552:3202490] Resetting plugins due to page load.
+2015-06-04 11:44:32.774 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 11:45:43.731 homeBase[33552:3203621] Terminating since there is no system app.
