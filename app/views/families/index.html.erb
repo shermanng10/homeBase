@@ -24,8 +24,7 @@
     <input type="radio" name="member[img_url]" value="<%= asset_path 'girl2.jpg' %>"><%= image_tag 'avatars/girl2.jpg', class: 'style_image'  %>
     <input type="radio" name="member[img_url]" value="<%= asset_path 'girl3.jpg' %>"><%= image_tag 'avatars/girl3.jpg', class: 'style_image'  %>
     <input type="radio" name="member[img_url]" value="<%= asset_path 'girl4.jpg' %>"><%= image_tag 'avatars/girl4.jpg', class: 'style_image'  %>
-    <input type="radio" name="member[img_url]" value="<%= asset_path 'baby.jpg' %>"><%= image_tag 'avatars/baby.jpg', class: 'style_image'  %>
-    <input type="radio" name="member[img_url]" value="<%= asset_path 'grandpa.jpg' %>"><%= image_tag 'avatars/grandpa.jpg', class: 'style_image' %>
+  
     <div class="center">
       <input type="submit" id="loginbtn" class="flatbtn-blu hidemodal" value="Submit" tabindex="3">
     </div>
@@ -37,7 +36,8 @@
 <div class="members-medals-container"></div>
 
 <% if parent_mode? %>
-  <p class="add-member"><button class="add"><a href="#new-member-box" class="login-window">Add Family Member</a></button></p>
+  <p class="add-member"><button class="add"><a href="#new-member-box" class="login-window button button-balanced">Add Family Member</a></button></p>
+
 <% end %>
 </div>
 </body>

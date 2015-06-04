@@ -293,3 +293,10 @@ p img {
 .unassigned-header {
 	margin-bottom: 3px;
 }
+
+#weather{
+	margin-right: 40px;
+	margin-top: 20px;
+	font-size: 30px;
+	font-family: 'lora';
+}

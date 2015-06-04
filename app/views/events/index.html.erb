@@ -12,6 +12,9 @@
 <div id="calendar" class='calendar-padding'></div>
 <%= flash[:error] %>
 <%= flash[:message] %>
+
+<span class='icon ion-ios-partlysunny' id='weather'></span>
+
 <div class="list" style="margin:20px 0 100px 30px;">
 <form method="post" class="create-event" action="/events">
   <%= token_tag(nil) %>
@@ -38,6 +41,7 @@
   </div>
 </form>
 </div>
+
 </body>
 
 <script id="child-points" type="text/x-handlebars-template">
