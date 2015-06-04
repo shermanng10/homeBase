@@ -47,33 +47,36 @@
 </script>
 
 <script id="memberMedal-template" type="text/x-handlebars-template">
- <ul class="list">
-  <li class="item"> 
-  <a class="item item-avatar" href="#">
-    <img src={{imgUrl}}>
-  <h2 class="memberMain">{{name}}
-    <span class="points">{{task_points}}</span>
-  </h2>
-  </a>
+  <div class="list" style='margin-top: 2vw; width: 75vw; margin: 0 auto'>
+    <a class="item item-avatar reward-name" style='background-color: {{color}}' href="#">
+      <img src="{{imgUrl}}">
+      <div class="item item-divider col-list"> {{name}} <span class="{{pointscolor}}"> {{task_points}}<span class='bb'> bB</span><span></div>
+    </a>
     {{#pendingRewards}}
-  <div style="text-align:center">
+  
+  <div class='item item-button-right row col-font'>   
+  
   <% if parent_mode? %>
-  <form class='giveanewreward'>
-    <input type='hidden' name='reward_id' value='{{id}}'>
-    <input type='image' style='height: 25px' src='/assets/greencheck.png'>
-  </form>
-  <% end %>
-    <div class="pendingReward">  - {{name}} -  </div>
-  <% if parent_mode? %>
-  <form class='denyanewreward'>
+  <form class='denyanewreward col'>
+  <%= token_tag(nil) %>
     <input type='hidden' name='reward_id' value='{{id}}'>
     <input type='image' style='height: 25px' src='/assets/redx.png'>
   </form>
   <% end %>
+
+    <div class="pendingReward col" style='text-align: center'> {{name}} - {{cost}}<span class='bb'> bB</span> </div>
+
+    <% if parent_mode? %>
+    <form class='giveanewreward col' style='float: right; text-align: right'>
+    <%= token_tag(nil) %>
+      <input type='hidden' name='reward_id' value='{{id}}'>
+      <input type='image' style='height: 25px' src='/assets/greencheck.png'>
+    </form>
+    <% end %>
+    
   </div>
   {{/pendingRewards}}
-  </li>
-  </ul>
+  </div>
 </script>
 
 

@@ -5,7 +5,7 @@
 </head>
 
 <div class="bar bar-subheader bar-royal">
-  <h2 class="title">Welcome to the store!</h2>
+  <h2 class="title">Welcome to the store! Spend your baseBucks here!</h2>
 </div>
 
 
@@ -48,7 +48,7 @@
   {{#rewards}}
   
     <form class='buyreward'>
-    
+    <%= token_tag(nil) %>
     <input type='hidden' name='reward_id' value='{{reward_id}}'>
     <div class='item item-button-right row col-font'>
       <div class='col col-40 center-chore'> {{name}} </div>
@@ -56,7 +56,6 @@
       <div class='col col-20'> <button class="button button-positive" style='float:right;'>Buy
         <i class="icon ion-ios-cart"></i>
       </button> </div>
-     
     </div>
     </form>
 
@@ -79,6 +78,7 @@ var buyReward = function(e){
     method: 'post',
     data: $(e.target).serialize()
   }).done(function(response){
+    console.log('this is working')
     getRewards()
   }).fail(function(response){
     console.log(response)
