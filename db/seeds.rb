@@ -15,12 +15,12 @@ Member.create!(name: "Khloe",
               img_url: "/assets/girl2.jpg")
 Member.create!(name: "Kendall",
               family_id: 1,
-              task_points: 120,
-              color:"#2980b9"
+              task_points: 380,
+              color:"#2980b9",
               img_url: "/assets/girl3.jpg")
 Member.create!(name: "Kylie",
               family_id: 1,
-              task_points: 20,
+              task_points: -10,
               color:"#f1c40f",
               img_url: "/assets/girl4.jpg")
 
@@ -29,53 +29,49 @@ Member.create!(name: "Kylie",
 task1 = Task.create!(title: "Empty dishwasher" ,
                     point_value: 20,
                     family_id: 1,
-                    assigned_member_id: 1,
-                    completed_member_id: 1,
+                    assigned_member_id: 1
                     )
 task2 = Task.create!(title: "Clean Bedroom",
-                    point_value: 20,
+                    point_value: 25,
                     family_id: 1,
                     assigned_member_id: 1,
                     completed_member_id: 1)
 task3 = Task.create!(title: "Take out trash" ,
                     point_value: 10,
                     family_id: 1,
-                    assigned_member_id: 2,
-                    completed_member_id: 2
+                    assigned_member_id: 2
                     )
 task4 = Task.create!(title: "Sweep Kitchen floor",
                     point_value: 35,
                     family_id: 1,
-                    assigned_member_id: 3,
-                    completed_member_id: 3)
+                    assigned_member_id: 3)
 
 task5 = Task.create!(title: "Vaccuum living room",
                     point_value: 45,
                     family_id: 2,
-                    assigned_member_id: 4,
-                    completed_member_id:4
-                    )
+                    assigned_member_id: 4 )
 
 task6 = Task.create!(title: "Walk dog",
                     point_value: 15,
                     family_id: 1)
 
 task7 = Task.create!(title: "Feed fish",
-                    point_value: 5,
+                    point_value: 10,
                     family_id: 1,
                     assigned_member_id: 9)
 
 task8 = Task.create!(title: "Fold laundry",
                     point_value: 30,
                     family_id: 1,
-                    assigned_member_id: 10,
-                    completed_member_id: 10,
+                    assigned_member_id: 10
                     )
 
 task9 = Task.create!(title: "Vaccuum pool", point_value: 75, family_id: 1)
 
 
 task10 = Task.create!(title: "Clean countertops", point_value: 20, family_id:1, assigned_member_id: 3)
+
+task11 = Task.create!(title:"Sweep floor", point_value:20, family_id:1, assigned_member_id:4)
 
 reward1 = Reward.create!(name: "Gum",  cost: 20, family_id: 1, member_id: 2)
 reward2 = Reward.create!(name: "M&M's",  cost: 40,family_id: 1, member_id: 1,)
