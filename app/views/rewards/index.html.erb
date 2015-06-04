@@ -70,33 +70,21 @@
 </script>
 
 <script>
-$(document).on('submit', '.buyreward', buyReward);
-$(document).on('submit', '.giveanewreward', approveReward)
 
-var buyReward = function(e){
-  e.preventDefault();
-  console.log("hello")
-  $.ajax({
-    url: 'rewards/buy_reward',
-    method: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    getRewards()
-  }).fail(function(response){
-    console.log(response)
-  })
-};
+// $(document).on('submit', '.giveanewreward', approveReward)
 
-var approveReward = function(e){
-  e.preventDefault();
-  $.ajax({
-    url: '/members/give_reward',
-    method: 'post',
-    data: $(e.target).serialize()
-  }).done(function(response){
-    console.log(response)
-  })
-}
+
+
+// var approveReward = function(e){
+//   e.preventDefault();
+//   $.ajax({
+//     url: '/members/give_reward',
+//     method: 'post',
+//     data: $(e.target).serialize()
+//   }).done(function(response){
+//     console.log(response)
+//   })
+// }
 
 </script>
 

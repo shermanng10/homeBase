@@ -1,4 +1,5 @@
 $(document).on('ready on:load', function() {
+
   $('a.new-reward-link').click(function() {
     var rewardBox = $(this).attr('href');
     $(rewardBox).fadeIn(300);
@@ -12,6 +13,7 @@ $(document).on('ready on:load', function() {
     $('#mask').fadeIn(300);
     return false;
   });
+  $(document).on('submit', '.buyreward', buyReward);
   $(document).on('submit', '.create-reward', createReward)
   getRewards();
   $(document).on('click', '#mask', function() {
@@ -33,6 +35,20 @@ var createReward = function(e) {
     data: $(e.target).serialize()
   }).done(function(response) {
     getRewards();
+  })
+};
+
+var buyReward = function(e){
+  e.preventDefault();
+  console.log("hello")
+  $.ajax({
+    url: 'rewards/buy_reward',
+    method: 'post',
+    data: $(e.target).serialize()
+  }).done(function(response){
+    getRewards()
+  }).fail(function(response){
+    console.log(response)
   })
 };
 
