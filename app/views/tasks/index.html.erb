@@ -6,12 +6,15 @@
     <h2 class="title">Welcome to Work!</h2>
   </div>
 </header>
-<body>
+<body style='background-color: #ecf0f1'>
   <div class="customscroll has-header has-footer">
     <h1 class="welcome"><span id="date"></span></h1>
+   <div class='date'> Today is: <%= Time.now.strftime("%A - %b %d") %>  </div>
     <div class="clear"></div>
+    <% if parent_mode? %>
     <a href="#chore-box" class="chore-window button icon-left ion-compose button-energized" style='margin-top: 6vw;'>New Chore</a>
-    <div id="chore-box" class="modal">
+    <% end %>
+    <div id="chore-box" class="modal" style='background-color: #d3d3d3;'>
       <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
       <form method="post" class="chore-form" action="tasks">
         <%= token_tag(nil) %>
