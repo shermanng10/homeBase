@@ -8,7 +8,7 @@
 </header>
 <body>
   <div class="customscroll has-header has-footer">
-    <h1 class="welcome"><span id="date"></span></h1><h2 id='weather'></h2>
+    <h1 class="welcome"><span id="date"></span></h1>
     <div class="clear"></div>
     <a href="#chore-box" class="chore-window button icon-left ion-compose button-energized" style='margin-top: 6vw;'>New Chore</a>
     <div id="chore-box" class="modal">
@@ -62,8 +62,8 @@
         <input type="hidden" name="member_id" value="{{id}}">
         <input type="submit" class= "{{isComplete}} button button-balanced" style='float: right;'value='Complete' />
       </form>
-    </div>
   <% if session[:admin] == true %>
+  <div class='col-10' style='float:right; text-align: center;'>
     <form class="approve-chore">
       <input type="hidden" name="task_id" value="{{task_id}}">
       <input type="image" class="icon-parent-task-approve" src="<%= image_path('svg/check.svg') %>">
@@ -76,7 +76,10 @@
       <input type="hidden" name="task_id" value="{{task_id}}">
       <input type="image"  src="<%= image_path('svg/reload.svg') %>">
     </form>
+    </div>
   <% end %>
+  </div>
+
 
   {{/assignedTasks}}
 
