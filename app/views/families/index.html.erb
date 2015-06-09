@@ -37,8 +37,52 @@
 
 <% if parent_mode? %>
   <p class="add-member"><button class="add"><a href="#new-member-box" class="login-window button button-balanced">Add Family Member</a></button></p>
-
 <% end %>
+<% if parent_mode? %>
+  <a href="#points-box" id='addpointsbtn' class="points-window">Add Points</a>
+    <div id="points-box" class="points-popup">
+    <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <form method="post" class="addpoints" action="members/add_points">
+      <%= token_tag(nil) %>
+      <fieldset class="textbox">
+        <label class="username">
+        <span>Points to Add</span>
+        <input id="addpoints" name="points" type="number" autocomplete="on" placeholder="+ points">
+        </label>
+        <label class="assign">
+          <span>Give to:</span>
+          <select class="child-points" name="name">
+            <option> </option>
+            </select>
+            <br><br>
+        </label>
+        <input type='submit' class='submitchore' name="Assign_Chore">
+      </fieldset>
+  </form>
+  </div>
+  <a href="#rmpoints-box" id='removepointsbtn' class="rmpoints-window">Remove Points</a>
+    <div id="rmpoints-box" class="rmpoints-popup">
+    <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+    <form method="post" class="rmpoints" action="members/remove_points">
+      <%= token_tag(nil) %>
+      <fieldset class="textbox">
+        <label class="username">
+        <span>Points to Remove</span>
+        <input id="rmpoints" name="points" type="number" autocomplete="on" placeholder="- points">
+        </label>
+        <label class="assign">
+          <span>Give to:</span>
+          <select class="child-points" name="name">
+            <option> </option>
+            </select>
+            <br><br>
+        </label>
+        <input type='submit' class='submitchore' name="Assign_Chore">
+      </fieldset>
+  </form>
+  </div>
+<% end %>
+</div>
 </div>
 </body>
 
@@ -78,54 +122,6 @@
   {{/pendingRewards}}
   </div>
 </script>
-
-
-<% if parent_mode? %>
-  <a href="#points-box" id='addpointsbtn' class="points-window">Add Points</a>
-    <div id="points-box" class="points-popup">
-    <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-    <form method="post" class="addpoints" action="members/add_points">
-      <%= token_tag(nil) %>
-      <fieldset class="textbox">
-        <label class="username">
-        <span>Points to Add</span>
-        <input id="addpoints" name="points" type="number" autocomplete="on" placeholder="+ points">
-        </label>
-        <label class="assign">
-          <span>Give to:</span>
-          <select class="child-points" name="name">
-            <option> </option>
-            </select>
-            <br><br>
-        </label>
-        <input type='submit' class='submitchore' name="Assign_Chore">
-      </fieldset>
-  </form>
-  </div>
-  <a href="#rmpoints-box" id='removepointsbtn' class="rmpoints-window">Remove Points</a>
-    <div id="rmpoints-box" class="rmpoints-popup">
-    <a href="#" class="close"><img src="/assets/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-    <form method="post" class="rmpoints" action="members/remove_points">
-      <%= token_tag(nil) %>
-      <fieldset class="textbox">
-        <label class="username">
-        <span>Points to Add</span>
-        <input id="rmpoints" name="points" type="number" autocomplete="on" placeholder="- points">
-        </label>
-        <label class="assign">
-          <span>Give to:</span>
-          <select class="child-points" name="name">
-            <option> </option>
-            </select>
-            <br><br>
-        </label>
-        <input type='submit' class='submitchore' name="Assign_Chore">
-      </fieldset>
-  </form>
-  </div>
-<% end %>
-</div>
-</body>
 
 <script id="child-points" type="text/x-handlebars-template">
   <option value={{id}}>{{name}}</option>

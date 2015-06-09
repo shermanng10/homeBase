@@ -335,3 +335,333 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-06-04 11:44:32.511 homeBase[33552:3202490] Resetting plugins due to page load.
 2015-06-04 11:44:32.774 homeBase[33552:3202490] Finished load of: http://10.0.2.101:3000/tasks
 2015-06-04 11:45:43.731 homeBase[33552:3203621] Terminating since there is no system app.
+2015-06-04 14:23:51.709 homeBase[35672:3223991] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/5CA7AB19-0B5A-4D1A-8876-CD44606A096E/Library/Cookies/Cookies.binarycookies
+2015-06-04 14:23:51.849 homeBase[35672:3223991] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 14:23:51.850 homeBase[35672:3223991] Multi-tasking -> Device: YES, App: YES
+2015-06-04 14:23:51.874 homeBase[35672:3223991] Unlimited access to network resources
+2015-06-04 14:23:51.883 homeBase[35672:3223991] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 14:23:52.683 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:23:54.332 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/
+2015-06-04 14:24:52.229 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:24:52.860 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:25:05.972 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:25:06.586 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:25:08.536 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:25:08.753 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/
+2015-06-04 14:29:05.742 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:29:06.432 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:29:52.749 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:29:53.024 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:30:59.360 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:30:59.587 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 14:33:03.074 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:33:03.311 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:33:15.125 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:33:15.342 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:33:15.499 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:33:15.753 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:33:27.747 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:33:28.227 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:33:48.446 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:33:48.895 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:35:29.467 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:35:30.059 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 14:36:47.111 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:36:47.332 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 14:37:10.818 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:37:11.245 homeBase[35672:3223991] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-06-04 14:37:11.246 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:37:11.733 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 14:37:35.484 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:37:35.681 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 14:37:35.887 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:37:36.129 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 14:37:41.591 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:37:42.196 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 14:38:01.371 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:38:01.586 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 14:38:01.736 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:38:02.019 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 14:38:08.623 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:38:08.855 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 14:39:26.756 homeBase[35672:3229311] Communications error: <OS_xpc_error: <error: 0x2d2b5f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x2d2b83c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-06-04 14:55:38.984 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:55:39.681 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 14:56:00.742 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 14:56:01.019 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 15:23:39.752 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:23:40.359 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 15:25:08.315 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:25:08.655 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 15:25:08.679 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:25:09.119 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 15:25:42.867 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:25:43.063 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 15:26:02.598 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:26:02.791 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 15:26:03.007 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:26:03.223 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 15:26:13.236 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:26:13.550 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 15:26:13.602 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:26:13.983 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 15:27:33.351 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:27:33.581 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 15:27:34.743 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:27:35.072 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 15:28:41.076 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:28:41.750 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 15:28:44.459 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 15:28:44.736 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 16:06:09.047 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:06:09.720 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 16:09:02.002 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:09:02.589 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 16:09:38.147 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:09:38.374 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 16:09:38.550 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:09:38.783 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 16:10:18.316 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:10:18.893 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 16:10:21.465 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:10:21.724 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 16:11:17.907 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:11:18.110 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 16:11:18.261 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:11:18.500 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 16:11:44.963 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:11:45.386 homeBase[35672:3223991] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-06-04 16:11:45.387 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:11:45.752 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 16:12:41.990 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:12:42.579 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 16:12:58.125 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:12:58.378 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 16:12:58.494 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:12:58.847 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 16:13:32.417 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 16:13:32.742 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 16:13:33.218 homeBase[35672:3223991] Application tried to represent an active popover presentation: <UIPopoverPresentationController: 0x7c79d300>
+2015-06-04 17:54:07.753 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 17:54:08.182 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/
+2015-06-04 17:54:17.357 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 17:54:17.765 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 17:54:47.064 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 17:54:47.343 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 17:54:57.934 homeBase[35672:3223991] Resetting plugins due to page load.
+2015-06-04 17:54:58.139 homeBase[35672:3223991] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 18:56:56.782 homeBase[1004:8702] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/A1B10987-EAC2-4CA0-A9B9-3619826A11B2/Library/Cookies/Cookies.binarycookies
+2015-06-04 18:56:56.901 homeBase[1004:8702] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 18:56:56.902 homeBase[1004:8702] Multi-tasking -> Device: YES, App: YES
+2015-06-04 18:56:56.924 homeBase[1004:8702] Unlimited access to network resources
+2015-06-04 18:56:56.932 homeBase[1004:8702] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 18:56:57.644 homeBase[1004:8702] Resetting plugins due to page load.
+2015-06-04 18:56:57.693 homeBase[1004:8702] Failed to load webpage with error: Could not connect to the server.
+2015-06-04 18:57:38.284 homeBase[1161:9695] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/7D9968F7-D557-4C73-B70D-449578C995E8/Library/Cookies/Cookies.binarycookies
+2015-06-04 18:57:38.404 homeBase[1161:9695] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-04 18:57:38.404 homeBase[1161:9695] Multi-tasking -> Device: YES, App: YES
+2015-06-04 18:57:38.406 homeBase[1161:9695] Unlimited access to network resources
+2015-06-04 18:57:38.409 homeBase[1161:9695] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-04 18:57:38.770 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 18:57:43.500 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/
+2015-06-04 18:57:53.885 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 18:57:54.435 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 18:57:59.932 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 18:58:00.347 homeBase[1161:9695] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-06-04 18:58:00.348 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 18:58:00.801 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 18:58:03.133 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 18:58:03.390 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:01:43.152 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:01:43.423 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:01:43.560 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:01:43.845 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:02:02.040 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:02:02.221 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:02:02.401 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:02:02.646 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:03:49.305 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:03:49.567 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:03:49.707 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:03:49.985 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:03:51.836 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:03:52.045 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:03:52.195 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:03:52.438 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:04:03.850 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:04:04.079 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:04:04.215 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:04:04.469 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:04:09.768 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:04:09.996 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:05:59.716 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:00.074 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:06:00.088 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:00.490 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:06:01.489 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:01.700 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:06:01.845 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:02.121 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:06:12.745 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:13.080 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:06:13.146 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:13.585 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:06:14.626 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:14.834 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:06:14.980 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:15.230 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:06:23.017 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:23.259 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:06:23.406 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:23.756 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:06:24.802 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:25.034 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:06:25.159 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:06:25.445 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:07:10.790 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:07:11.111 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:07:11.189 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:07:11.647 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:07:12.638 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:07:12.862 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:07:13.010 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:07:13.285 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:07:20.796 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:07:21.032 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:07:21.153 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:07:21.429 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:07:27.249 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:07:27.684 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:07:28.625 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:07:28.850 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:08:22.078 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:08:22.641 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:08:30.938 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:08:31.286 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:08:31.302 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:08:31.655 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-04 19:08:46.491 homeBase[1161:9695] Application tried to represent an active popover presentation: <UIPopoverPresentationController: 0x7bf41e30>
+2015-06-04 19:09:40.908 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:09:41.108 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:09:41.260 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:09:41.543 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-04 19:10:06.931 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:10:07.350 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:10:41.954 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:10:42.885 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:10:49.107 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:10:49.728 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 19:10:57.786 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:10:58.066 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/families
+2015-06-04 19:11:03.718 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:11:03.970 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 19:11:04.076 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:11:04.467 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/events
+2015-06-04 19:11:39.482 homeBase[1161:9695] Resetting plugins due to page load.
+2015-06-04 19:11:39.777 homeBase[1161:9695] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-05 07:56:58.652 homeBase[932:7082] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/siddharthwatal/Library/Developer/CoreSimulator/Devices/3D34E3DD-9430-4A99-8A92-03E57F82DA40/data/Containers/Data/Application/5C2169BF-AEDB-4381-8509-B81037F416E7/Library/Cookies/Cookies.binarycookies
+2015-06-05 07:56:58.760 homeBase[932:7082] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-05 07:56:58.760 homeBase[932:7082] Multi-tasking -> Device: YES, App: YES
+2015-06-05 07:56:58.767 homeBase[932:7082] Unlimited access to network resources
+2015-06-05 07:56:58.774 homeBase[932:7082] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-05 07:56:59.575 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 07:57:03.187 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/
+2015-06-05 07:57:29.647 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 07:57:30.199 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-05 07:57:40.927 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 07:57:41.320 homeBase[932:7082] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-06-05 07:57:41.323 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 07:57:42.035 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 07:59:22.106 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 07:59:22.628 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 07:59:24.689 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 07:59:24.899 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-05 07:59:25.045 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 07:59:25.322 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-05 07:59:26.140 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 07:59:26.401 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 07:59:26.507 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 07:59:26.905 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:01:08.414 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:01:08.823 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:01:08.870 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:01:09.325 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:02:22.303 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:02:22.617 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:02:22.684 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:02:23.101 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:03:38.354 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:03:38.620 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:03:38.750 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:03:39.129 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:03:48.622 homeBase[932:7082] Application tried to represent an active popover presentation: <UIPopoverPresentationController: 0x7bf55030>
+2015-06-05 08:04:16.866 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:04:17.226 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:04:17.308 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:04:17.711 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:05:12.140 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:05:12.445 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-05 08:05:29.257 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:05:29.475 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-05 08:05:29.650 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:05:29.969 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-05 08:33:29.783 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:33:30.275 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-05 08:34:33.008 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:34:33.207 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-05 08:34:33.360 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:34:33.632 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-05 08:35:09.248 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:35:09.844 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-05 08:35:15.947 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:35:16.299 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/tasks
+2015-06-05 08:36:09.062 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:36:09.288 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-05 08:36:09.423 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:36:09.663 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/rewards
+2015-06-05 08:36:36.393 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:36:36.810 homeBase[932:7082] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-06-05 08:36:36.811 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:36:37.279 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/families
+2015-06-05 08:37:25.731 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 08:37:26.021 homeBase[932:7082] Finished load of: http://10.0.2.101:3000/events
+2015-06-05 08:46:32.023 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 10:47:26.968 homeBase[932:7082] CDVWebViewDelegate: Detected redirect when loadCount=2
+2015-06-05 10:47:26.976 homeBase[932:7082] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-06-05 10:47:26.977 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 10:51:03.668 homeBase[932:7082] CDVWebViewDelegate: Detected redirect when loadCount=2
+2015-06-05 10:51:03.669 homeBase[932:7082] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-06-05 10:51:03.669 homeBase[932:7082] Resetting plugins due to page load.
+2015-06-05 11:58:10.071 homeBase[932:7082] CDVWebViewDelegate: Detected redirect when loadCount=2
+2015-06-05 11:58:10.080 homeBase[932:7082] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-06-05 11:58:10.081 homeBase[932:7082] Resetting plugins due to page load.
