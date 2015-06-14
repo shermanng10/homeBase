@@ -18,8 +18,6 @@ $(document).ready(function() {
     });
     return false;
   });
-  var date = new Date()
-  $('#date').text(date.toDateString());
   getPeople();
   getUnassigned();
   $(document).on('submit', '.chore-form', updateChore);

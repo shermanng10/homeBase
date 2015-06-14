@@ -307,11 +307,7 @@ p img {
 }
 
 .date {
-	margin-top: 100px; 
 	text-align: center;
 	font-size: 3vw;
 }
 
-.modal {
-	max-height: 100px !important;
-}
