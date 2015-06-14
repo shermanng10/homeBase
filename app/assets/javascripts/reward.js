@@ -55,7 +55,7 @@ var buyReward = function(e){
 
 var getRewards = function() {
   $.ajax({
-    url: "http://10.0.2.101:3000/rewards",
+    url: "http://localhost:3000/rewards",
     type: 'get',
     dataType: 'json'
   }).done(function(response) {

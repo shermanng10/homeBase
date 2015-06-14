@@ -311,3 +311,7 @@ p img {
 	text-align: center;
 	font-size: 3vw;
 }
+
+.modal {
+	max-height: 100px !important;
+}
