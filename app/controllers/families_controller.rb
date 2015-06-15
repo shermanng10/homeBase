@@ -8,13 +8,13 @@ class FamiliesController < ApplicationController
 
   def create
   	@new_family = Family.new(family_params)
-  	if @new_family.save!
+  	if @new_family.save
       session[:user_id] = @new_family.id
       session[:admin] = true
       flash[:message] = "Congratulations on signing up"
     else
-      flash[:warn] = "Please enter valid information."
-  	end
+      flash[:danger] = "Please enter valid information."
+    end
     redirect_to :root
   end
 
