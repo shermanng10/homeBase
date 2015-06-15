@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>FE263D82706BF12FA2F4D0F75DB29575F3A4B994</key>
-		<string>https://github.com/nyc-pocket-gophers-2015/homeBase2.git</string>
+		<string>https://github.com/nyc-pocket-gophers-2015/homeBase.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>cordovaApp/platforms/ios/homeBase.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/nyc-pocket-gophers-2015/homeBase2.git</string>
+	<string>https://github.com/nyc-pocket-gophers-2015/homeBase.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>FE263D82706BF12FA2F4D0F75DB29575F3A4B994</string>
 			<key>IDESourceControlWCCName</key>
-			<string>homebase2</string>
+			<string>homeBase</string>
 		</dict>
 	</array>
 </dict>
