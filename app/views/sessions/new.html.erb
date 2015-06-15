@@ -1,16 +1,19 @@
 <body >
 <div class="cont" >
 
-  <div id='form-login' class="row">
-    <%= form_tag "/login", method: "post", class: "list list-inset" do %>
-    <%= label_tag :email %>
-    <%= text_field_tag :email,'', class: "item-input-wrapper" %>
-    <br>
-    <%= label_tag :password %>
-    <%= password_field_tag :password,'', class: "item-input-wrapper" %>
-    <br>
-    <%= submit_tag "Sign in", :class => 'button button-positive' %>
-    <% end %>
+    <div id='form-login' class="row">
+        <%= form_tag "/login", method: "post", class: "list list-inset" do %>
+        <%= label_tag :email %>
+        <%= text_field_tag :email,'', class: "item-input-wrapper" %>
+        <br>
+        <%= label_tag :password %>
+        <%= password_field_tag :password,'', class: "item-input-wrapper" %>
+        <br>
+        <%= submit_tag "Sign in", :class => 'button button-positive' %>
+         <% if flash[:danger] %>
+            <div class='error-message'><%= flash[:danger] %></div>
+        <% end %>
+        <% end %>
     </div>
  
 

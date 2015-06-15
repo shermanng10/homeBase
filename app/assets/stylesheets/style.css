@@ -322,3 +322,9 @@ p img {
   background: transparent;
   color: #387ef5;
 }
+
+.error-message {
+	display: block;
+	clear: both;
+	padding-top: 1vw;
+}
