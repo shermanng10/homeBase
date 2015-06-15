@@ -1,28 +1,14 @@
-== README
+= \homeBase
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Description
+homeBase is a tablet optimized family application that allows guardians to delegate tasks with 'baseBuck' values to children. Children can then complete these tasks and receive baseBucks which could then be redeemed for rewards specified by the guardian. homeBase aims to not only make chores something that children want to do, but also teach them about money management.
 
-Things you may want to cover:
+homeBase is built on Ruby on Rails and is packaged into a mobile application through Apache Cordova. Responsive design is done utilizing Ionic CSS and templating and rendering is handled by Mustache.js. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+== Team Members
+* Sherman Ng, 
+* Tanya Trinkle 
+* Scott Warner
+* Sid Watal
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
