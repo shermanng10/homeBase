@@ -6,9 +6,7 @@ homeBase is a tablet optimized family application that allows guardians to deleg
 homeBase is built on Ruby on Rails and is packaged into a mobile application through Apache Cordova. Responsive design is done utilizing Ionic CSS and templating and rendering is handled by Mustache.js. 
 
 == Team Members
-* Sherman Ng, 
-* Tanya Trinkle 
-* Scott Warner
-* Sid Watal
-
-
+* {Sherman Ng}[http://www.github.com/shermanng10]
+* {Tanya Trinkle}[http://www.github.com/ttrinkle]
+* {Scott Warner}[http://www.github.com/scottbwar]
+* {Sid Watal}[http://www.github.com/sidwatal]
