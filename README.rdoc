@@ -1,7 +1,7 @@
 = \homeBase
 
 == Description
-homeBase is a tablet optimized family application that allows guardians to delegate tasks with 'baseBuck' values to children. Children can then complete these tasks and receive baseBucks which could then be redeemed for rewards specified by the guardian. homeBase aims to not only make chores something that children want to do, but also teach them about money management.
+homeBase is a tablet optimized family application that allows guardians to delegate tasks with 'baseBuck' values to children. Children can then complete these tasks and receive baseBucks which can be redeemed for rewards specified by the guardian. homeBase aims to not only make chores something that children want to do, but also teach them about money management.
 
 homeBase is built on Ruby on Rails and is packaged into a mobile application through Apache Cordova. Responsive design is done utilizing Ionic CSS and templating and rendering is handled by Mustache.js. 
 
