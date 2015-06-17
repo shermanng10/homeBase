@@ -10,3 +10,6 @@ homeBase is built on Ruby on Rails and is packaged into a mobile application thr
 * {Tanya Trinkle}[http://www.github.com/ttrinkle]
 * {Scott Warner}[http://www.github.com/scottbwar]
 * {Sid Watal}[http://www.github.com/sidwatal]
+
+== Example
+Image[link:example.png]
